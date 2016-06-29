@@ -1,0 +1,33 @@
+\documentclass[12pt,english]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+%\usepackage[amssymb]{SIunits}
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+
+\title{KOGW-PM-KNP:  Exercise 1 Questions - Runeson’s Planimeter}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+ \item Explain, in your own words, the difference between perception and cognition, using the concept of a “smart” mechanism [1]? Begin with a basic description of how the planimeter works [1]. Include an example of a discovered smart mechanism [1].
+  \begin{itemize}
+  \color{blue} 
+  \item The planimeter acts as a transducer between intention (wanting to know the area of a irregular shape) and a physically “complex” variable (the area) without direct knowledge of the underlying mathematical principles of its construction. 
+  \item No calculations are explicitly made, rather the mechanics of the device produces the desired output via correct use of the instrument. In a similar way, our brains can access complex variables of the physical environment (e.g. color, sound, temperature) without us needing to calculate anything.  This is perception as Runeson describes it.
+  \item Tennis player watching a ball need only “know” the rate of image expansion to calculate time-to-collision, rather than compute all the myriad physical variables. P.176 Runeson Paper - Lee 1974. Allow other good examples of smart mechanisms.
+  \end{itemize}
+ \item Name two properties that Runeson identifies as definitive for smart mechanisms [2]?
+ \item What is the “principle of equal simplicity” [2]?
+ \item Name two areas of psychology (besides perception) in which smart mechanisms apply [2]:
+ \item Invent a smart mechanism that could improve on our everyday perception [1].
+\end{enumerate}
+
+
+\end{document}
