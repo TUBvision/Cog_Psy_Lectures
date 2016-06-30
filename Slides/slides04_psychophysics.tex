@@ -1,0 +1,386 @@
+\documentclass[]{beamer}
+% \geometry{papersize={16cm,9.60cm}}
+\usepackage{etex}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{multimedia}
+\usetheme{Boadilla}
+\usepackage{graphicx}
+%\usepackage{inputenc}
+
+% \mode<presentation>
+% {
+%   \usetheme{default}
+%   \setbeamercovered{transparent}
+% }
+
+
+% {\vskip5pt}
+
+%% customize layout, bullet points navigation toolbar
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+\setbeamertemplate{enumerate items}[default]
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize items}[circle]
+\setbeamercolor{enumerate item}{fg=black}
+
+\setbeamertemplate{footline}{}
+\setbeamersize{text margin left = 2.0em}
+\setbeamersize{text margin right = 2.0em}
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+\setbeamertemplate{navigation symbols}{}
+
+\title{ Cognitive (Neuro) Psychology }
+\subtitle{IV. Psychophysics}
+\author{ Marianne Maertens }
+\institute[TU Berlin]{Technische Universit\"at Berlin}
+\date{July 2016}
+
+\begin{document}
+\setbeamertemplate{enumerate items}[default]
+\setbeamertemplate{headline}
+
+\frame{\titlepage}
+
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Layout}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\section{Definition}
+\begin{frame}
+ \frametitle{Psychophysics}
+\begin{center}
+\includegraphics<1>[width=50mm]{../../../figures/pmf.png} 
+\end{center}
+
+\begin{itemize}
+\setlength{\itemsep}{5pt}
+ \item subdiscipline of psychology
+ \item addresses the relationship between physical stimuli, $x$, and their subjective correlates (percepts), $\Psi(x)$ 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Components of a psychophysics experiment}
+\begin{itemize}
+\setlength{\itemsep}{5pt}
+ \item stimuli
+ \item task
+ \item method
+ \item analysis
+ \item measure
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Measure: contrast sensitivity}
+
+\begin{center}
+\includegraphics<1>[width=100mm]{../../../figures/CSF_wiki.png} 
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Stimulus}
+\begin{center}
+\includegraphics<1>[width=100mm]{../../../figures/weber_contrast_stimulus.png} 
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Task}
+\begin{overlayarea}{110mm}{80mm}
+\begin{columns}[T]
+ \begin{column}{50mm}
+\begin{itemize}
+\setlength{\itemsep}{10pt}
+\item[]
+\item[] 
+\item Method of adjustment
+\item[]
+\item[]
+\item[]
+\item<2-> 2-alternative forced-coice (2-AFC)
+\end{itemize}
+ \end{column}
+
+\begin{column}{60mm}
+\begin{center}
+\includegraphics<1->[width=50mm]{../../../figures/weber_adjustment.png} 
+
+\vspace{15mm}
+
+\includegraphics<2->[width=50mm]{../../../figures/weber_2afc.png} 
+\end{center}
+ \end{column}
+\end{columns}
+\end{overlayarea}
+\end{frame}
+
+
+
+\begin{frame}
+ \frametitle{Method \& Analysis}
+\begin{overlayarea}{110mm}{80mm}
+\begin{columns}[T]
+ \begin{column}{50mm}
+\begin{itemize}
+\setlength{\itemsep}{10pt}
+\item[]
+\item Adaptive procedure
+\item[]
+\item[]
+\item<2-> Method of constant stimuli
+\end{itemize}
+ \end{column}
+
+\begin{column}{60mm}
+\begin{center}
+\includegraphics<1->[width=50mm]{../../../figures/weber_adaptive.png} 
+
+\vspace{5mm}
+
+\includegraphics<2->[width=50mm]{../../../figures/weber_constant_method.png} 
+\end{center}
+ \end{column}
+\end{columns}
+\end{overlayarea}
+\end{frame}
+
+
+\section{Classification of Experiments}
+\begin{frame}
+ \frametitle{Dichotomies}
+\begin{center}
+ \includegraphics[width=100mm]{../../../figures/cloud_types.png}
+\end{center}
+
+\begin{itemize}
+ \item all understanding begins with making comparisons and those comparisons, in turn, lead to the construction of categories
+ \item[]
+ \item<2-> simplify and make explicit design choices
+ \item<2-> which method is appropriate for studying which aspect of visual functioning 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Objective vs. Subjective}
+
+\begin{itemize}
+ \item nature of measurement e.g. Muller-Lyer illusion
+\end{itemize}
+
+\begin{overlayarea}{110mm}{70mm}
+\begin{columns}[T]
+ \begin{column}{50mm}
+\begin{center}
+\includegraphics<1->[width=30mm]{../../../figures/muller_lyer.png} 
+\end{center}
+\begin{itemize}
+ \item<3> PSE: point of subjective equality
+ \item<3> objective: correct vs. incorrect
+\end{itemize}
+ \end{column}
+
+\begin{column}{60mm}
+\begin{center}
+\includegraphics<2>[width=50mm]{../../../figures/muller_lyer_pmf.png} 
+\includegraphics<3->[width=50mm]{../../../figures/muller_lyer_pmf_pse.png} 
+\end{center}
+ \end{column}
+\end{columns}
+\end{overlayarea}
+\end{frame}
+
+\begin{frame}
+\frametitle{Objective vs. Subjective}
+
+\begin{itemize}
+ \item method of data collection
+ \item[]
+ \item[] method of adjustment = \textcolor{blue}{subjective}
+ \item[] method of constant stimuli = \textcolor{blue}{objective}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Performance vs. appearance}
+\begin{overlayarea}{110mm}{80mm}
+\begin{columns}[T]
+ \begin{column}{55mm}
+\begin{itemize}
+ \item How good is an observer in a particular task? e.g. orientation discrimination in the fovea vs. the periphery
+\end{itemize}
+\begin{center}
+\includegraphics<2->[width=30mm]{../../../figures/weber_ori_discrim.png} 
+\end{center}
+\begin{itemize}
+ \item<3> accuracy
+ \item<3> threshold
+\end{itemize}
+ \end{column}
+
+ \begin{column}{55mm}
+  \begin{itemize}
+   \item Performance can not be meaningfully considered as 'better' e.g. apparent lightness of targets
+  \end{itemize}
+\begin{center}
+\includegraphics<2->[width=30mm]{../../../figures/weber_lightness_appear.png} 
+\end{center}
+\begin{itemize}
+ \item<3> PSE
+ \item<3> scales
+\end{itemize}
+ \end{column}
+\end{columns}
+
+\end{overlayarea}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Forced-choice vs. non-forced}
+\begin{itemize}
+ \item criterion-free vs. criterion-dependent
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Detection vs. Discrimination}
+
+\begin{overlayarea}{110mm}{80mm}
+\begin{columns}[T]
+ \begin{column}{55mm}
+\begin{itemize}
+ \item is there a / where is the single stimulus?
+\end{itemize}
+\begin{center}
+\includegraphics<2->[width=30mm]{../../../figures/weber_detection.png} 
+\end{center}
+ \end{column}
+
+ \begin{column}{55mm}
+  \begin{itemize}
+   \item which of two stimuli is more 'x'?
+  \end{itemize}
+\begin{center}
+\includegraphics<2->[width=30mm]{../../../figures/weber_discrimination.png} 
+\end{center}
+ \end{column}
+\end{columns}
+\vspace{5mm}
+\begin{itemize}
+ \item<3> contrast discrimination - detection of an increment on a pedestal
+\end{itemize}
+\end{overlayarea}
+\end{frame}
+
+
+
+
+\begin{frame}
+ \frametitle{Psychophysics Summary}
+\begin{center}
+\includegraphics[width=110mm]{../../../figures/psychophysics_classification.png} 
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}
+
+\begin{center}
+\includegraphics[width=60mm]{../../../figures/adelson_demo_bar.png} 
+\end{center}
+
+ \begin{exampleblock}{Thinking}
+The two checks indicated by arrows have the same retinal luminance but differ in apparent lightness. Design an experiment to quantify the perceived difference between the two checks!
+ \end{exampleblock}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Psychometric function theories: high threshold theory}
+
+\begin{center}
+\includegraphics[width=60mm]{../../../figures/weber_2ifc.png} 
+\end{center}
+
+\begin{itemize}
+ \item 2-IFC: $S$ signal and $N$ noise 
+ \item Which of the two intervals contained the stimulus?
+ \item sensory evidence fluctuates from trial to trial $n \sim N(0,1)$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Psychometric function theories: high threshold theory}
+
+\begin{center}
+\includegraphics<1>[width=90mm]{../../../figures/signal_pmf_0_5.png} 
+\includegraphics<2>[width=90mm]{../../../figures/signal_pmf_1_5.png} 
+\includegraphics<3>[width=90mm]{../../../figures/signal_pmf_3_0.png} 
+\includegraphics<4>[width=90mm]{../../../figures/signal_pmf_4_5.png} 
+\end{center}
+\begin{itemize}
+ \item according to high-threshold theory the sensory mechanism will detect the stimulus when the amount of sensory evidence exceeds a fixed internal criterion
+ \item $F(x)$: probability that the threshold will be exceeded by a stimulus of intensity $x$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+ \frametitle{High threshold theory - decision process}
+\begin{center}
+\includegraphics<1>[width=90mm]{../../../figures/high_threshold_decision.png} 
+\end{center}
+\begin{itemize}
+%  \item $S_{I2}$ > $t$ $\Rightarrow$ stimulus was in that interval
+\item relation between observable behavior $\Psi(x)$ and unobservable decision mechanism $F(x)$
+% \item various serious of events that lead to correct and incorrect responses
+\item $\lambda:$ lapse rate
+\item $\gamma:$ guess rate
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{High threshold theory - assumptions}
+\begin{itemize}
+\item amount of sensory evidence accumulated is unavailable to the decision process
+\item probability that the threshold is exceeded when x=0, i.e. by noise is effectively zero, no false alarms
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}
+ \frametitle{References}
+\begin{small}
+\begin{itemize}
+ \item  Kingdom \& Prins, Psychophysics. A practical introduction. 
+ \item 
+ \item 
+\end{itemize}
+\end{small}
+\end{frame}
+
+
+\end{document}
