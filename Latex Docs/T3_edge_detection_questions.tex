@@ -1,0 +1,64 @@
+\documentclass[12pt,english]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+%\usepackage[amssymb]{SIunits}
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[font={color=blue},figurename=Fig.,labelfont={it}]{caption}
+
+\title{KOGW-PM-KNP: Edge detection Questions - Gaussian filtering}
+
+\begin{document}
+
+\maketitle
+
+Complete the tasks using python. Your answers should include the code you wrote and written answers to the questions with relevant output images.
+
+\section*{Task 1. Gaussian filtering of an image}
+
+\begin{enumerate}
+ \item Using the given equation for a 2D Gaussian filter, plot the output of a filter-convolved image with an appropriate sigma $\sigma$ value. \\
+ \item[]
+ \centering
+ $G(x,y) = \frac{1}{2\pi\sigma^2} e^{-\frac{x^2+y^2}{2\sigma^2}}$
+ \item[]
+ \raggedright
+ \color{black}
+ \item[] \textit{Hint: Use PIL.Image.open to import your image, and from scipy.signal use the convolve2d (with mode='same') function for the convolution.} \\
+ \item[]
+
+ \color{black} 
+ \item What type of filter results from a high $\sigma$ value? \\
+ \item[]
+ \item[]
+
+ \color{black}
+ \item Can you think of a way of extracting high frequency components from an image using only a low frequency filtered image? Plot such an image and comment on its quality
+ \item[]
+
+ \end{enumerate}
+
+\section*{Task 2. Difference of Gaussian filtering of an image}
+
+\begin{enumerate}
+ \color{black}
+ \item Create a Difference of Gaussian (DOG) filter by applying two different sigma valued Gaussian  filters to the original image and then subtracting the two outputs from each other. \\ 
+
+ \color{black}
+ \item Try to find optimum sigma values for detecting edges in an image. \\
+ \item[]
+
+ \color{black}
+ \item Comment on differences between this filter and the first. \\
+ \item[]
+
+\end{enumerate}
+
+\section*{Task 3. Phase and Fourier 1}
+
+\section*{Task 4. Phase and Fourier 2}
+
+ 
+\end{document}
