@@ -1,0 +1,34 @@
+\documentclass[12pt,english]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+%\usepackage[amssymb]{SIunits}
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+
+\title{KOGW-PM-KNP: Tutorial 2 - G{\"u}nt{\"u}rk{\"u}n`s Magpies}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+Working in a pairs, read the paper by Prior, Schwarz and G{\"u}nt{\"u}rk{\"u}n (2008) and answer the following questions:
+\begin{enumerate}
+ \item What was the research question the authors wanted to address? [1]
+ \item What experimental hypothesis did they formulate in order to test their research questions? Try to express this hypothesis in ``IF ..., then ...'' form. [2]
+ \item Identify the independent and dependent variables in the experiment. [5]
+ \item What type of realizations/operationalizations did the authors use to observe the dependent variable? (4)
+ \item What variables did the authors identify as potentially confounding factors and how did they control for them? [2]
+ \item What other potential confounds could you think of that the authors did not control and that could potentially invalidate their research? [2]
+ \item Label the design as within- or between group design. [2]
+ \item Create an example design matrix, for one subject, that is, a matrix containing one row for each trial of the experiment, and one column each for the independent variable, the control variables and the trial number. [2]
+ \end{enumerate}
+
+\item[]
+Please email me your answers (marianne.maertens@tu-berlin.de), together with a text file containing your design matrix including column names. Don't forget to include the names of both partners. \\
+Maximum marks 20/20
+
+\end{document}
