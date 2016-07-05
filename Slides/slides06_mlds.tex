@@ -58,25 +58,69 @@
 
 \begin{frame}
  \frametitle{So far ...}
-
+\begin{center}
+\includegraphics[width=100mm]{figs/l4/methods_overview_appearance.png} 
+\end{center}
 \end{frame}
 
 
 \begin{frame}
  \frametitle{Perceptual Scales}
- \begin{itemize}
-  \item psychological scales
-  \item sensory scales
-  \item transducer functions
- \end{itemize}
 
 describe the relationship between the \textcolor{blue}{perceived} and \textcolor{blue}{physical} magnitudes of a stimulus, e.g. transparency and perceived transparency
-% \includegraphics[width=50mm]{}
+
+ \begin{itemize}
+  \item[] ``psychological scales''
+  \item[] ``sensory scales''
+  \item[] ``transducer functions''
+ \end{itemize}
+\begin{center}
+\includegraphics[width=50mm]{figs/l6/perceived_transparency.png}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Matching vs. Scaling}
+\begin{overlayarea}{110mm}{70mm}
+
+\begin{columns}[T]
+ \begin{column}{55mm}
+\centering Adjust the test field so that it looks like the target
+  \begin{center}
+\includegraphics<1->[width=50mm]{figs/l6/ruler_matching.png}
+ \end{center}
+ \end{column}
+
+ \begin{column}{55mm}
+\only<2->{\centering Which of the pairs looks more different}
+  \begin{center}
+\includegraphics<2->[width=50mm]{figs/l6/ruler_mlds.png}
+ \end{center}
+ \end{column}
+\end{columns}
+\end{overlayarea}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{(Asymmetric) Matching}
+\begin{overlayarea}{110mm}{60mm}
+  \begin{center}
+\includegraphics[width=110mm]{figs/l6/internal_functions_matching.png}
+ \end{center}
+\end{overlayarea}
+\begin{itemize}
+ \item<2-> matching measures internal variables indirectly
+ \item<2-> it is prone to response strategies (Runeson!)
+\end{itemize}
 \end{frame}
 
 
 \begin{frame}
  \frametitle{Types of perceptual scales}
+\begin{overlayarea}{110mm}{60mm}
 \begin{center}
 \includegraphics[width=50mm]{figs/l6/three_contrasts.png} 
 \end{center}
@@ -86,11 +130,13 @@ describe the relationship between the \textcolor{blue}{perceived} and \textcolor
  \item  number stimulus magnitudes according to their rank order along perceptual continuum, difference between any pair of number does not necessarily correspond to magnitude of the perceptual difference, e.g. 1, 2, 3 
  \item differences between numbers do not correspond to perceived differences
 \end{itemize}
+\end{overlayarea}
 \end{frame}
 
 
 \begin{frame}
  \frametitle{Types of perceptual scales}
+\begin{overlayarea}{110mm}{60mm}
 \begin{center}
 \includegraphics[width=50mm]{figs/l6/three_contrasts.png} 
 \end{center}
@@ -100,11 +146,13 @@ describe the relationship between the \textcolor{blue}{perceived} and \textcolor
  \item interval: differences between number correspond to perceptual differences, even though numbers themselves are arbitrary, e.g. 1, 5, 6 or 4, 12, 14, an interval scale can be transformed without loss of information by the equation $aX+b$
  \item does not capture perceived relative magnitudes of the stimulus dimension
 \end{itemize}
+\end{overlayarea}
 \end{frame}
 
 
 \begin{frame}
  \frametitle{Types of perceptual scales}
+\begin{overlayarea}{110mm}{60mm}
 \begin{center}
 \includegraphics[width=50mm]{figs/l6/three_contrasts.png} 
 \end{center}
@@ -113,14 +161,16 @@ describe the relationship between the \textcolor{blue}{perceived} and \textcolor
 \begin{itemize}
  \item interval: capture relative perceived magnitudes, e.g. values of 1 and 5 indicate that the second value is five times the first 
 \end{itemize}
+\end{overlayarea}
 \end{frame}
 
 
 \begin{frame}
  \frametitle{Forced-choice vs. non-forced choice scaling procedures}
-\begin{itemize}
- \item
-\end{itemize}
+\begin{center}
+\includegraphics<1>[width=90mm]{figs/l6/appearance_fc.png} 
+\includegraphics<2>[width=90mm]{figs/l6/appearance_nonfc.png} 
+\end{center}
 \end{frame}
 
 \begin{frame}
@@ -143,8 +193,60 @@ describe the relationship between the \textcolor{blue}{perceived} and \textcolor
 \end{itemize}
 
 \begin{center}
-\includegraphics<1>[width=70mm]{figs/l6/whittle_display.png} 
+\includegraphics<1>[width=90mm]{figs/l6/scale_power_function.pdf} 
 \end{center}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Perceptual scales and internal noise}
+\begin{overlayarea}{110mm}{70mm}
+Why not construct a perceptual scale from JNDs?\\
+
+\only<2->{
+\vspace{5mm}
+\textcolor{blue}{thought experiment:}
+\begin{itemize}
+ \item start with low stimulus level, baseline
+ \item measure JND between baseline and a higher stimulus level
+ \item second baseline will be first baseline plus the JND
+ \item measure JND between second baseline and a higher stimulus
+ \item ...
+ \item series of baselines separated by JNDs that span the entire stimulus range
+ \item[=] Discrimination scale, Discrimination or Fechnerian scaling 
+\end{itemize}
+}
+\end{overlayarea}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Perceptual scales and internal noise}
+\begin{overlayarea}{110mm}{90mm}
+\begin{itemize}
+ \item JND for some criterion level, e.g. 75\% correct, depends on signal-to-noise ratio $\frac{\Delta\Psi}{\sigma}$
+\end{itemize}
+
+\begin{center}
+  \includegraphics[width=90mm]{figs/l6/additive_noise.png}
+\end{center}
+
+\begin{columns}[T]
+ \begin{column}{35mm}
+\begin{itemize}
+ \item \textit{additive}  noise
+\end{itemize}
+   \end{column}
+ \begin{column}{40mm}
+ \begin{itemize}
+ \item \textit{multiplicative} noise 
+ \end{itemize}
+ \end{column}
+\end{columns}
+\begin{itemize}
+ \item<2->[$\Rightarrow$] impossible to derive the shape of the underlying perceptual scale from JNDs
+\end{itemize}
+\end{overlayarea}
 \end{frame}
 
 
@@ -179,7 +281,7 @@ describe the relationship between the \textcolor{blue}{perceived} and \textcolor
 
 \begin{frame}
  \frametitle{Single trial example}
-\begin{overlayarea}{120mm}{70mm}
+\begin{overlayarea}{120mm}{80mm}
 \begin{itemize}
  \item initial guesses for parameters:
  \item[] $\Psi(1)=0.5$, $\Psi(2)=0.7$, $\Psi(3)=0.2$, $\Psi(4)=0.3$ 
@@ -195,9 +297,35 @@ describe the relationship between the \textcolor{blue}{perceived} and \textcolor
 \item[] 
 \item<3-> convert to z-score $\frac{D}{\sigma_d} = 1$
  \item<3-> calculate area under the standard normal distribution $\Phi(z=1)=0.8413$
+ \item[]
+ \item<4->[$\Rightarrow$] $L(S_3,S_4)|(\Psi(1),\Psi(2),\Psi(3),\Psi(4)) = (1-0.8413)$
 \end{itemize}
 \end{overlayarea}
 \end{frame}
+
+
+\begin{frame}
+ \frametitle{Across-trials likelihood}
+\begin{overlayarea}{120mm}{80mm}
+\begin{enumerate}
+\setlength{\itemsep}{10pt}
+ \item calculate likelihoods for all trials
+ \item multiply individual likelihoods across trials
+ \item compute logarithm of the result
+ \item repeat procedure for other set of $\Phi(S)$ and $\sigma_d$
+ \item select the set that gives the largest across-trials likelihood
+\end{enumerate}
+\end{overlayarea}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{MLDS in the GLM framework}
+\begin{center}
+  \includegraphics<1>[width=110mm]{figs/l6/cartoon_mlds.png}
+\end{center}
+\end{frame}
+
 
 
 
@@ -210,23 +338,41 @@ describe the relationship between the \textcolor{blue}{perceived} and \textcolor
 
 
 \begin{frame}
- \frametitle{Relationship between z-scores and probabilities}
-\begin{center}
-\includegraphics<1>[width=50mm]{../../../figures/pmf.png} 
-\end{center}
-
+ \frametitle{}
 \begin{itemize}
-\setlength{\itemsep}{5pt}
- \item subdiscipline of psychology
- \item addresses the relationship between physical stimuli, $x$, and their subjective correlates (percepts), $\Psi(x)$ 
+ \item
 \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+ \frametitle{ Scaling Applications}
+\begin{columns}[T]
+ \begin{column}{40mm}
+  \begin{itemize}
+  \setlength{\itemsep}{5pt}
+   \item<1-> Munsell Products and Applications:
+   \item[]
+   \item<1-> Standardized color palettes
+   \item<1-> Monitor calibration
+   \item<1-> Color vision tests
+   \item<1-> ...
+
+  \end{itemize}
+ \end{column}
+
+ \begin{column}{70mm}
+  \includegraphics<1>[width=70mm]{figs/l6/Munsell_Scale2.pdf}
+ \end{column}
+\end{columns}
 \end{frame}
 
 
 \begin{frame}
  \frametitle{Summary}
 \begin{itemize}
- \item 
+ \item discrimination or Fechnerian scaling is appropriate when the scale is used to predict a pattern of JNDs
 \end{itemize}
 \end{frame}
 
