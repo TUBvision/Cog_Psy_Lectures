@@ -105,7 +105,12 @@
 
 \begin{frame}
 \frametitle{Outline}
- 
+ \begin{itemize}
+ \setlength{\itemsep}{10pt}
+  \item Components of a psychophysical experiment
+  \item Classification of psychophysical experiments 
+  \item Measuring performance: The psychometric function
+ \end{itemize}
 \end{frame}
 
 
@@ -371,14 +376,15 @@ The two checks indicated by arrows have the same retinal luminance but differ in
  \frametitle{Psychometric function theories: high threshold theory}
 
 \begin{center}
-\includegraphics<1>[width=90mm]{../../../figures/signal_pmf_0_5.png} 
-\includegraphics<2>[width=90mm]{../../../figures/signal_pmf_1_5.png} 
-\includegraphics<3>[width=90mm]{../../../figures/signal_pmf_3_0.png} 
-\includegraphics<4>[width=90mm]{../../../figures/signal_pmf_4_5.png} 
+\includegraphics<1-3>[width=90mm]{../../../figures/signal_pmf_0_5.png} 
+\includegraphics<4>[width=90mm]{../../../figures/signal_pmf_1_5.png} 
+\includegraphics<5>[width=90mm]{../../../figures/signal_pmf_3_0.png} 
+\includegraphics<6>[width=90mm]{../../../figures/signal_pmf_4_5.png} 
 \end{center}
+
 \begin{itemize}
- \item according to high-threshold theory the sensory mechanism will detect the stimulus when the amount of sensory evidence exceeds a fixed internal criterion
- \item $F(x)$: probability that the threshold will be exceeded by a stimulus of intensity $x$
+ \item<2-> according to high-threshold theory the sensory mechanism will detect the stimulus when the amount of sensory evidence exceeds a fixed internal criterion
+ \item<3-> $F(x)$: probability that the threshold will be exceeded by a stimulus of intensity $x$
 \end{itemize}
 \end{frame}
 
@@ -398,11 +404,19 @@ The two checks indicated by arrows have the same retinal luminance but differ in
 
 
 \begin{frame}
- \frametitle{High threshold theory - assumptions}
+ \frametitle{High threshold theory - relevance}
 \begin{itemize}
 \item amount of sensory evidence accumulated is unavailable to the decision process
 \item probability that the threshold is exceeded when x=0, i.e. by noise is effectively zero, no false alarms
+\item[]
+\item<2-> above assumptions largely discredited
+\item<2-> psychometric function of the type $F(x; \alpha,\beta,\gamma,\lambda) = \gamma+(1-\gamma-\lambda)*F(x;\alpha,\beta)$ in practical use
+\item<2-> \textbf{threshold} as the location parameter of the psychometric function characterizes performance
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Summary}
 \end{frame}
 
 
@@ -411,9 +425,7 @@ The two checks indicated by arrows have the same retinal luminance but differ in
  \frametitle{References}
 \begin{small}
 \begin{itemize}
- \item  Kingdom \& Prins, Psychophysics. A practical introduction. 
- \item 
- \item 
+ \item   Kingdom, F.A.A. \& Prins, N. (2010). Psychophysics. A practical introduction. London, UK: Elsevier Academic Press.
 \end{itemize}
 \end{small}
 \end{frame}
