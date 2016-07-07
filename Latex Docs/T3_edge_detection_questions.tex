@@ -56,9 +56,24 @@ Complete the tasks using python. Your answers should include the code you wrote 
 
 \end{enumerate}
 
-\section*{Task 3. Phase and Fourier 1}
+\section*{Task 3. Hybrid Images}
+Using the Gaussian filter from Q1.1 and the knowledge of spatial frequencies from Q1.3, extract low spatial frequency information from the image of Albert Einstein provided and add this to the high spatial frequency information of the Marilyn Monroe. \\
 
-\section*{Task 4. Phase and Fourier 2}
+Experiment with two different sigma value Gaussian filters, until up close the combined image looks like Monroe but from afar like Einstein. \\
 
- 
+\textit{Hint: You may find the cv2 library useful for import and resizing the image} \\
+
+\section*{Task 4. Phase and Fourier Transforms}
+\begin{enumerate}
+
+\item Using the Fourier transform split the Einstein and Monroe images into their component magnitude and phase information  \\
+
+\item Recombine the components for each image using the reconstruction equation for one image below: \\
+\item[]
+$Recontruction = M(ft1)*cos(\phi(ft2)) + M(ft1)*sin(\phi(ft2))) i$ \\
+where M is magnitude and $\phi$ is phase.
+\item[]
+\textit{Hint: Use numpy.fft.fftn for the Fourier transform.}
+\end{enumerate}
+
 \end{document}
