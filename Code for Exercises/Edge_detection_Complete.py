@@ -65,14 +65,14 @@ plt.title('Output image')
 
 # Question 2
 plt.figure(2)
-plt.subplot(1,3,1)
-plt.imshow(Gaussian_filter(1,5),cmap='gray')
+plt.subplot(2,3,1)
+plt.imshow(convolve2d(im,Gaussian_filter(1,5),mode='same'),cmap='gray')
 plt.title('sigma = 1')
-plt.subplot(1,3,2)
-plt.imshow(Gaussian_filter(2,5),cmap='gray')
+plt.subplot(2,3,2)
+plt.imshow(convolve2d(im,Gaussian_filter(2,5),mode='same'),cmap='gray')
 plt.title('sigma = 2')
-plt.subplot(1,3,3)
-plt.imshow(Gaussian_filter(5,5),cmap='gray')
+plt.subplot(2,3,3)
+plt.imshow(convolve2d(im,Gaussian_filter(5,5),mode='same'),cmap='gray')
 plt.title('sigma = 5')
 
 
@@ -89,15 +89,21 @@ Task 2 - Difference of Gaussian filtering of an image
 
 """
 # Optimum sigma and N values below
-gaus1 = Gaussian_filter(1,1)
-gaus2 = Gaussian_filter(2,2)
-blur1 = convolve2d(im,gaus2,mode='same')
-blur2 = convolve2d(im,gaus1,mode='same')
+gaus1 = Gaussian_filter(1,10)
+gaus2 = Gaussian_filter(2,10)
+DOG = gaus1-gaus2
+output = convolve2d(im,DOG,mode='same')
+
 
 plt.figure(4)
-plt.imshow(blur1 - blur2, cmap='gray')
+plt.imshow(output, cmap='gray')
 
-
+# Answer to T2.3
+gaus1 = Gaussian_filter(1,10)
+gaus2 = Gaussian_filter(2,10)
+blur1 = convolve2d(im,gaus2,mode='same')
+blur2 = convolve2d(im,gaus1,mode='same')
+plt.imshow(blur1-blur2, cmap='gray')
 """
 Task 3 - Hybrid Images
 

@@ -66,13 +66,13 @@ plt.title('Output image')
 # Question 2
 plt.figure(2)
 plt.subplot(1,3,1)
-plt.imshow(Gaussian_filter(1,5),cmap='gray')
+plt.imshow(convolve2d(im,Gaussian_filter(1,5),mode='same'),cmap='gray')
 plt.title('sigma = 1')
 plt.subplot(1,3,2)
-plt.imshow(Gaussian_filter(2,5),cmap='gray')
+plt.imshow(convolve2d(im,Gaussian_filter(2,5),mode='same'),cmap='gray')
 plt.title('sigma = 2')
 plt.subplot(1,3,3)
-plt.imshow(Gaussian_filter(5,5),cmap='gray')
+plt.imshow(convolve2d(im,Gaussian_filter(5,5),mode='same'),cmap='gray')
 plt.title('sigma = 5')
 
 
@@ -88,13 +88,14 @@ plt.imshow(high_freq_image,cmap='gray')
 Task 2 - Difference of Gaussian filtering of an image
 
 """
-gaus1 = Gaussian_filter(5,5)
-gaus2 = Gaussian_filter(10,10)
-blur1 = convolve2d(im,gaus2,mode='same')
-blur2 = convolve2d(im,gaus1,mode='same')
+gaus1 = Gaussian_filter(3,10)
+gaus2 = Gaussian_filter(5,10)
+DOG = gaus1-gaus2
+output = convolve2d(im,DOG,mode='same')
+
 
 plt.figure(4)
-plt.imshow(blur1 - blur2, cmap='gray')
+plt.imshow(output, cmap='gray')
 
 
 """
@@ -151,10 +152,9 @@ phasemonroe = np.angle(ftmonroe)
 phaseeinstein = np.angle(fteinstein)
 
 # Reconstruction with phase from other image
-"""
-amp1Phase2=???
-amp2Phase1=???
-"""
+amp1Phase2=np.fft.ifftn(np.abs(ftmonroe)*np.cos(np.angle(fteinstein)) + 0j*np.abs(ftmonroe)*np.sin(np.angle(fteinstein)))
+amp2Phase1=np.fft.ifftn(np.abs(fteinstein)*np.cos(np.angle(ftmonroe)) + 0j*np.abs(fteinstein)*np.sin(np.angle(ftmonroe)))
+
 plt.figure(1)
 plt.subplot(2,4,1)
 plt.imshow(monroe,cmap='gray')
@@ -177,11 +177,11 @@ plt.axis('off')
 plt.subplot(2,4,7)
 plt.imshow(phaseeinstein,cmap='gray')
 plt.axis('off')
-#plt.subplot(2,4,4)
-#plt.imshow(np.real(amp1Phase2),cmap='gray')
-#plt.title('Recontruction with Phase from other Image')
-#plt.axis('off')
-#plt.subplot(2,4,8)
-#plt.imshow(np.real(amp2Phase1),cmap='gray')
-#plt.axis('off')
+plt.subplot(2,4,4)
+plt.imshow(np.real(amp1Phase2),cmap='gray')
+plt.title('Recontruction with Phase from other Image')
+plt.axis('off')
+plt.subplot(2,4,8)
+plt.imshow(np.real(amp2Phase1),cmap='gray')
+plt.axis('off')
 
