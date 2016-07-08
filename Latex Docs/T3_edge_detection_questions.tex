@@ -13,71 +13,65 @@
 \begin{document}
 
 
-
 \maketitle
 \raggedright
-Retinal ganglion cells and neurons in the LGN respond preferentially to dark or light spots of a particular size and neurons in V1 respond preferentially to stimuli of a certain orientation and spatial frequency. Being selective to these stimulus attributes the neurons act as filters that pass some information and not other to the next level of visual information processing. This exercise will illustrate some of the transformations that are applied to the input image by neurons or filters that are selective for different features.
- 
-Complete the tasks using python. 
+Retinal ganglion cells and neurons in the LGN respond preferentially to dark or light spots of a particular size and neurons in V1 respond preferentially to stimuli of a certain orientation and spatial frequency. Being selective to these stimulus attributes the neurons act as filters that pass some information and not other to the next level of visual information processing. This exercise will illustrate some of the transformations that are applied to the input image by neurons or filters that are selective for different features.\\
+\bigskip
+Work through the Python code provided and answer any following questions. 
 
 \section*{Task 1. Gaussian filtering of an image}
-
+ This is the equation for a 2D Gaussian, plot the output of a filter-convolved image with an appropriate $\sigma$ value.
+ 
 \begin{enumerate}
- \item Using the given equation for a 2D Gaussian filter, plot the output of a filter-convolved image with an appropriate $\sigma$ value. \\
  \item[]
  \centering
- $G(x,y) = \frac{1}{2\pi\sigma^2} e^{-\frac{x^2+y^2}{2\sigma^2}}$
- \item[]
+ $G(x,y) = \frac{1}{2\pi\sigma^2} e^{-\frac{x^2+y^2}{2\sigma^2}}$ \\
  \raggedright
- \color{black}
- \item[] \textit{Hint: Use PIL.Image.open to import your image, and from scipy.signal use the convolve2d (with mode='same') function for the convolution.} \\
+ \item What happens to the image? \\
  \item[]
-
  \color{black} 
- \item What type of filter results from a high $\sigma$ value? \\
+ \item Are these low or high-pass type filters? Describe the effect of changing $\sigma$. \\
  \item[]
- \item[]
-
  \color{black}
  \item Can you think of a way of extracting high frequency components from an image using only a low frequency filtered image? Plot such an image and comment on its quality
  \item[]
-
  \end{enumerate}
 
 \section*{Task 2. Difference of Gaussian filtering of an image}
+A Difference of Gaussian (DOG) filter is made by applying two different $\sigma$ valued Gaussian filters to the original image. These two blurred images are then subtracted from each other. In this way, the $\sigma$ values of the filters can be used to specify which frequency values are extracted.
 
 \begin{enumerate}
  \color{black}
- \item Create a Difference of Gaussian (DOG) filter by applying two different sigma valued Gaussian  filters to the original image and then subtracting the two outputs from each other. \\ 
-
- \color{black}
- \item Try to find optimum sigma values for detecting edges in an image. \\
+ \item  Read through the code. Try changing the N and $\sigma$ values. What type of filter is the DOG? \\ 
  \item[]
-
+ \color{black}
+ \item Try to find optimum $\sigma$ and N values for detecting edges in an image. Remember the two Gaussians must have different $\sigma$ values \\
+ \item[]
  \color{black}
  \item Comment on differences between this filter and the first. \\
- \item[]
-
 \end{enumerate}
 
 \section*{Task 3. Hybrid Images}
-Using the Gaussian filter from Q1.1 and the knowledge of spatial frequencies from Q1.3, extract low spatial frequency information from the image of Albert Einstein provided and add this to the high spatial frequency information of the Marilyn Monroe. \\
-
+Using the Gaussian filter from task 1, extract low spatial frequency information from the image of Albert Einstein provided and add this to the high spatial frequency information of the Marilyn Monroe. \\
+\bigskip
 Experiment with two different sigma value Gaussian filters, until up close the combined image looks like Monroe but from afar like Einstein. \\
-
-\textit{Hint: You may find the cv2 library useful for import and resizing the image} \\
+\bigskip
+What does this say about the way our visual system detects images?
 
 \section*{Task 4. Phase and Fourier Transforms}
-\begin{enumerate}
+Another way to extract image information is via the Fourier transform. Read through the code which splits the Einstein and Monroe images into their magnitude and phase components, using the Fourier transform.  \\
+\bigskip
+Recombine the components for each image using the reconstruction equation for one image below: \\
+\bigskip
+\centering
+$Recontruction = [A(ft1)*cos(\phi(ft2))] + [A(ft1)*sin(\phi(ft2))] i$ \\
+\raggedright
+where A is amplitude and $\phi$ is phase.\\
+\bigskip
+{\it Note: i is imaginary and is denoted by "0j" in python.} \\
+\bigskip
+What do you notice about the output? What does this suggest about what Fourier information our visual system relies upon?
 
-\item Using the Fourier transform split the Einstein and Monroe images into their component magnitude and phase information  \\
 
-\item Recombine the components for each image using the reconstruction equation for one image below: \\
-\item[]
-$Recontruction = M(ft1)*cos(\phi(ft2)) + M(ft1)*sin(\phi(ft2))) i$ \\
-where M is magnitude and $\phi$ is phase.
-\item[]
-\textit{Hint: Use numpy.fft.fftn for the Fourier transform.}
-\end{enumerate}
 
 \end{document}
