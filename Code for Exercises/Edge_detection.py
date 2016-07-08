@@ -39,7 +39,7 @@ def Gaussian_filter(sigma, N):
     return g
 
 # Import image
-im = Image.open("/home/will/gitrepos/Cogntive_Psychology_Lectures/Figures/Edge_detection_1/lena.jpg")
+im = Image.open("lena.jpg")
 im = np.array(im)
 
 # Define parameters and create filter
@@ -83,7 +83,7 @@ high_freq_image = ?????
 plt.figure(3)
 plt.imshow(high_freq_image,cmap='gray')
 """ 
-   
+
 """
 Task 2 - Difference of Gaussian filtering of an image
 
@@ -103,8 +103,8 @@ Task 3 - Hybrid Images
 """
 
  # Import images
-monroe=cv2.imread('/home/will/gitrepos/Cogntive_Psychology_Lectures/Figures/Edge_detection_1/monroe.jpg')
-einstein=cv2.imread('/home/will/gitrepos/Cogntive_Psychology_Lectures/Figures/Edge_detection_1/einstein.jpg')
+monroe=cv2.imread('monroe.jpg')
+einstein=cv2.imread('einstein.jpg')
 
 # Resize images
 monroe=cv2.resize(monroe, (0,0), fx=0.5, fy=0.5) 
