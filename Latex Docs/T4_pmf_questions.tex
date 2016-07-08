@@ -1,0 +1,49 @@
+\documentclass[12pt,english]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+%\usepackage[amssymb]{SIunits}
+\usepackage{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[font={color=blue},figurename=Fig.,labelfont={it}]{caption}
+
+\title{KOGW-PM-KNP: The Psychometric Function in R}
+
+\begin{document}
+
+% \maketitle
+
+\begin{center}
+\textbf{\begin{LARGE}KOGW-PM-KNP:\\ \vspace{3mm} Tutorial 4 - The psychometric function in R                                                                           \end{LARGE}}
+\end{center}
+
+\raggedright
+
+\subsection*{Task 0. Introduction to R: T4\_pmf.R}
+Explore the help facilities of R. At the command line type \texttt{help(help)} and read over the documentation. Try the commands \texttt{help.start()}, \texttt{demo(graphics)}.
+
+\subsection*{Task 1. Fitting a Psychometric Function to data}
+Go through the example fitting process provided in the tutorial. \\
+The data set \texttt{Vernier} in the package \textbf{MPDiR} contains results from an experiment on the detection of misalignment (phase difference) between two adjacent horizontal gratings that were drifting either upward or downward. Extract the subset of data for which the waveform is ``Sine" and the temporal frequency is 2 cycles/deg and the direction is upward. Fit a psychometric function to this subset of the data using \texttt{glm}. Then, plot the data points and the fitted curve on the same graph. Using the fitted object, calculate the just noticeable difference (JND) as the phase shift difference between 0.5 and 0.75 detection upward. 
+
+\subsection*{Task 2. Maximum Likelihood Criterion}
+To introduce the concept of 'likelihood' we start with a 1-parameter example. Imagine we have a coin and wish to estimate the parameter corresponding to the probability that our coin lands 'heads' on any given flip of the coin. We designate the parameter $alpha$. We perform the experiment of flipping the coin 10 times. After each flip we denote whether it landed heads (H) or tails (T). The results are HHTHTTHHTH\\
+
+The likelihood function associated with our parameter of interest is:\\
+
+$\displaystyle L(a|\textbf{y}) = \prod_{k=1}^n p(y_k|a)$
+
+where $a$ is a potential value for our parameter $\alpha$, $p(y_k|a)$ is the probability of observing outcome $y$ on trial $k$, given value $a$ for $\alpha$ and $n$ is the total number of trials. In our example it is obvious, that $p(y_k=H) = a$ and $p(y_k=T)=1-a$. The equation utilizes the multiplicative rule in probability theory for independent random events. 
+
+\begin{enumerate}
+ \item Calculate the likelihood for a=0.4.
+ \item Plot $L(a|\textbf{y})$ as a function of $a$ across the range $0\leq a \leq 1$
+ \item As the term implies, the maximum likelihood estimte of parameter $\alpha$ is the value of $a$ that maximizes the likelihood function $L(a|\textbf{y})$. For which $a$ is $L(a|\textbf{y})$ maximal in the present example.
+ \item Please comment on the difference between a likelihood and a probability.   
+\end{enumerate}
+
+
+  
+
+\end{document}
