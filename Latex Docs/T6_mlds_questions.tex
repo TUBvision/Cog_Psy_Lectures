@@ -12,21 +12,24 @@
 
 \begin{document}
 
-\maketitle
+% \maketitle
 
-Scatterplots are often used to depict the relationship between two variables of interest. One might ask the question how well human observers perceive correlations in scatterplots  for varying degrees of correlation between two variables. This is a question that MLDS can be used for. Knoblauch \& Maloney used this example to test the power of MLDS to construct perceptual scales. Complete the tasks using R. 
+\begin{center}
+\textbf{\begin{LARGE}KOGW-PM-KNP:\\ \vspace{3mm} Tutorial 6 - MLDS in R                                                                           \end{LARGE}}
+\end{center}
 
-\section*{Task 1. MLDS: experiment and analysis}
-Use the script T6\_mlds.R. It contains a function to run an example of the scatterplot experiment with the methods of quadruples. The experiment contains scatterplots of 11 different correlation values ranging from 0 to 0.98 in steps of 0.1 except for the last value which is 0.98 instead of 1.0. 
+\raggedright
+Scatterplots are often used to depict the relationship between two variables of interest. One might ask the question how well human observers perceive correlations in scatterplots  for varying degrees of correlation between two variables. This is a question that MLDS can be used for. Knoblauch \& Maloney used this example to test the power of MLDS to construct perceptual scales. Use the script T6\_mlds.R. 
+
+\subsection*{Task 1. MLDS: experiment and analysis}
+First run an example of the scatterplot experiment with the method of quadruples. The experiment contains scatterplots of $p=11$ different correlation values ranging from 0 to 0.98 in steps of 0.1 except for the last value which is 0.98 instead of 1.0. 
 The quadruples for the experiment are chosen so as to include a set of all possible non-overlapping quadruples $a<b<c<d$ for $p=11$ stimuli. For $p$ stimuli there are 
 $$\binom{p}{4} = \frac{p!}{4!*(p-4)!} = \frac{11!}{4!*7!}=330$$ 
 
-Collect a number of trials for yourself to get an idea of the experiment. Familiarize yourself with the data that are collected. Since you do not want to run the entire experiment the MLDS package comes with the data collected by one of the authors. Go through the example code that loads, analyzes and plots the data. Try to understand what is going on. What is the difference between the left and right plot and what does it mean for the interpretation of perceptual scales? 
+Having done a number of trials you got an idea of the experiment. Familiarize yourself with the data that are collected. Since you do not want to run the entire experiment, the MLDS package comes with the data collected by one of the authors. Go through the example code that loads, analyzes and plots the data. Try to understand what is going on. What is the difference between the left and right plot and what does it mean for the interpretation of perceptual scales? 
 
-
-\section*{Task 2. Simulating an observer}
-Go through the simulation process provided in the tutorial. \\
-Repeat the simulation with the method of triad. Plot the result and comment on it. Repeat the simulations (quadruples and triads) for $\sigma = 0.5$.
-
+\subsection*{Task 2. Simulating an observer}
+Go through the simulation process provided in the tutorial. \texttt{combn} is used to generate the quadrules. \\
+Repeat the simulation with the method of triads. Plot the result and comment on it. Repeat the simulations (quadruples and triads) for $\sigma = 0.5$.
 
 \end{document}
