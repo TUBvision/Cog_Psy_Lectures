@@ -128,7 +128,7 @@
 
 
 \begin{frame}
- \frametitle{Measure: contrast sensitivity}
+ \frametitle{Example: contrast sensitivity}
 
 \begin{center}
 \includegraphics<1>[width=100mm]{../../../figures/CSF_wiki.png} 
@@ -145,46 +145,37 @@
 
 
 \begin{frame}
- \frametitle{Task}
-\begin{overlayarea}{110mm}{80mm}
-\begin{columns}[T]
- \begin{column}{50mm}
+ \frametitle{Measure}
+\begin{overlayarea}{110mm}{50mm}
+\textcolor{blue}{Absolute threshold}
 \begin{itemize}
-\setlength{\itemsep}{10pt}
-\item[]
-\item[] 
-\item Method of adjustment
-\item[]
-\item[]
-\item[]
-\item<2-> 2-alternative forced-coice (2-AFC)
+ \item The minimum amount of stimulation necessary for a person to detect a stimulus \textbf{50\%} of the time. 
 \end{itemize}
- \end{column}
 
-\begin{column}{60mm}
-\begin{center}
-\includegraphics<1->[width=50mm]{../../../figures/weber_adjustment.png} 
-
-\vspace{15mm}
-
-\includegraphics<2->[width=50mm]{../../../figures/weber_2afc.png} 
-\end{center}
- \end{column}
-\end{columns}
+\only<2->{
+\vspace{5mm}
+\textcolor{blue}{Just noticeable difference - JND}
+\begin{itemize}
+ \item The smallest detectable dfference between two stimuli.
+\end{itemize}
+}
 \end{overlayarea}
 \end{frame}
 
 
 
 \begin{frame}
- \frametitle{Method \& Analysis}
-\begin{overlayarea}{110mm}{80mm}
+ \frametitle{Task}
+\begin{overlayarea}{110mm}{90mm}
 \begin{columns}[T]
  \begin{column}{50mm}
 \begin{itemize}
-\setlength{\itemsep}{10pt}
+\setlength{\itemsep}{5pt}
+\item[] 
 \item[]
-\item Adaptive procedure
+\item Method of adjustment
+\item[]
+\item[]
 \item[]
 \item[]
 \item<2-> Method of constant stimuli
@@ -192,13 +183,11 @@
  \end{column}
 
 \begin{column}{60mm}
-\begin{center}
-\includegraphics<1->[width=50mm]{../../../figures/weber_adaptive.png} 
+\includegraphics<1->[width=50mm]{../../../figures/weber_adjustment.png} 
 
-\vspace{5mm}
+\vspace{2mm}
 
 \includegraphics<2->[width=50mm]{../../../figures/weber_constant_method.png} 
-\end{center}
  \end{column}
 \end{columns}
 \end{overlayarea}
@@ -206,7 +195,39 @@
 
 
 \begin{frame}
- \frametitle{Dichotomies}
+ \frametitle{Method \& Analysis}
+\begin{overlayarea}{110mm}{90mm}
+\begin{columns}[T]
+ \begin{column}{50mm}
+\begin{itemize}
+\setlength{\itemsep}{10pt}
+\item[]
+\item[]
+\item Method of limits
+\item[]
+\item[]
+\item[]
+\item[]
+\item[]
+\item<2-> Cross modality matching
+\end{itemize}
+ \end{column}
+
+\begin{column}{60mm}
+% \includegraphics<1->[width=50mm]{../../../figures/weber_adaptive.png} 
+\includegraphics<1->[width=40mm]{figs/l4/method_limits.png} 
+
+\vspace{5mm}
+
+\includegraphics<2->[width=50mm]{figs/l4/weber_cross_modality.png} 
+ \end{column}
+\end{columns}
+\end{overlayarea}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Classifications}
 \begin{center}
  \includegraphics[width=100mm]{../../../figures/cloud_types.png}
 \end{center}
@@ -422,12 +443,9 @@ The two checks indicated by arrows have the same retinal luminance but differ in
 \end{frame}
 
 
-\begin{frame}
-\frametitle{Measuring a psychometric function}
 
-\begin{itemize}
- \item determine the perceived size of the Muller-Lyer illusion
-\end{itemize}
+\begin{frame}
+\frametitle{Measuring the magnitude of the Muller Lyer effect}
 
 \begin{overlayarea}{110mm}{70mm}
 \begin{columns}[T]
@@ -439,8 +457,7 @@ The two checks indicated by arrows have the same retinal luminance but differ in
 
 \begin{column}{60mm}
 \begin{center}
-\includegraphics<2>[width=50mm]{../../../figures/muller_lyer_pmf.png} 
-\includegraphics<3->[width=50mm]{../../../figures/muller_lyer_pmf_pse.png} 
+\includegraphics<1->[width=50mm]{../../../figures/muller_lyer_pmf_pse.png} 
 \end{center}
  \end{column}
 \end{columns}
@@ -448,8 +465,48 @@ The two checks indicated by arrows have the same retinal luminance but differ in
 \end{frame}
 
 
+
+\begin{frame}
+\frametitle{Measuring a psychometric function}
+
+\begin{overlayarea}{110mm}{80mm}
+\begin{columns}[T]
+ \begin{column}{55mm}
+\begin{center}
+\includegraphics<1->[width=50mm]{figs/l4/threshold_step_function.png} 
+\end{center}
+ \end{column}
+
+\begin{column}{55mm}
+\begin{center}
+\includegraphics<1->[width=50mm]{figs/l4/threshold_smooth_function.png} 
+\end{center}
+ \end{column}
+\end{columns}
+
+\only<2->{
+\begin{itemize}
+ \item at each stimulus level $x$, observer responds 'yes' with certain probability
+ \item probability increases with increasing $x$
+ \item $F(\alpha, \beta) = \frac{1}{1+exp(-\frac{x-\alpha}{\beta})}$
+ \item $F^{-1}$ $\rightarrow$ threshold
+\end{itemize}
+}
+
+\end{overlayarea}
+\end{frame}
+
+
 \begin{frame}
  \frametitle{Summary}
+\begin{itemize}
+\setlength{\itemsep}{5pt}
+ \item psychophysics
+ \item absolute vs difference threshold
+ \item methods of threshold estimation
+ \item classification of psychophysical tasks
+ \item theory and praxis of psychometric function fitting
+\end{itemize}
 \end{frame}
 
 
