@@ -329,60 +329,120 @@ Why not construct a perceptual scale from JNDs?\\
 \end{frame}
 
 
+
 \begin{frame}
- \frametitle{MLDS in the GLM framework}
+\frametitle{MLDS at work - constructing a lightness scale}
+
+\begin{overlayarea}{130mm}{60mm}
 \begin{center}
-  \includegraphics<1>[width=110mm]{figs/l6/cartoon_mlds.png}
+ \includegraphics[width=60mm]{figs/l6/adelson_triad.png}
+
+\vspace{5mm}
+\only<1>{
+\textit{``Which pair looks more different, $(x_1, x_2)$ or $(x_2,x_3)$?"}}
+\end{center}
+
+\only<2->{
+\begin{itemize}
+ \item[] \textbf{Decision model:} $\Delta = (\Psi(x_3)-\Psi(x_2))-(\Psi(x_2)-\Psi(x_1)) + \epsilon$, 
+ \item[] \hspace{30mm} $\epsilon \sim N(0,\sigma^2)$
+\end{itemize}}
+\end{overlayarea}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{MLDS at work - constructing a lightness scale}
+\begin{center}
+ \includegraphics[width=40mm]{figs/l6/adelson_triad.png}
+\vspace{3mm}
+
+ \includegraphics[width=100mm]{figs/l6/mlds_model.png}
 \end{center}
 \end{frame}
 
-
-
-
 \begin{frame}
- \frametitle{}
-\begin{itemize}
- \item
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}
- \frametitle{}
-\begin{itemize}
- \item
-\end{itemize}
-\end{frame}
-
-
-
-\begin{frame}
- \frametitle{ Scaling Applications}
+\frametitle{MLDS at work - constructing a lightness scale}
+\begin{overlayarea}{110mm}{60mm}
 \begin{columns}[T]
- \begin{column}{40mm}
+\begin{column}{50mm}
+\begin{center}
+ \includegraphics<1->[width=50mm]{figs/l6/mlds_scale_contrast.png}
+\end{center}
+ \end{column}
+
+\begin{column}{50mm}
+\begin{itemize}
+ \item human observers are more sensitive to differences in low intensities
+\end{itemize}
+
+\end{column}
+\end{columns}
+\end{overlayarea}
+\end{frame}
+
+\begin{frame}
+\frametitle{Relevance: electronic displays}
+\begin{overlayarea}{110mm}{80mm}
+\textbf{Gamma correction} is the name of a nonlinear operation used to encode luminance values in image systems. Gamma correction is defined by the following power-law expression:
+\begin{itemize}
+\item[] $V_{out} = V_{in}^{\gamma}$
+\item[] Mac 2.1, Windows 2.2
+\end{itemize}
+
+\begin{columns}[T]
+\begin{column}{50mm}
+\begin{center}
+ \includegraphics<1->[width=50mm]{figs/l6/mlds_scale_contrast.png}
+\end{center}
+ \end{column}
+
+\begin{column}{50mm}
+\begin{center}
+ \includegraphics<1->[width=50mm]{figs/l6/gamma_functions.png}
+\end{center}
+\end{column}
+\end{columns}
+\end{overlayarea}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{ Applications}
+\begin{overlayarea}{110mm}{70mm}
+\begin{columns}[T]
+ \begin{column}{60mm}
   \begin{itemize}
   \setlength{\itemsep}{5pt}
-   \item<1-> Munsell Products and Applications:
-   \item[]
-   \item<1-> Standardized color palettes
+   \item<1-> Standardized color palettes e.g. Munsell
    \item<1-> Monitor calibration
-   \item<1-> Color vision tests
-   \item<1-> ...
-
+   \item<2-> Colormaps in plotting software
   \end{itemize}
  \end{column}
 
- \begin{column}{70mm}
-  \includegraphics<1>[width=70mm]{figs/l6/Munsell_Scale2.pdf}
+ \begin{column}{50mm}
+  \includegraphics<1->[width=30mm]{figs/l6/munsell_color_wheel.png}
  \end{column}
 \end{columns}
+
+\begin{center}
+ \includegraphics<2->[width=100mm]{figs/l6/matplotlib_option_a.png}
+\end{center}
+\end{overlayarea}
 \end{frame}
 
 
 \begin{frame}
  \frametitle{Summary}
 \begin{itemize}
- \item discrimination or Fechnerian scaling is appropriate when the scale is used to predict a pattern of JNDs
+ \item forced-choice scaling: paired, triad, quadruple comparison
+ \item non-forced-choice scaling: partition, multi-partition scaling
+ \item[]  
+ \item discrimination (Fechnerian) scaling is appropriate when the scale is used to \textit{predict} JNDs 
+ \item to use a JND based scale to identify the true underlying perceptual scale, internal noise must be additive
+ \item[]
+ \item MLDS is relevant for a variety of applications
 \end{itemize}
 \end{frame}
 
