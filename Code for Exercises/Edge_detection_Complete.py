@@ -39,7 +39,7 @@ def Gaussian_filter(sigma, N):
     return g
 
 # Import image
-im = Image.open("/home/will/gitrepos/Cogntive_Psychology_Lectures/Figures/Edge_detection_1/lena.jpg")
+im = Image.open("/home/will/Documents/Git_Repository/Cog_Psy_Lectures/Cog_Psy_Lectures/Figures/Edge_detection/lena.jpg")
 im = np.array(im)
 
 # Define parameters and create filter
@@ -64,21 +64,31 @@ plt.title('Output image')
 
 
 # Question 2
+G1=Gaussian_filter(1,5)
+G2=Gaussian_filter(2,5)
+G5=Gaussian_filter(5,5)
+
 plt.figure(2)
 plt.subplot(2,3,1)
-plt.imshow(convolve2d(im,Gaussian_filter(1,5),mode='same'),cmap='gray')
+plt.imshow(convolve2d(im,G1,mode='same'),cmap='gray')
 plt.title('sigma = 1')
 plt.subplot(2,3,2)
-plt.imshow(convolve2d(im,Gaussian_filter(2,5),mode='same'),cmap='gray')
+plt.imshow(convolve2d(im,G2,mode='same'),cmap='gray')
 plt.title('sigma = 2')
 plt.subplot(2,3,3)
-plt.imshow(convolve2d(im,Gaussian_filter(5,5),mode='same'),cmap='gray')
+plt.imshow(convolve2d(im,G5,mode='same'),cmap='gray')
 plt.title('sigma = 5')
+plt.subplot(2,3,4)
+plt.imshow(G1,cmap='gray')
+plt.subplot(2,3,5)
+plt.imshow(G2,cmap='gray')
+plt.subplot(2,3,6)
+plt.imshow(G5,cmap='gray')
 
 
 # Question 3
 low_freq_image = convolve2d(im,gaus,mode='same')
-high_freq_image = im = low_freq_image
+high_freq_image = im - low_freq_image
 
 plt.figure(3)
 plt.imshow(high_freq_image,cmap='gray')
@@ -94,24 +104,27 @@ gaus2 = Gaussian_filter(2,10)
 DOG = gaus1-gaus2
 output = convolve2d(im,DOG,mode='same')
 
-
 plt.figure(4)
 plt.imshow(output, cmap='gray')
 
+
 # Answer to T2.3
-gaus1 = Gaussian_filter(1,10)
-gaus2 = Gaussian_filter(2,10)
 blur1 = convolve2d(im,gaus2,mode='same')
 blur2 = convolve2d(im,gaus1,mode='same')
-plt.imshow(blur1-blur2, cmap='gray')
+plt.figure(5)
+plt.subplot(2,1,1)
+plt.imshow(blur2-blur1, cmap='gray')
+plt.subplot(2,1,2)
+plt.imshow(output,cmap='gray')
+
 """
 Task 3 - Hybrid Images
 
 """
 
  # Import images
-monroe=cv2.imread('/home/will/gitrepos/Cogntive_Psychology_Lectures/Figures/Edge_detection_1/monroe.jpg')
-einstein=cv2.imread('/home/will/gitrepos/Cogntive_Psychology_Lectures/Figures/Edge_detection_1/einstein.jpg')
+monroe=cv2.imread('/home/will/Documents/Git_Repository/Cog_Psy_Lectures/Cog_Psy_Lectures/Figures/Edge_detection_1/monroe.jpg')
+einstein=cv2.imread('/home/will/Documents/Git_Repository/Cog_Psy_Lectures/Cog_Psy_Lectures/Figures//einstein.jpg')
 
 # Resize images
 monroe=cv2.resize(monroe, (0,0), fx=0.5, fy=0.5) 
@@ -132,7 +145,7 @@ high_freq_monroe=monroe - convolve2d(monroe,Gaussian_filter(s2,N),mode="same")
 
 
 # Plot images
-plt.figure(1,figsize=(30,10))
+plt.figure(5,figsize=(30,10))
 plt.subplot(1,3,1)
 plt.imshow(low_freq_einstein+high_freq_monroe,cmap='gray')
 plt.subplot(1,3,2)
