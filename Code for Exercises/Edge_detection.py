@@ -103,17 +103,15 @@ Task 3 - Hybrid Images
 
 """
 
- # Import images
-monroe=cv2.imread('monroe.jpg')
-einstein=cv2.imread('einstein.jpg')
-
-# Resize images
-monroe=cv2.resize(monroe, (0,0), fx=0.5, fy=0.5) 
-einstein=cv2.resize(einstein, (0,0), fx=0.5, fy=0.5) 
-
-# Take single colour channel
-monroe=monroe[:,:,0]
+# Import images / Resize image / Change data type / Select single color channel from RGB
+monroe=Image.open('monroe.jpg')
+einstein=Image.open('einstein.jpg')
+monroe=monroe.resize([300,400],1)
+einstein=einstein.resize([300,400],1)
+einstein = np.array(einstein)
+monroe = np.array(monroe)
 einstein=einstein[:,:,0]
+monroe=monroe[:,:,0]
 
 # Gaussian parameters
 s1=4

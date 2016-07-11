@@ -39,7 +39,7 @@ def Gaussian_filter(sigma, N):
     return g
 
 # Import image
-im = Image.open("/home/will/Documents/Git_Repository/Cog_Psy_Lectures/Cog_Psy_Lectures/Figures/Edge_detection/lena.jpg")
+im = Image.open("lena.jpg")
 im = np.array(im)
 
 # Define parameters and create filter
@@ -122,22 +122,20 @@ Task 3 - Hybrid Images
 
 """
 
- # Import images
-monroe=cv2.imread('/home/will/Documents/Git_Repository/Cog_Psy_Lectures/Cog_Psy_Lectures/Figures/Edge_detection_1/monroe.jpg')
-einstein=cv2.imread('/home/will/Documents/Git_Repository/Cog_Psy_Lectures/Cog_Psy_Lectures/Figures//einstein.jpg')
-
-# Resize images
-monroe=cv2.resize(monroe, (0,0), fx=0.5, fy=0.5) 
-einstein=cv2.resize(einstein, (0,0), fx=0.5, fy=0.5) 
-
-# Take single colour channel
-monroe=monroe[:,:,0]
+# Import images / Resize image / Change data type / Select single color channel from RGB
+monroe=Image.open('monroe.jpg')
+einstein=Image.open('einstein.jpg')
+monroe=monroe.resize([300,400],1)
+einstein=einstein.resize([300,400],1)
+einstein = np.array(einstein)
+monroe = np.array(monroe)
 einstein=einstein[:,:,0]
+monroe=monroe[:,:,0]
 
 # Gaussian parameters
 s1=4
 s2=6
-N=20
+N=10
 
 # Filtering and image extraction
 low_freq_einstein=convolve2d(einstein,Gaussian_filter(s1,N),mode="same")
