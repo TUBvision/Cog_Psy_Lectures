@@ -1,0 +1,82 @@
+id = 'vpn5'
+
+for (sess_nr in 1:4){
+
+    ## independent variables
+    ## BLOCKED
+    stim_type   = c(0,1,2,3)
+    k_stimtype  = length(stim_type)
+
+    ## RANDOMIZED
+    search_type  = c(0,1)
+    item_numbers = c(4,8,12)
+
+    repeats = 20
+    k_searchtype  = length(search_type)
+    k_itemnumbers = length(item_numbers)
+    trials_per_stim =  k_searchtype * k_itemnumbers * repeats
+
+    design = data.frame()
+    stimtype_sequence = sample(k_stimtype)-1
+
+    for (k in c(1:k_stimtype))
+        {
+
+        
+        search = gl(k_searchtype, k_itemnumbers * repeats, length=trials_per_stim, label=search_type)
+        nitems = gl(k_itemnumbers, repeats, length=trials_per_stim, label=item_numbers)
+        
+        curr_target = rep(rep(c(1,2), ea=repeats/2), 4*3)
+
+        design_per_stim = data.frame(search, nitems, curr_target)
+        random_idx      = sample(trials_per_stim)
+        design_per_stim = design_per_stim[random_idx,]
+        
+        curr_stim_level = rep(stimtype_sequence[k], trials_per_stim)
+        
+        design = rbind(design,  cbind(curr_stim_level, design_per_stim))
+        }
+
+
+    trl_n  = c(1:(k_stimtype*trials_per_stim))
+    design = cbind(trl_n, design)
+
+
+    write.table(design, file=paste('design/', id, '/design_', id, '_', sess_nr, '.txt', sep=''), quote=FALSE, append=FALSE, row.names=FALSE)
+}
+
+## independent variables
+## BLOCKED
+stim_type   = c(0,1,2,3)
+k_stimtype  = length(stim_type)
+
+## RANDOMIZED
+item_numbers = c(4,8,12)
+
+repeats = 10
+k_itemnumbers = length(item_numbers)
+trials_per_stim =  k_itemnumbers * repeats
+
+design = data.frame()
+stimtype_sequence = sample(k_stimtype)-1
+
+for (k in c(1:k_stimtype))
+    {
+    nitems = gl(k_itemnumbers, repeats, length=trials_per_stim, label=item_numbers)
+    search = rep(0, trials_per_stim)
+    curr_target = rep(rep(c(1,2), ea=repeats/2), 4*3)
+
+    design_per_stim = data.frame(search, nitems, curr_target)
+    random_idx      = sample(trials_per_stim)
+    design_per_stim = design_per_stim[random_idx,]
+    
+    curr_stim_level = rep(stimtype_sequence[k], trials_per_stim)
+    
+    design = rbind(design,  cbind(curr_stim_level, design_per_stim))
+    }
+
+
+trl_n  = c(1:(k_stimtype*trials_per_stim))
+design = cbind(trl_n, design)
+
+write.table(design, file='design/em_control.txt', quote=FALSE, append=FALSE, row.names=FALSE)

@@ -1,0 +1,5 @@
+"4" "8" "12"
+"misaligned" 1 0.95 0.9
+"aligned" 0.9 0.95 0.75
+"filled" 0.85 1 1
+"no_inducer" 0.95 1 0.9
