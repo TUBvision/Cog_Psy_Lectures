@@ -1,12 +1,20 @@
-import Image
+from PIL import Image
 import eye
 import random
 import numpy as np
 import matplotlib.pyplot as plt
 
+"""
+KEY
+
+item   - single image on final output figure
+offset
+
+"""
 def polar2cart(r, theta):
     """
-    Converts polar to cartesian coordinates
+    Converts polar coordinates to cartesian coordinates. 
+    Different frames of references in which the eye movements are described
     
     Parameters
     ----------
@@ -27,7 +35,7 @@ def polar2cart(r, theta):
 
 def get_positions(nitems, pos_offset, radius=400):
     """
-    determines [x,y] positions for search items given the number of items and 
+    Determines [x,y] positions for search items given the number of items and 
     the radius of search circle in pixel
     
     Parameters
@@ -53,7 +61,7 @@ def get_positions(nitems, pos_offset, radius=400):
     
     for k in np.arange(nitems):
         #print k, positions_off[k]
-        x, y = polar_to_cart(radius, positions_off[k])
+        x, y = polar2cart(radius, positions_off[k])
         screen_positions['x'].append(x)
         screen_positions['y'].append(y)
     return screen_positions
@@ -118,39 +126,45 @@ def create_display(log_data, trl, target=False):
     return im_base
 
 
-id = 'kvdb'
-sess = 4
-n_items = 8
+id = 'kvdb' # file label
+sess = 4    # session number [from conditions]
+n_items = 8 # number of items (figures) in stimuli
 
 conditions = {0: 'misaligned', 1: 'aligned', 2: 'filled', 3: 'noinducer'}
 
-
+# Import computer and button response data as dictionary
 bdata = eye.data_to_dict('%s/%s_%d' %(id, id, sess))
+# Find which trials the target is correctly found (Where button response = Target presence)
 bdata['correct'] = np.array(bdata['button']-6 == bdata['search'], dtype=int)
+# Import eye tracking data [ block, time, x position, y position]
 edata = np.loadtxt('%s/%s_%d_eye.txt' %(id, id, sess), skiprows=1)
+# Extract corrected condition
 bdata = eye.get_subset(bdata, 'correct', 1)
 
-for target in conditions.keys():
+
+# loop through each condition
+# for target in conditions.keys():
+
+target = 0
+sdata = eye.get_subset(bdata, 'target', target) 
+trl_select = sdata['trl'][np.logical_and(sdata['search']==0, sdata['nitems']==n_items)]
+
+f1 = plt.figure()
+
+for k, trl in enumerate(trl_select):
+    trl_disp = create_display(bdata, trl )
+    eye_trial = edata[edata[:,0] == trl,]
     
-    sdata = eye.get_subset(bdata, 'target', target)
-    trl_select = sdata['trl'][np.logical_and(sdata['search']==0, sdata['nitems']==n_items)]
-    
-    f1 = plt.figure()
-    
-    for k, trl in enumerate(trl_select):
-        trl_disp = create_display(bdata, trl )
-        eye_trial = edata[edata[:,0] == trl,]
-        
-        plt.subplot(4,5,k+1)
-        plt.imshow(trl_disp, cmap = 'gray', vmin=0, vmax=255)
-        plt.hold(True)
-        plt.plot(eye_trial[:,2]+960, eye_trial[:,3]+600, 'b.')
-        plt.axis([300, 1660, 50, 1100])
-        plt.suptitle(conditions[target])
-    
-    f1.set_size_inches([24., 13.6375])
-    
-    plt.savefig('figures/%s_%d_%s_%d.png' %(id, sess, conditions[target], n_items))
+    plt.subplot(4,5,k+1)
+    plt.imshow(trl_disp, cmap = 'gray', vmin=0, vmax=255)
+    plt.hold(True)
+    plt.plot(eye_trial[:,2]+960, eye_trial[:,3]+600, 'b.')
+    plt.axis([300, 1660, 50, 1100])
+    plt.suptitle(conditions[target])
+
+f1.set_size_inches([24., 13.6375])
+
+plt.savefig('figures/%s_%d_%s_%d.png' %(id, sess, conditions[target], n_items))
 
 #f1 = plt.figure()
 #trl_disp = create_display(bdata, trl )
