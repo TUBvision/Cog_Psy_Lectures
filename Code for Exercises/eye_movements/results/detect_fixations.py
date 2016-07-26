@@ -1,27 +1,16 @@
 import numpy as np
 import sys
 import eye
-import time
 import matplotlib.pyplot as plt
-import numpy as np
 
-# parameter
-sampling_rate = 1000.0
+# Parameters
+sampling_rate = 1000.0   # sampling rate [Hz]
+min_duration  = 100      # minimum fixation duration [ms]
+smooth_window = 30       # smoothing window [ms]
+velocity_threshold = 50  # velocity threshold [deg/sec]
+dispersion_threshold = 1 # dispersion threshold [deg visual angle]
 
-# minimum fixation duration in ms
-min_duration  = 100
-
-# smoothing window in ms
-smooth_window = 30
-
-# velocity threshold indeg/sec
-velocity_threshold = 50
-
-# dispersion threshold in deg visual angle
-dispersion_threshold = 1
-
-
-## save eye movement data for all trials
+# save eye movement data for all trials
 id = sys.argv[1]
 fix_algorithm = sys.argv[2]
 

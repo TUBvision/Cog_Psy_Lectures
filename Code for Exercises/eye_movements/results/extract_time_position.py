@@ -1,6 +1,5 @@
 import numpy as np
 import sys
-import os
 import eye
 
 id   = sys.argv[1]
