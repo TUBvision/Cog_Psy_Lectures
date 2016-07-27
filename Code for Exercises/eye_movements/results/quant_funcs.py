@@ -1,32 +1,34 @@
 import numpy as np
-import eye
+import aux_funcs as af
+import pandas as pd
 
 """
-This script contains functions use to quantify the eye movements in various ways
-Namely, extracting fixation points and saccades.
+Quantification functions for eye movement paths
 
 """
 
 __all__ = [ 'calc_veloc', 'moving_average', 'veloc_to_fix', 'velocity_based_identification','dispersion_based_identification' ]
 
-def calc_veloc(raw):
+def calc_veloc(raw_path):
     """
-    calculate velocity between sampling points as euclidian distance
+    Calculates velocity of saccades between sampling points as the euclidian
+    distance. (v=d/t, where t is the constant sampling rate)
     
     Parameters
     ----------
-    raw : 
-        contains x and y positions (2 columns)
+    raw_path : array_like (2 columns)
+        Array containing containing x and y positions of eye tracking data 
     
     Returns
     ----------
-    veoc : 
+    veloc : array_like (2 columns)
+        Array containing the velocity as the euclidean distance between subsequent 
+        points along the scan path.
     """
     veloc=[]
-    for k in range(len(raw)-1):
+    for k in range(len(raw_path)-1):
         # euclidean distance
-        ed = np.sqrt(np.sum((raw[k,:]-raw[k+1,:])**2))
-         
+        ed = np.sqrt(np.sum((raw_path[k,:]-raw_path[k+1,:])**2))
         veloc.append(ed)
     return np.array(veloc)
 
@@ -143,7 +145,7 @@ def velocity_based_identification(data_samples, velocity_threshold, duration_thr
     
     fix_index = veloc_to_fix(velocity_smooth, velocity_threshold, duration_threshold, sampling_rate)
     
-    fixations = eye.fix_index_to_fixations(data_samples, fix_index, sampling_rate)
+    fixations = af.fix_index_to_fixations(data_samples, fix_index, sampling_rate)
     return fixations
 
 
@@ -156,9 +158,9 @@ def dispersion_based_identification(data_samples, dispersion_threshold, duration
     data_samples : 
         
     dispersion_threshold : 
-        in degree visual angle
+        [deg/ visual angle]
     duration_threshold : 
-        in ms
+        [ms]
     
     Returns
     ----------
@@ -166,7 +168,7 @@ def dispersion_based_identification(data_samples, dispersion_threshold, duration
         
     """
     data_samples_or = data_samples.copy()
-    duration_threshold_in = eye.millisecs_to_nsamples(duration_threshold, sampling_rate)
+    duration_threshold_in = af.millisecs_to_nsamples(duration_threshold, sampling_rate)
     sacc_samples = 0
     fix_end   = 0
     fix_index = []
@@ -207,5 +209,73 @@ def dispersion_based_identification(data_samples, dispersion_threshold, duration
             data_samples = data_samples.take(np.arange(1, data_samples.shape[0]), axis=0)
             sacc_samples +=1
     
-    fixations = eye.fix_index_to_fixations(data_samples_or, np.array(fix_index), sampling_rate)
+    fixations = af.fix_index_to_fixations(data_samples_or, np.array(fix_index), sampling_rate)
     return fixations
+
+def detect_fixations(id,sess=4, fix_algorithm ='velocity',sampling_rate = 1000.0,min_duration  = 100,smooth_window = 30, velocity_threshold = 50,dispersion_threshold = 1  ):
+    """
+    Use pre-defined thresholding functions to detect fixations.
+    
+    Parameters
+    ----------
+    id : string
+        participant identification string
+    sess : int
+        block number default = 4
+    fix_algorithm : string
+        Either 'velocity' or 'dispersion'
+    sampling_rate : float
+        sampling rate [Hz] default = 1000.0
+    min_duration : int
+        minimum fixation duration [ms] default = 100
+    smooth_window : int
+        smoothing window [ms] default = 30
+    velocity_threshold : int
+        velocity threshold [deg/sec] default = 50
+    dispersion_threshold : int
+        dispersion threshold [deg/ visual angle] default = 1 
+    
+    Returns
+    ----------
+    """    
+    #bdata = af.data_to_dict('%s/%s_%d' %(id, id, sess))
+    edata=pd.read_csv('%s/%s_%d_eye.txt' %(id, id, sess),names=['blk','time','xpos','ypos'],skiprows=1,sep=' ')
+    edata=np.asarray(edata)
+    
+    fix_out = np.array([])
+    
+    for trl in np.arange(1, 481):
+        print('working on %s fixation_type %s' %(id, fix_algorithm))
+        eye_trial = edata[edata[:,0] == trl,]
+        # convert eye positions from pixels into deg visual angle
+        points = af.mm_to_visangle( af.pixel_to_mm( eye_trial[:,2:4] ) )
+        
+        # blink detection and exclusion
+        n_samples = points.shape[0]
+        points_clean = af.del_artefact(points, xlim=24, ylim=15)
+        n_samples_clean = points_clean.shape[0]
+        if (n_samples - n_samples_clean) > 0:
+            fixations = af.nans((1,5))
+        else:
+            if fix_algorithm == 'velocity':
+                fixations = velocity_based_identification(points, velocity_threshold, min_duration,  smooth_window, sampling_rate)
+            elif fix_algorithm == 'dispersion':
+                fixations = dispersion_based_identification(points, dispersion_threshold, min_duration,  sampling_rate)
+        
+        if fix_out.shape[0] == 0:
+            fix_out = np.c_[np.ones(fixations.shape[0]) * trl, fixations]
+        else:
+            fix_out = np.r_[fix_out, np.c_[np.repeat(trl, fixations.shape[0]), fixations]]
+    
+    
+    # save file
+    out = open('%s/%s_%d_%s.txt' %(id, id, sess, fix_algorithm), "w")
+    out.write('# minimum duration: %d\n'     %min_duration)
+    out.write('# smoothing window: %d\n'     %smooth_window)
+    out.write('# velocity threshold: %d\n'   %velocity_threshold)
+    out.write('# dispersion threshold: %d\n' %dispersion_threshold)
+    out.write('trl fix_id fdur sdur xpos ypos\n')
+    
+    np.savetxt(out, fix_out, fmt='%d %1.2f %1.2f %1.2f %1.2f %1.2f', delimiter='\t')
+    out.flush()
+    out.close()

@@ -2,9 +2,9 @@ import numpy as np
 import os
 
 """
-This script contains auxiliary functions for data manipulation and conversion
-
+Auxiliary functions for data manipulation and conversion
 """
+
 __all__ = ['get_trials', 'raw_to_trial', 'samples_to_ms', 'samples_to_ms_coord', 'transform_coord', 'data_to_dict', 'get_subset',  'fix_index_to_fixations','polar2cart']
 
 def get_trials(data, start, end):
@@ -354,3 +354,47 @@ def polar2cart(r, theta):
     x = r * np.cos(np.radians(theta))
     y = r * np.sin(np.radians(theta))
     return (x, y)
+    
+def extract_time_positions(id='mm',sess=1):    
+    """
+    Conversion function from raw data into time vs position data.
+    
+    Parameters
+    ----------    
+    id : string
+        values == ['ipa','ipr',kvdb','mm','sk','to','tp','vf']
+    sess : int
+        values == [1:5]
+        
+    Returns
+    ----------
+    writes 'ID_SESS_eye.txt' file.
+    """     
+    
+    # read raw data files into string variable d
+    d = open('%s/%s_%d.asc' %(id, id, sess)).read()
+    
+    # separate raw data into list of trials
+    raw_trials = get_trials(d, 'trial_start', 'BUTTON')
+    
+    all_trials = []
+    
+    for trl_nr, raw_trial in enumerate(raw_trials):
+        print trl_nr
+        # single trial conversion list into numpy array
+        trial_data = raw_to_trial(raw_trial)
+        
+        # single trial conversion of samples into timesteps and screen coordinates
+        trial_data[:,1:] = samples_to_ms_coord(trial_data[:,1:], 960, 600)
+        
+        all_trials.append(trial_data)
+    
+    all_trials = np.concatenate(all_trials, axis=0)
+    
+    # write dataout in text file
+    out = open('%s/%s_%d_eye.txt' %(id, id, sess), 'w')
+    out.write('blk time xpos ypos\n')
+    np.savetxt(out, all_trials, fmt='%d %1.5f %1.2f %1.2f', delimiter='\t')
+    out.flush()
+    out.close()
+    #return print "File conversion saved"

@@ -1,31 +1,30 @@
 from PIL import Image
-import auxilliary_eye as a_eye
+import aux_funcs as a_eye
 import random
 import numpy as np
 import matplotlib.pyplot as plt
-
+import pandas as pd
 """
 This script takes the results data and converts it into an appropriate format 
 for plotting
 
 --- KEY ---
 
-item   - single image on final output figure
-offset - 
-
+search item - single figure on output stimuli
+offset - rotational offset of search items 
 """
 
-def get_positions(nitems, pos_offset, radius=400):
+def get_positions(nitems, offset, radius=400):
     """
-    Determines [x,y] positions for search items given the number of items and 
-    the radius of search circle in pixel
+    Determines the [x,y] positions of search items given the number of items, 
+    any rotational offset and the radius of search circle area.
     
     Parameters
     -----------    
     nitems : int
         Number of items
-    pos_offset : int
-        Position of offset ****
+    offset : int
+        Rotational offset of items
     radius : int, optional
         Radius with default value
     
@@ -35,9 +34,8 @@ def get_positions(nitems, pos_offset, radius=400):
         x & y coordinates for each item
     
     """
-    
     positions     = np.arange(1, 360, 360/float(nitems))
-    positions_off = positions + pos_offset
+    positions_off = positions + offset
     
     screen_positions = {'x': [], 'y': []}
     
@@ -49,30 +47,37 @@ def get_positions(nitems, pos_offset, radius=400):
     return screen_positions
 
 
-def create_display(log_data, trl, target=False):
+def create_display(log_data, trial, target=False):
     """
-    
+    Plots the background image stimuli, given the condition number, number of 
+    items, item figure type and rotational offset, upon which the eye tracking 
+    path is plotted.
     
     Parameters
     -----------
-    log_data
-    trl
-    target
+    log_data : array_like
+        input data
+    trial : int
+        experimental trial number
+    target : boolean, optional
+        default - False
     
     Returns
     -----------
-    im_base
+    im_base : array_like
+        output stimuli (underlay)
     
     """
     conditions = {0: 'misaligned', 1: 'aligned', 2: 'filled', 3: 'noinducer'}
     
-    cond    = np.int(log_data['target'][log_data['trl'] == trl])
-    n_items = log_data['nitems'][log_data['trl'] == trl]
-    offset  = log_data['rot_offset'][log_data['trl'] == trl]
+    # "[log_data['trial'] == trial])" selects trial number
+    cond    = np.int(log_data['target'][log_data['trl'] == trial])
+    n_items = log_data['nitems'][log_data['trl'] == trial]
+    offset  = log_data['rot_offset'][log_data['trl'] == trial]
     positions = get_positions(n_items, offset)
     
-    targ_x = log_data['tpos_x'][log_data['trl'] == trl]
-    targ_y = log_data['tpos_y'][log_data['trl'] == trl]
+    targ_x = log_data['tpos_x'][log_data['trl'] == trial]
+    targ_y = log_data['tpos_y'][log_data['trl'] == trial]
     
     im_base = Image.new('L', (1920, 1200), 128)
     if random.randint(0,1) == 1:
@@ -121,23 +126,23 @@ bdata['correct'] = np.array(bdata['button']-6 == bdata['search'], dtype=int)
 # Extract corrected condition
 bdata = a_eye.get_subset(bdata, 'correct', 1)
 # Import eye tracking data [ block, time, x position, y position]
-edata = np.loadtxt('%s/%s_%d_eye.txt' %(id, id, sess), skiprows=1)
-
+edata=pd.read_csv('%s/%s_%d_eye.txt' %(id, id, sess),names=['blk','time','xpos','ypos'],skiprows=1,sep=' ')
+edata=np.asarray(edata)
 
 # loop through each condition, plotting each condition stimuli
 for target in conditions.keys():
     sdata = a_eye.get_subset(bdata, 'target', target) 
     # Select trials to plot
-    trl_select = sdata['trl'][np.logical_and(sdata['search']==0, sdata['nitems']==n_items)]
+    trial_select = sdata['trl'][np.logical_and(sdata['search']==0, sdata['nitems']==n_items)]
     
     # Initiate plotting
     f1 = plt.figure()
-    for k, trl in enumerate(trl_select):
-        trl_disp = create_display(bdata, trl )
-        eye_trial = edata[edata[:,0] == trl,]
+    for k, trial in enumerate(trial_select):
+        trial_disp = create_display(bdata, trial )
+        eye_trial = edata[edata[:,0] == trial,]
         
         plt.subplot(4,5,k+1)
-        plt.imshow(trl_disp, cmap = 'gray', vmin=0, vmax=255)
+        plt.imshow(trial_disp, cmap = 'gray', vmin=0, vmax=255)
         plt.hold(True)
         plt.plot(eye_trial[:,2]+960, eye_trial[:,3]+600, 'b.')
         plt.axis([300, 1660, 50, 1100])
@@ -145,12 +150,17 @@ for target in conditions.keys():
     
     f1.set_size_inches([24., 13.6375])
     
-    plt.savefig('figures/%s_%d_%s_%d.png' %(id, sess, conditions[target], n_items))
+    #Option of saving figure (Takes up to 1 minute for all conditons)
+    #plt.savefig('figures/%s_%d_%s_%d.png' %(id, sess, conditions[target], n_items))
+
+
+
+
 
 #f1 = plt.figure()
-#trl_disp = create_display(bdata, trl )
-#eye_trial = edata[edata[:,0] == trl,]
-#plt.imshow(trl_disp, cmap = 'gray', vmin=0, vmax=255)
+#trial_disp = create_display(bdata, trial )
+#eye_trial = edata[edata[:,0] == trial,]
+#plt.imshow(trial_disp, cmap = 'gray', vmin=0, vmax=255)
 #plt.hold(True)
 #plt.plot(eye_trial[:,2]+960, eye_trial[:,3]+600, 'b.')
 #plt.axis([300, 1660, 50, 1100])
