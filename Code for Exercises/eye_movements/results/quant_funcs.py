@@ -7,11 +7,11 @@ Quantification functions for eye movement paths
 
 """
 
-__all__ = [ 'calc_veloc', 'moving_average', 'veloc_to_fix', 'velocity_based_identification','dispersion_based_identification' ]
+__all__ = [ 'calc_veloc', 'moving_average', 'velocity_based_identification','dispersion_based_identification' ]
 
 def calc_veloc(raw_path):
     """
-    Calculates velocity of saccades between sampling points as the euclidian
+    Calculates point-to-point velocities along path, as the euclidian
     distance. (v=d/t, where t is the constant sampling rate)
     
     Parameters
@@ -21,7 +21,7 @@ def calc_veloc(raw_path):
     
     Returns
     ----------
-    veloc : array_like (2 columns)
+    veloc : array_like (1 columns)
         Array containing the velocity as the euclidean distance between subsequent 
         points along the scan path.
     """
@@ -56,47 +56,59 @@ def moving_average(velocity_samples, sampling_rate, window_size=None, mode=None)
     smooth_window = round(window_size * sampling_rate/1000)
     window = np.ones(smooth_window)
     smoothed_velocity = np.convolve(velocity_samples, window, mode)/smooth_window
-    return smoothed_velocity
+    return smoothed_velocity 
 
 
-def veloc_to_fix(velocity, velocity_threshold, duration_threshold, sampling_rate):
+def velocity_based_identification(data_samples, velocity_threshold, duration_threshold,  smooth_window, sampling_rate=1000.):
     """
-    velocity based fixation identification
+    Also known as velocity-threshold fixation identification (I-VT), this function
+    seperates fixations from saccades based on their point-to-point velocities
+    
+    - Low velocity for fixations : <100 deg/sec
+    - High velocity for saccades : >300 deg/sec
+    
     fixations < velocity_threshold & > duration_threshold
     
     Parameters
     ----------
-    velocity :
-        in degrees visual angle
-    velocity_threshold :
-        in degrees visual angle/sec [20 degress/sec Sen & Megaw]
-    duration_threshold :
-        in ms
-    sampling_rate :
-        
+    data_samples : array_like
+        x- and y-pos of each sample in deg visual angle
+    sampling_rate : float
+        number of samples/second
+    velocity_threshold : int
+        velocity in deg/sec < fixations [20 degress/sec Sen & Megaw]
+    duration_threshold : int
+        minimum duration of a fixation [ms]
+    smooth_window : int
+        size of smoothing window
     
     Returns
     ----------
-    fix_index : 
-        indices of fixations
+    fixations : array_like
+        Array of fixation points
+        
     """
-    nsamples = len(velocity)
+    # calculate point-to-point velocities
+    velocity = calc_veloc(data_samples * sampling_rate)
     
+    # smooth raw velocities with smoothing window
+    velocity = moving_average(velocity, sampling_rate, smooth_window, 'same')
+    
+    # isolate velocities less than velocity threshold as fixations
     fix_velocities = np.array(velocity < velocity_threshold, dtype = int)
-    
-    #raw_fix_mean = np.mean(velocity[fix_velocities==1])
-    #raw_fix_sd   = np.std(velocity[fix_velocities==1])
-    
-    #if velocity_threshold <= raw_fix_mean + 2 * raw_fix_sd:
-        #velocity_threshold = raw_fix_mean + 2 * raw_fix_sd
-        #fix_velocities = np.array(velocity < velocity_threshold, dtype = int)
-    
-    # ... after number of occurrence
+        
+    # difference between subsequent velocities (out[n] = a[n+1] - a[n])
     fixation_index = np.diff(fix_velocities)
+    
+    # locations of where a change in velocity == 1
+    # np.where()[0] gets array of locations
     fix_start = np.where(fixation_index == 1)[0]+1
-    # assumption that eye movements start with fixation
+    
+    # assumption that eye movements start with fixation (i.e. velocity zero)
     fix_start = np.r_[0, fix_start]
+    
     # add 1 index because difference-vector index shifted by one element
+    nsamples = len(velocity)    
     fix_end   = np.nonzero(fixation_index == -1)[0]+1
     fix_end   = np.r_[fix_end, nsamples]
     
@@ -111,39 +123,7 @@ def veloc_to_fix(velocity, velocity_threshold, duration_threshold, sampling_rate
     # eliminate fixations with DUR < dur_crit ms
     critical_duration = duration_threshold * sampling_rate/1000
     fix_dur   = fix_index[:,1]-fix_index[:,0]
-    fix_index = fix_index[fix_dur>critical_duration,:]
-    
-    return fix_index
-
-
-def velocity_based_identification(data_samples, velocity_threshold, duration_threshold,  smooth_window, sampling_rate=1000.):
-    """
-    
-    
-    Parameters
-    ----------
-    data_samples : 
-        x- and y-pos of each sample in deg visual angle
-    sampling_rate :
-        number of samples/second
-    velocity_threshold : 
-        velocity in deg/sec < fixations
-    duration_threshold :
-        minimum duration of a fixation
-    smooth_window : 
-        size of 
-    
-    Returns
-    ----------
-    fixations : 
-        
-    """
-    velocity = calc_veloc(data_samples * sampling_rate)
-    
-    # smooth raw velocities with smoothing window
-    velocity_smooth = moving_average(velocity, sampling_rate, smooth_window, 'same')
-    
-    fix_index = veloc_to_fix(velocity_smooth, velocity_threshold, duration_threshold, sampling_rate)
+    fix_index = fix_index[fix_dur>critical_duration,:] # Indicies of fixation
     
     fixations = af.fix_index_to_fixations(data_samples, fix_index, sampling_rate)
     return fixations
@@ -151,7 +131,11 @@ def velocity_based_identification(data_samples, velocity_threshold, duration_thr
 
 def dispersion_based_identification(data_samples, dispersion_threshold, duration_threshold, sampling_rate=1000.):
     """
-    compute fixations based on dispersion of sample points and minimum duration, disperson = mean(max_horizontal, max_vertical distance)
+    As fixations are low velocity, they tend to cluster. This method classifies
+    fixations based on maximum cluster seperation. In other words, it computes
+    fixations based on dispersion of sample points and minimum duration
+    
+    - disperson = mean(max_horizontal_distance, max_vertical_distance)
     
     Parameters
     ----------
@@ -211,6 +195,8 @@ def dispersion_based_identification(data_samples, dispersion_threshold, duration
     
     fixations = af.fix_index_to_fixations(data_samples_or, np.array(fix_index), sampling_rate)
     return fixations
+    
+
 
 def detect_fixations(id,sess=4, fix_algorithm ='velocity',sampling_rate = 1000.0,min_duration  = 100,smooth_window = 30, velocity_threshold = 50,dispersion_threshold = 1  ):
     """

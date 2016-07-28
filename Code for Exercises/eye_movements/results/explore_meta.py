@@ -23,7 +23,9 @@ eye_trial = edata[edata[:,0] == trl,]
 points = af.mm_to_visangle( af.pixel_to_mm( eye_trial[:,2:4] ) )
 
 
-## plot velocity_based_identification
+"""
+plot velocity_based_identification
+"""
 velocity_threshold=50
 min_duration=100
 smooth_window=100
@@ -33,26 +35,36 @@ plt.figure(1)
 plt.plot(points[:,0], points[:,1])
 plt.plot(fixations_veloc[:,3], fixations_veloc[:,4], 'ro')
 plt.title('Velocity based')
+plt.tick_params(axis='both',which='both', bottom='off',top='off', left='off',right='off', labelbottom='off',labelleft='off')
 
 
-## plot dispersion_based_identification
-dispersion_threshold=100 #[100-200]ms
+"""
+plot dispersion_based_identification
+"""
+dispersion_threshold=1 #[100-200]ms
 fixations_disp = qf.dispersion_based_identification(points, dispersion_threshold, min_duration, sampling_rate)
 plt.figure(2)
 plt.plot(points[:,0], points[:,1])
 plt.plot(fixations_disp[:,3], fixations_disp[:,4], 'ro')
 plt.title("Dispersion based")
+plt.tick_params(axis='both',which='both', bottom='off',top='off', left='off',right='off', labelbottom='off',labelleft='off')
 
 
-# plot moving_average_based_threshold
+"""
+plot moving_average_based_threshold
+"""
 velocity = qf.calc_veloc(points * 1000)
 velocity_smooth = qf.moving_average(velocity, sampling_rate, smooth_window, 'same')
 plt.figure(3)
-plt.plot(velocity_smooth)
-plt.plot([0,1800], np.ones(2) * velocity_threshold)
+plt.plot(velocity_smooth,label='velocity')
+plt.plot([0,1800], np.ones(2) * velocity_threshold,label='thresholded')
 velocity_smooth = qf.moving_average(velocity, sampling_rate, 40, 'same')
-plt.plot(velocity_smooth)
+plt.plot(velocity_smooth, label='smoothed')
 plt.title("Moving average based")
+plt.tick_params(axis='both',which='both', bottom='off',top='off', left='off',right='off')
+plt.legend()
+plt.ylabel("Velocity [ms]")
+plt.xlabel("Path point")
 
 
 n_items = 8
