@@ -199,229 +199,143 @@ Hit a response key as fast as possible when the probe appears!\\
 \end{frame}
 
 
+
+\begin{frame}
+\frametitle{Theories of Attention}
+\begin{overlayarea}{110mm}{75mm}
+\textbf{Spotlight model:}
+
+\begin{itemize}
+ \setlength{\itemsep}{5pt}
+ \item attention is restricted in space and moves from one point to the next
+ \item in-depth processing of areas within spotlight
+\end{itemize}
+
+\textbf{Zoom lens model:}
+
+\begin{itemize}
+ \setlength{\itemsep}{5pt}
+ \item attended region can grow or shrink depending on the size of the area to be processed in detail
+\end{itemize}
+\end{overlayarea}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Visual Search}
+\begin{overlayarea}{120mm}{70mm}
+closer approximation of deployment of attention in the real world
+\vspace{4mm}
+\begin{columns}[T]
+ \begin{column}{50mm}
+\includegraphics[width=40mm]{figs/l8/suitcase_scan.jpg}
+ \end{column}
+
+ \begin{column}{60mm} 
+\includegraphics[width=40mm]{figs/l8/car_in_parking_lot.jpg}
+ \end{column}
+\end{columns}
+
+\vspace{4mm}
+Find the \textit{target} item among \textit{distractor} items!
+\begin{itemize}
+ \item[] 
+ \item<2->[] \textbf{target} - goal of visual search
+ \item<2->[] \textbf{distractor} - any stimulus other than the target (in visual search)
+ \item<2->[] \textbf{set size} - number of items in visual search display
+\end{itemize}
+\end{overlayarea}
+\end{frame}
+
 \begin{frame}
  \frametitle{Visual search}
-\begin{overlayarea}{130mm}{80mm}
-first described by Werner Reichardt (1950)
- \begin{center}
-\includegraphics[width=60mm]{figs/l7/reichardt_detector_manycells.png}
- \end{center}
-\only<2->{
-\begin{itemize}
- \item direction-selective
- \item tuned to velocity 
- \item fast adaptation prevents response to large objects
-\end{itemize}
-}
-\end{overlayarea}
+\includegraphics<1>[width=110mm]{figs/l8/types_visual_search_displays.png}
+\includegraphics<2>[width=110mm]{figs/l8/types_visual_search.png}
 \end{frame}
 
-
-
 \begin{frame}
-
-\begin{block}{Activity}
-Explore the motion detection circuit with the activity on the following webpage \url{http://sites.sinauer.com/wolfe4e/wa08.01.html}
-\end{block}
-\end{frame}
-
-
-
-\begin{frame}
- \frametitle{Apparent motion}
- \begin{overlayarea}{110mm}{80mm}
-\begin{itemize}
-   \item Reichardt detector does not require continuous motion, responds equally to object that appears in A's receptive field, disappears and reappears in B's receptive field
-\end{itemize}
-
-\begin{columns}[T]
- \begin{column}{40mm}
-\includegraphics<1->[width=30mm]{figs/l7/reichardt_detector_single.png}
- \end{column}
-
- \begin{column}{40mm}
+ \frametitle{Visual Search}
 \begin{center}
-\includegraphics<2>[width=40mm]{figs/l7/daumenkino_daffy_1.png} 
-\includegraphics<3>[width=40mm]{figs/l7/daumenkino_daffy_2.png} 
-\includegraphics<4>[width=40mm]{figs/l7/daumenkino_daffy_3.png} 
-\includegraphics<5>[width=40mm]{figs/l7/daumenkino_daffy_4.png} 
-\end{center}
-\end{column}
-\end{columns}
-\end{overlayarea}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Apparent motion}
- \begin{itemize}
- \item illusory impression of smooth motion resulting from rapid alternation of objects that appear in different locations in rapid succession
- \item stop-motion
-\end{itemize}
-\begin{center}
-\includegraphics[width=70mm]{figs/l7/filming_shaun2.jpg} 
-\end{center}
-\end{frame}
-
-\begin{frame}
- \frametitle{The correspondence problem}
-\begin{overlayarea}{110mm}{80mm}
- \begin{columns}[T]
- \begin{column}{40mm}
-\includegraphics<1->[width=35mm]{figs/l7/correspondence_1.png}
- \end{column}
-
- \begin{column}{40mm}
-\includegraphics<1->[width=35mm]{figs/l7/correspondence_2.png} 
-\end{column}
-\end{columns}
-
-\only<2->{
-\vspace{3mm}
-How does the visual system know which circles in frame 2 correspond to which circles in frame 1?}
-\begin{center}
-\includegraphics<2>[width=40mm]{figs/l7/correspondence_3.png} 
-\end{center}
-\end{overlayarea}
-\end{frame}
-
-\begin{frame}
- \frametitle{The aperture problem}
-\begin{overlayarea}{120mm}{70mm}
-when a moving object is viewed through an aperture, the direction of motion of a local part of the object may be ambiguous 
-\begin{center}
-\includegraphics[width=80mm]{figs/l7/aperture.png} 
+\includegraphics<1>[width=100mm]{figs/l8/types_visual_search_summary.png}
 \end{center}
 
-\only<2->{
+Efficiency is quantified as average RT as a function of set size 
 \begin{itemize}
- \item Why is such an artificial situation relevant at all?
- \item<3->[$\rightarrow$] every V1 cell sees the world through a small aperture
-\end{itemize}
-}
-\end{overlayarea}
-\end{frame}
-
-
-\begin{frame}
- \frametitle{Local vs. global motion}
-\begin{overlayarea}{110mm}{70mm}
-\begin{columns}[T]
-\begin{column}{70mm}
-\includegraphics[width=70mm]{figs/l7/global_motion.png} 
-\end{column}
-
-\begin{column}{50mm}
-\only<2->{
-\begin{itemize}
- \item none of the V1 cells can tell with certainty which visual elements correspond to one another when an object moves
- \item<3->[$\rightarrow$] have another set of neurons 'listen' to the V1 neurons and integrate the potentially conflicting signals 
-\end{itemize}
-}
-\end{column}
- \end{columns}
-\end{overlayarea}
-\end{frame}
-
-\begin{frame}
- \frametitle{Where in the brain are global motion detectors?}
-\begin{center}
-\includegraphics<1>[width=90mm]{figs/l7/cortical_pathways_motion.png} 
-\includegraphics<2->[width=70mm]{figs/l7/MT_brain.png}  
-\end{center}
-\only<2->{
-\begin{itemize}
- \item area MT in non-human primates - middle temporal area
- \item human equivalent of MT localized with fMRI MT+/V5
- \item<3-> MT cells are selective for motions in one particular direction
- \item<4->[$\rightarrow$] \textit{Do MT cells correspond to global motion detector or are they also local motion detectors?}
-\end{itemize}
-}
-\end{frame}
-
-
-\begin{frame}
- \frametitle{Newsome and Pare (1988) paradigm}
-\begin{overlayarea}{110mm}{70mm}
-\begin{center}
-\includegraphics<1->[width=90mm]{figs/l7/newsome_pare.png} 
-\end{center}
-
-\begin{itemize}
- \item monkeys were trained in motion discrimination in correlated dot displays
- \item<2-> no single dot sufficient to signal overall direction of motion
- \item<2->[$\rightarrow$] to detect correlated direction a neuron must integrate information from many locations
-\end{itemize}
-\end{overlayarea}
-\end{frame}
-
-
-\begin{frame}
- \frametitle{Newsome and Pare (1988) paradigm}
-\begin{overlayarea}{110mm}{70mm}
-\begin{center}
-\includegraphics<1->[width=90mm]{figs/l7/newsome_pare.png} 
-\end{center}
-
-\begin{itemize}
- \item after training monkeys recognized motion direction when only 2-3\% od the dots moved coherently
- \item<2-> experimental \textcolor{blue}{lesion} of area MT
- \item<3-> following surgery discrimination thresholds were 10 times as high: 20\% correlated dots
- \item<3-> ability to discriminate orientation of stationary patterns was generally unimpaired
-\end{itemize}
-\end{overlayarea}
-\end{frame}
-
-\begin{frame}
- \frametitle{Salzman, Britten \& Newsome, 1990}
- \begin{itemize}
-  \item lesions may be incomplete or may affect other structures
-  \item[]
-  \item<2-> new group of monkeys was trained on motion discrimination
-  \item<2-> recording of neurons to find groups of neurons that responded to one particular direction of motion
- \item[]
- \item<3-> stimulation with leftward motion while electrically stimulating neurons that respond to rightward motion
- \item<3->[?]
- \item<4-> monkeys reported motion in the stimulated neuron's preferred direction  
- \end{itemize}
-\end{frame}
-
-\begin{frame}
- \frametitle{Motion aftereffects (MAE)}
-\begin{overlayarea}{110mm}{70mm}
- \begin{itemize}
-  \item converging evidence for motion perception in humans?
- \item<2-> MAE: illusion of motion of a stationary object that occurs after prolonged exposure to a moving object
+  \item search slope, $\frac{ms}{item}$
+  \item the larger the slope the less efficient the search
  \end{itemize}
 
-\only<3->{
-\begin{block}{Activity}
-Explore the motion aftereffect with the activity on the following webpage \url{http://sites.sinauer.com/wolfe4e/wa08.04.html}
-\begin{itemize}
- \item What happens when you adapt to downward motion and then look at something moving horizontally? Make a prediction and then test your hypothesis!
- \item Adapt for 15 s ro rightward motion with your right eye open and left eye closed. After adaptation quickly switch your eyes when looking at the test. 
-\end{itemize}
+\end{frame}
 
+
+
+\begin{frame}
+\begin{block}{Activity}
+Quantify your visual search performance in the activity on the following webpage \url{http://sites.sinauer.com/wolfe4e/wa07.02.html}
  \end{block}
-}
-\end{overlayarea}
 \end{frame}
 
 
 \begin{frame}
- \frametitle{}
+ \frametitle{Using search efficiency to explore visual processing}
 \begin{overlayarea}{110mm}{70mm}
 \begin{columns}[T]
-\begin{column}{70mm}
+\begin{column}{40mm}
+\includegraphics<1>[width=40mm]{figs/l8/feature_search.png}
+\includegraphics<2>[width=40mm]{figs/l8/enns_rensink.png}
 \end{column}
 
-\begin{column}{50mm}
+\begin{column}{70mm}
+\begin{itemize}
+ \item \textbf{feature search} - target defined by presence of single feature
+ \item ''pop out`` of the target because of its saliency
+ \item color or orientation can be processed at once - parallel search 
+ \item[]
+ \item<2-> look for the odd one out
+ \item<2-> overall shape and orientation same, 
+ \item<2-> difference in perceived depth \textbf{feature difference}
+\end{itemize}
 \end{column}
  \end{columns}
 \end{overlayarea}
 \end{frame}
 
 
+\begin{frame}
+ \frametitle{Using search efficiency to explore visual processing}
+\begin{overlayarea}{110mm}{70mm}
+\begin{columns}[T]
+\begin{column}{40mm}
+\includegraphics<1>[width=40mm]{figs/l8/serial_search.png}
+\includegraphics<2>[width=40mm]{figs/l8/chinese_search.png}
+\end{column}
+
+\begin{column}{70mm}
+\begin{itemize}
+ \item \textbf{conjunction search} - target defined by co-occurrence of more than one feature
+ \item each additional distractor adds a fixed amount of search time
+ \item slope in trials without target twice as large as slope in trials with target 
+ \item[$\rightarrow$] serial self-terminating search
+ \item[]
+ \item<2-> hardest search except you read Chinese
+ \item<2-> T-among-L is simpler ''target hides in plain sight''
+\end{itemize}
+\end{column}
+ \end{columns}
+\end{overlayarea}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Real-world searches}
+\begin{center}
+\includegraphics<1>[width=80mm]{figs/l8/real_world_search.png}
+\end{center}
+In real-life search is often \textbf{guided:} Attention is restricted to a subset of possible items on the basis of information about the target's basic features (e.g., its color)
+\end{frame}
+
+\begin{frame}
+ \frametitle{Attending in time}
+\end{frame}
 
 
 \begin{frame}

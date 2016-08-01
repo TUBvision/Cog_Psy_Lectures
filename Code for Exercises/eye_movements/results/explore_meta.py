@@ -16,6 +16,7 @@ edata=pd.read_csv('%s/%s_%d_eye.txt' %(id, id, sess),names=['blk','time','xpos',
 edata=np.asarray(edata)
 
 trl = 1
+
 # single trial data
 eye_trial = edata[edata[:,0] == trl,]
 
