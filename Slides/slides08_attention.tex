@@ -1,0 +1,437 @@
+\documentclass[]{beamer}
+% \geometry{papersize={16cm,9.60cm}}
+\usepackage{etex}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{multimedia}
+\usetheme{Boadilla}
+\usepackage{graphicx}
+\usepackage{url}
+%\usepackage{inputenc}
+
+% \mode<presentation>
+% {
+%   \usetheme{default}
+%   \setbeamercovered{transparent}
+% }
+
+
+% {\vskip5pt}
+
+%% customize layout, bullet points navigation toolbar
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+\setbeamertemplate{enumerate items}[default]
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize items}[circle]
+\setbeamercolor{enumerate item}{fg=black}
+
+\setbeamertemplate{footline}{}
+\setbeamersize{text margin left = 2.0em}
+\setbeamersize{text margin right = 2.0em}
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+\setbeamertemplate{navigation symbols}{}
+
+\title{ Cognitive (Neuro) Psychology }
+\subtitle{VIII. Attention}
+\author{ Marianne Maertens }
+\institute[TU Berlin]{Technische Universit\"at Berlin}
+\date{September 2016}
+
+\begin{document}
+\setbeamertemplate{enumerate items}[default]
+\setbeamertemplate{headline}
+
+\frame{\titlepage}
+
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Layout}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+
+\begin{frame}
+ \begin{center}
+\includegraphics<1>[width=50mm]{figs/l8/serial_reading.png}
+\includegraphics<2->[width=100mm]{figs/l8/waldo.png}
+ \end{center} 
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Attention}
+\begin{overlayarea}{110mm}{80mm}
+ \begin{itemize}
+  \item a very large set of selective processes in the brain
+ \item[] 
+ \item<2-> impossible to handle all inputs at once
+ \item<2-> nervous system has evolved mechanisms that are able to restrict processing to a subset of things, places, ideas, moments in time
+ \end{itemize}
+\only<3->{
+\textcolor{blue}{Selective Attention}
+ \begin{itemize}
+  \item form of attention involved when processing is restricted to a subset of possible stimuli
+\end{itemize}
+}
+ \begin{center}
+ \end{center} 
+\end{overlayarea}
+ \end{frame}
+
+\begin{frame}
+\frametitle{Selective Attention}
+ \begin{center}
+\includegraphics[width=35mm]{figs/l1/dichotic_listening_task.png}
+ \end{center} 
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Overview}
+\begin{itemize}[<+->]
+  \setlength{\itemsep}{5pt}
+ \item Experimental paradigms for studying attention
+ \begin{itemize}
+  \item in space
+  \item in time
+ \end{itemize}
+ \item Physiological basis of attention
+ \item Disorders of attention
+ \item Scene perception
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Attention}
+\begin{overlayarea}{110mm}{80mm}
+\begin{itemize}
+ \item<1-> not a single \textit{thing} and does not have a single locus in the brain
+ \item[]
+ \item<2-> external vs. internal
+ \item<3-> overt vs. covert
+ \item<4-> focussed vs. divided
+ \item<5-> sustained
+ \item<6-> selective
+\end{itemize}
+\end{overlayarea}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Selection in space}
+\begin{overlayarea}{130mm}{75mm}
+\only<1->{
+\begin{itemize}
+ \item[] What does it mean to ``pay attention``?
+\end{itemize}
+}
+\only<2->{
+\begin{center}
+\textcolor{blue}{Cueing paradigm} \begin{scriptsize}(Posner, 1980) \end{scriptsize}
+
+\includegraphics[width=80mm]{figs/l8/cueing_basic.png}
+\end{center}
+}
+
+\only<3->{
+Hit a response key as fast as possible when the probe appears!\\
+\textbf{Dependent variable:} reaction time (RT)
+}
+\end{overlayarea}
+\end{frame}
+
+
+
+\begin{frame}
+ \frametitle{Selection in space}
+\begin{overlayarea}{110mm}{75mm}
+
+\begin{center}
+\textcolor{blue}{Cueing paradigm} \begin{scriptsize}(Posner, 1980) \end{scriptsize}
+\end{center}
+\begin{columns}[T]
+ \begin{column}{50mm}
+\centering valid
+\includegraphics[width=60mm]{figs/l8/cueing_valid.png}
+ \end{column}
+
+ \begin{column}{80mm}
+\centering invalid
+ 
+\includegraphics[width=60mm]{figs/l8/cueing_invalid.png}
+ \end{column}
+\end{columns}
+
+\vspace{5mm}
+\begin{itemize}
+ \item<2->[Cue] stimulus that indicates where (or what) subsequent stimulus might be. Valid (giving correct information), invalid or neutral.
+ \item<3-> exogeneous/peripheral vs. endogeneous/symbolic cues
+ \item<4->[SOA] stimulus onset asynchrony  - time between onset of one stimulus and onset of another.
+\end{itemize}
+\end{overlayarea}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Selection in scace}
+\begin{overlayarea}{110mm}{75mm}
+\begin{center}
+\textcolor{blue}{Cueing paradigm} \begin{scriptsize}(Posner, 1980) \end{scriptsize}
+\end{center}
+
+ \begin{center}
+\includegraphics<1-2>[width=70mm]{figs/l8/cueing_results.png}
+ \end{center}
+\begin{itemize}
+ \item benefit from valid cue: $RT_{invalid} - RT_{valid}$
+ \item increases with processing time for cue 
+ \item peripheral cue is processed quicker
+\end{itemize}
+\end{overlayarea}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Visual search}
+\begin{overlayarea}{130mm}{80mm}
+first described by Werner Reichardt (1950)
+ \begin{center}
+\includegraphics[width=60mm]{figs/l7/reichardt_detector_manycells.png}
+ \end{center}
+\only<2->{
+\begin{itemize}
+ \item direction-selective
+ \item tuned to velocity 
+ \item fast adaptation prevents response to large objects
+\end{itemize}
+}
+\end{overlayarea}
+\end{frame}
+
+
+
+\begin{frame}
+
+\begin{block}{Activity}
+Explore the motion detection circuit with the activity on the following webpage \url{http://sites.sinauer.com/wolfe4e/wa08.01.html}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}
+ \frametitle{Apparent motion}
+ \begin{overlayarea}{110mm}{80mm}
+\begin{itemize}
+   \item Reichardt detector does not require continuous motion, responds equally to object that appears in A's receptive field, disappears and reappears in B's receptive field
+\end{itemize}
+
+\begin{columns}[T]
+ \begin{column}{40mm}
+\includegraphics<1->[width=30mm]{figs/l7/reichardt_detector_single.png}
+ \end{column}
+
+ \begin{column}{40mm}
+\begin{center}
+\includegraphics<2>[width=40mm]{figs/l7/daumenkino_daffy_1.png} 
+\includegraphics<3>[width=40mm]{figs/l7/daumenkino_daffy_2.png} 
+\includegraphics<4>[width=40mm]{figs/l7/daumenkino_daffy_3.png} 
+\includegraphics<5>[width=40mm]{figs/l7/daumenkino_daffy_4.png} 
+\end{center}
+\end{column}
+\end{columns}
+\end{overlayarea}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Apparent motion}
+ \begin{itemize}
+ \item illusory impression of smooth motion resulting from rapid alternation of objects that appear in different locations in rapid succession
+ \item stop-motion
+\end{itemize}
+\begin{center}
+\includegraphics[width=70mm]{figs/l7/filming_shaun2.jpg} 
+\end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{The correspondence problem}
+\begin{overlayarea}{110mm}{80mm}
+ \begin{columns}[T]
+ \begin{column}{40mm}
+\includegraphics<1->[width=35mm]{figs/l7/correspondence_1.png}
+ \end{column}
+
+ \begin{column}{40mm}
+\includegraphics<1->[width=35mm]{figs/l7/correspondence_2.png} 
+\end{column}
+\end{columns}
+
+\only<2->{
+\vspace{3mm}
+How does the visual system know which circles in frame 2 correspond to which circles in frame 1?}
+\begin{center}
+\includegraphics<2>[width=40mm]{figs/l7/correspondence_3.png} 
+\end{center}
+\end{overlayarea}
+\end{frame}
+
+\begin{frame}
+ \frametitle{The aperture problem}
+\begin{overlayarea}{120mm}{70mm}
+when a moving object is viewed through an aperture, the direction of motion of a local part of the object may be ambiguous 
+\begin{center}
+\includegraphics[width=80mm]{figs/l7/aperture.png} 
+\end{center}
+
+\only<2->{
+\begin{itemize}
+ \item Why is such an artificial situation relevant at all?
+ \item<3->[$\rightarrow$] every V1 cell sees the world through a small aperture
+\end{itemize}
+}
+\end{overlayarea}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Local vs. global motion}
+\begin{overlayarea}{110mm}{70mm}
+\begin{columns}[T]
+\begin{column}{70mm}
+\includegraphics[width=70mm]{figs/l7/global_motion.png} 
+\end{column}
+
+\begin{column}{50mm}
+\only<2->{
+\begin{itemize}
+ \item none of the V1 cells can tell with certainty which visual elements correspond to one another when an object moves
+ \item<3->[$\rightarrow$] have another set of neurons 'listen' to the V1 neurons and integrate the potentially conflicting signals 
+\end{itemize}
+}
+\end{column}
+ \end{columns}
+\end{overlayarea}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Where in the brain are global motion detectors?}
+\begin{center}
+\includegraphics<1>[width=90mm]{figs/l7/cortical_pathways_motion.png} 
+\includegraphics<2->[width=70mm]{figs/l7/MT_brain.png}  
+\end{center}
+\only<2->{
+\begin{itemize}
+ \item area MT in non-human primates - middle temporal area
+ \item human equivalent of MT localized with fMRI MT+/V5
+ \item<3-> MT cells are selective for motions in one particular direction
+ \item<4->[$\rightarrow$] \textit{Do MT cells correspond to global motion detector or are they also local motion detectors?}
+\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Newsome and Pare (1988) paradigm}
+\begin{overlayarea}{110mm}{70mm}
+\begin{center}
+\includegraphics<1->[width=90mm]{figs/l7/newsome_pare.png} 
+\end{center}
+
+\begin{itemize}
+ \item monkeys were trained in motion discrimination in correlated dot displays
+ \item<2-> no single dot sufficient to signal overall direction of motion
+ \item<2->[$\rightarrow$] to detect correlated direction a neuron must integrate information from many locations
+\end{itemize}
+\end{overlayarea}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Newsome and Pare (1988) paradigm}
+\begin{overlayarea}{110mm}{70mm}
+\begin{center}
+\includegraphics<1->[width=90mm]{figs/l7/newsome_pare.png} 
+\end{center}
+
+\begin{itemize}
+ \item after training monkeys recognized motion direction when only 2-3\% od the dots moved coherently
+ \item<2-> experimental \textcolor{blue}{lesion} of area MT
+ \item<3-> following surgery discrimination thresholds were 10 times as high: 20\% correlated dots
+ \item<3-> ability to discriminate orientation of stationary patterns was generally unimpaired
+\end{itemize}
+\end{overlayarea}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Salzman, Britten \& Newsome, 1990}
+ \begin{itemize}
+  \item lesions may be incomplete or may affect other structures
+  \item[]
+  \item<2-> new group of monkeys was trained on motion discrimination
+  \item<2-> recording of neurons to find groups of neurons that responded to one particular direction of motion
+ \item[]
+ \item<3-> stimulation with leftward motion while electrically stimulating neurons that respond to rightward motion
+ \item<3->[?]
+ \item<4-> monkeys reported motion in the stimulated neuron's preferred direction  
+ \end{itemize}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Motion aftereffects (MAE)}
+\begin{overlayarea}{110mm}{70mm}
+ \begin{itemize}
+  \item converging evidence for motion perception in humans?
+ \item<2-> MAE: illusion of motion of a stationary object that occurs after prolonged exposure to a moving object
+ \end{itemize}
+
+\only<3->{
+\begin{block}{Activity}
+Explore the motion aftereffect with the activity on the following webpage \url{http://sites.sinauer.com/wolfe4e/wa08.04.html}
+\begin{itemize}
+ \item What happens when you adapt to downward motion and then look at something moving horizontally? Make a prediction and then test your hypothesis!
+ \item Adapt for 15 s ro rightward motion with your right eye open and left eye closed. After adaptation quickly switch your eyes when looking at the test. 
+\end{itemize}
+
+ \end{block}
+}
+\end{overlayarea}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{}
+\begin{overlayarea}{110mm}{70mm}
+\begin{columns}[T]
+\begin{column}{70mm}
+\end{column}
+
+\begin{column}{50mm}
+\end{column}
+ \end{columns}
+\end{overlayarea}
+\end{frame}
+
+
+
+
+\begin{frame}
+ \frametitle{References}
+\begin{small}
+\begin{itemize}
+ \item  Wolfe, J.M., Kluender, K.R. \& Levi, D.M. (2012).\textit{Sensation \& Perception}. Sinauer Associates: Sunderland, MA. 
+\end{itemize}
+\end{small}
+\end{frame}
+
+
+\end{document}
