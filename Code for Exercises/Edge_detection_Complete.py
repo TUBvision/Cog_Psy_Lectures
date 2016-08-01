@@ -91,9 +91,17 @@ low_freq_image = convolve2d(im,gaus,mode='same')
 high_freq_image = im - low_freq_image
 
 plt.figure(3)
+plt.subplot(1,3,1)
+plt.imshow(im,cmap='gray')
+plt.title('original image')
+plt.subplot(1,3,2)
+plt.imshow(low_freq_image, cmap='gray')
+plt.title('low frequency image')
+plt.subplot(1,3,3)
 plt.imshow(high_freq_image,cmap='gray')
+plt.title('original - low frequency image')
+plt.savefig('task_1_3.png')
 
-   
 """
 Task 2 - Difference of Gaussian filtering of an image
 
@@ -105,8 +113,15 @@ DOG = gaus1-gaus2
 output = convolve2d(im,DOG,mode='same')
 
 plt.figure(4)
+plt.subplot(1,3,1)
+plt.imshow(DOG,cmap='gray')
+plt.title('DOG  filter')
+plt.subplot(1,3,2)
+plt.plot(DOG[20,])
+plt.title('cross-section through DOG')
+plt.subplot(1,3,3)
 plt.imshow(output, cmap='gray')
-
+plt.title('DOG filtered image')
 
 # Answer to T2.3
 blur1 = convolve2d(im,gaus2,mode='same')
@@ -129,6 +144,7 @@ monroe=monroe.resize([300,400],1)
 einstein=einstein.resize([300,400],1)
 einstein = np.array(einstein)
 monroe = np.array(monroe)
+
 einstein=einstein[:,:,0]
 monroe=monroe[:,:,0]
 
@@ -143,13 +159,16 @@ high_freq_monroe=monroe - convolve2d(monroe,Gaussian_filter(s2,N),mode="same")
 
 
 # Plot images
-plt.figure(5,figsize=(30,10))
+plt.figure(5)
 plt.subplot(1,3,1)
 plt.imshow(low_freq_einstein+high_freq_monroe,cmap='gray')
+plt.title('hybrid: low freq einstein')
 plt.subplot(1,3,2)
 plt.imshow(low_freq_einstein, cmap='gray')
+plt.title('einstein: low pass')
 plt.subplot(1,3,3)
 plt.imshow(high_freq_monroe,cmap='gray')
+plt.title('monroe: high pass')
 
 
 """

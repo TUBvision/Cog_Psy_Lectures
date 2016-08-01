@@ -56,18 +56,61 @@
   \end{frame}
 }
 
-\section{Definition}
+
+\begin{frame}
+ \frametitle{What is real?}
+\begin{columns}[T]
+\begin{column}{60mm}
+``What is real? How do you define real? If you're talking about what you can feel, what you can smell, what you can taste and see, then real is simply electrical signals interpreted by your brain. This is the world that you know.'' - Morpheus' answer to Neo in \textit{The Matrix}, 1999
+\end{column}
+\begin{column}{50mm}
+\includegraphics<1>[width=45mm]{figs/l4/matrix_real.png} 
+\end{column}
+\end{columns}
+\end{frame}
+
+
+
 \begin{frame}
  \frametitle{Psychophysics}
 \begin{center}
-\includegraphics<1>[width=50mm]{../figures/pmf.png} 
+\includegraphics<1->[width=50mm]{../../../figures/pmf.png} 
 \end{center}
 
 \begin{itemize}
 \setlength{\itemsep}{5pt}
- \item subdiscipline of psychology
- \item addresses the relationship between physical stimuli, $x$, and their subjective correlates (percepts), $\Psi(x)$ 
+ \item<2-> subdiscipline of psychology
+ \item<3-> addresses the relationship between physical stimuli, $x$, and their subjective correlates (percepts), $\Psi(x)$ 
 \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Psychophysics}
+
+\begin{columns}[T]
+\begin{column}{60mm}
+\includegraphics<1>[width=45mm]{figs/l4/soundwave.png} 
+
+\includegraphics<1>[width=45mm]{figs/l4/smell.jpg} 
+
+\end{column}
+\begin{column}{50mm}
+\includegraphics<1>[width=45mm]{figs/l4/wavelength.jpg} 
+
+\includegraphics<1>[width=40mm]{figs/l4/fire_stim.png} 
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Outline}
+ \begin{itemize}
+ \setlength{\itemsep}{10pt}
+  \item Components of a psychophysical experiment
+  \item Classification of psychophysical experiments 
+  \item Measuring performance: The psychometric function
+ \end{itemize}
 \end{frame}
 
 
@@ -85,10 +128,10 @@
 
 
 \begin{frame}
- \frametitle{Measure: contrast sensitivity}
+ \frametitle{Example: contrast sensitivity}
 
 \begin{center}
-\includegraphics<1>[width=100mm]{../figures/CSF_wiki.png} 
+\includegraphics<1>[width=100mm]{../../../figures/CSF_wiki.png} 
 \end{center}
 \end{frame}
 
@@ -96,52 +139,43 @@
 \begin{frame}
  \frametitle{Stimulus}
 \begin{center}
-\includegraphics<1>[width=100mm]{../figures/weber_contrast_stimulus.png} 
+\includegraphics<1>[width=100mm]{../../../figures/weber_contrast_stimulus.png} 
 \end{center}
 \end{frame}
 
 
 \begin{frame}
- \frametitle{Task}
-\begin{overlayarea}{110mm}{80mm}
-\begin{columns}[T]
- \begin{column}{50mm}
+ \frametitle{Measure}
+\begin{overlayarea}{110mm}{50mm}
+\textcolor{blue}{Absolute threshold}
 \begin{itemize}
-\setlength{\itemsep}{10pt}
-\item[]
-\item[] 
-\item Method of adjustment
-\item[]
-\item[]
-\item[]
-\item<2-> 2-alternative forced-coice (2-AFC)
+ \item The minimum amount of stimulation necessary for a person to detect a stimulus \textbf{50\%} of the time. 
 \end{itemize}
- \end{column}
 
-\begin{column}{60mm}
-\begin{center}
-\includegraphics<1->[width=50mm]{../figures/weber_adjustment.png} 
-
-\vspace{15mm}
-
-\includegraphics<2->[width=50mm]{../figures/weber_2afc.png} 
-\end{center}
- \end{column}
-\end{columns}
+\only<2->{
+\vspace{5mm}
+\textcolor{blue}{Just noticeable difference - JND}
+\begin{itemize}
+ \item The smallest detectable dfference between two stimuli.
+\end{itemize}
+}
 \end{overlayarea}
 \end{frame}
 
 
 
 \begin{frame}
- \frametitle{Method \& Analysis}
-\begin{overlayarea}{110mm}{80mm}
+ \frametitle{Task}
+\begin{overlayarea}{110mm}{90mm}
 \begin{columns}[T]
  \begin{column}{50mm}
 \begin{itemize}
-\setlength{\itemsep}{10pt}
+\setlength{\itemsep}{5pt}
+\item[] 
 \item[]
-\item Adaptive procedure
+\item Method of adjustment
+\item[]
+\item[]
 \item[]
 \item[]
 \item<2-> Method of constant stimuli
@@ -149,24 +183,53 @@
  \end{column}
 
 \begin{column}{60mm}
-\begin{center}
-\includegraphics<1->[width=50mm]{../figures/weber_adaptive.png} 
+\includegraphics<1->[width=50mm]{../../../figures/weber_adjustment.png} 
 
-\vspace{5mm}
+\vspace{2mm}
 
-\includegraphics<2->[width=50mm]{../figures/weber_constant_method.png} 
-\end{center}
+\includegraphics<2->[width=50mm]{../../../figures/weber_constant_method.png} 
  \end{column}
 \end{columns}
 \end{overlayarea}
 \end{frame}
 
 
-\section{Classification of Experiments}
 \begin{frame}
- \frametitle{Dichotomies}
+ \frametitle{Method \& Analysis}
+\begin{overlayarea}{110mm}{90mm}
+\begin{columns}[T]
+ \begin{column}{50mm}
+\begin{itemize}
+\setlength{\itemsep}{10pt}
+\item[]
+\item[]
+\item Method of limits
+\item[]
+\item[]
+\item[]
+\item[]
+\item[]
+\item<2-> Cross modality matching
+\end{itemize}
+ \end{column}
+
+\begin{column}{60mm}
+% \includegraphics<1->[width=50mm]{../../../figures/weber_adaptive.png} 
+\includegraphics<1->[width=40mm]{figs/l4/method_limits.png} 
+
+\vspace{5mm}
+
+\includegraphics<2->[width=50mm]{figs/l4/weber_cross_modality.png} 
+ \end{column}
+\end{columns}
+\end{overlayarea}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Classifications}
 \begin{center}
- \includegraphics[width=100mm]{../figures/cloud_types.png}
+ \includegraphics[width=100mm]{../../../figures/cloud_types.png}
 \end{center}
 
 \begin{itemize}
@@ -189,7 +252,7 @@
 \begin{columns}[T]
  \begin{column}{50mm}
 \begin{center}
-\includegraphics<1->[width=30mm]{../figures/muller_lyer.png} 
+\includegraphics<1->[width=30mm]{../../../figures/muller_lyer.png} 
 \end{center}
 \begin{itemize}
  \item<3> PSE: point of subjective equality
@@ -199,8 +262,8 @@
 
 \begin{column}{60mm}
 \begin{center}
-\includegraphics<2>[width=50mm]{../figures/muller_lyer_pmf.png} 
-\includegraphics<3->[width=50mm]{../figures/muller_lyer_pmf_pse.png} 
+\includegraphics<2>[width=50mm]{../../../figures/muller_lyer_pmf.png} 
+\includegraphics<3->[width=50mm]{../../../figures/muller_lyer_pmf_pse.png} 
 \end{center}
  \end{column}
 \end{columns}
@@ -228,7 +291,7 @@
  \item How good is an observer in a particular task? e.g. orientation discrimination in the fovea vs. the periphery
 \end{itemize}
 \begin{center}
-\includegraphics<2->[width=30mm]{../figures/weber_ori_discrim.png} 
+\includegraphics<2->[width=30mm]{../../../figures/weber_ori_discrim.png} 
 \end{center}
 \begin{itemize}
  \item<3> accuracy
@@ -241,7 +304,7 @@
    \item Performance can not be meaningfully considered as 'better' e.g. apparent lightness of targets
   \end{itemize}
 \begin{center}
-\includegraphics<2->[width=30mm]{../figures/weber_lightness_appear.png} 
+\includegraphics<2->[width=30mm]{../../../figures/weber_lightness_appear.png} 
 \end{center}
 \begin{itemize}
  \item<3> PSE
@@ -272,8 +335,11 @@
  \item is there a / where is the single stimulus?
 \end{itemize}
 \begin{center}
-\includegraphics<2->[width=30mm]{../figures/weber_detection.png} 
+\includegraphics<2->[width=30mm]{../../../figures/weber_detection.png} 
 \end{center}
+\begin{itemize}
+ \item<2->[$\rightarrow$] absolute threshold: minimum signal for 50\% correct detection
+\end{itemize}
  \end{column}
 
  \begin{column}{55mm}
@@ -281,13 +347,16 @@
    \item which of two stimuli is more 'x'?
   \end{itemize}
 \begin{center}
-\includegraphics<2->[width=30mm]{../figures/weber_discrimination.png} 
+\includegraphics<2->[width=30mm]{../../../figures/weber_discrimination.png} 
 \end{center}
+\begin{itemize}
+ \item<3->[$\rightarrow$] difference threshold
+\end{itemize}
  \end{column}
 \end{columns}
 \vspace{5mm}
 \begin{itemize}
- \item<3> contrast discrimination - detection of an increment on a pedestal
+ \item<4-> contrast discrimination - detection of an increment on a pedestal
 \end{itemize}
 \end{overlayarea}
 \end{frame}
@@ -298,7 +367,7 @@
 \begin{frame}
  \frametitle{Psychophysics Summary}
 \begin{center}
-\includegraphics[width=110mm]{../figures/psychophysics_classification.png} 
+\includegraphics[width=110mm]{../../../figures/psychophysics_classification.png} 
 \end{center}
 \end{frame}
 
@@ -307,7 +376,7 @@
 \begin{frame}
 
 \begin{center}
-\includegraphics[width=60mm]{../figures/adelson_demo_bar.png} 
+\includegraphics[width=60mm]{../../../figures/adelson_demo_bar.png} 
 \end{center}
 
  \begin{exampleblock}{Thinking}
@@ -320,7 +389,7 @@ The two checks indicated by arrows have the same retinal luminance but differ in
  \frametitle{Psychometric function theories: high threshold theory}
 
 \begin{center}
-\includegraphics[width=60mm]{../figures/weber_2ifc.png} 
+\includegraphics[width=60mm]{../../../figures/weber_2ifc.png} 
 \end{center}
 
 \begin{itemize}
@@ -334,26 +403,101 @@ The two checks indicated by arrows have the same retinal luminance but differ in
  \frametitle{Psychometric function theories: high threshold theory}
 
 \begin{center}
-\includegraphics<1>[width=90mm]{../figures/signal_pmf_0_5.png} 
-\includegraphics<2>[width=90mm]{../figures/signal_pmf_1_5.png} 
-\includegraphics<3>[width=90mm]{../figures/signal_pmf_3_0.png} 
-\includegraphics<4>[width=90mm]{../figures/signal_pmf_4_5.png} 
+\includegraphics<1-3>[width=90mm]{../../../figures/signal_pmf_0_5.png} 
+\includegraphics<4>[width=90mm]{../../../figures/signal_pmf_1_5.png} 
+\includegraphics<5>[width=90mm]{../../../figures/signal_pmf_3_0.png} 
+\includegraphics<6>[width=90mm]{../../../figures/signal_pmf_4_5.png} 
 \end{center}
+
 \begin{itemize}
- \item according to high-threshold theory the sensory mechanism will detect the stimulus when the amount of sensory evidence exceeds a fixed internal criterion
- \item $F(x)$: probability that the threshold will be exceeded by a stimulus of intensity $x$
+ \item<2-> according to high-threshold theory the sensory mechanism will detect the stimulus when the amount of sensory evidence exceeds a fixed internal criterion
+ \item<3-> $F(x)$: probability that the threshold will be exceeded by a stimulus of intensity $x$
 \end{itemize}
 \end{frame}
 
 \begin{frame}
  \frametitle{High threshold theory - decision process}
 \begin{center}
-\includegraphics<1>[width=90mm]{../figures/high_threshold_decision.png} 
+\includegraphics<1>[width=90mm]{../../../figures/high_threshold_decision.png} 
 \end{center}
 \begin{itemize}
- \item $I_2$ > $t$ $\Rightarrow$ signal was in that interval
+%  \item $S_{I2}$ > $t$ $\Rightarrow$ stimulus was in that interval
+\item relation between observable behavior $\Psi(x)$ and unobservable decision mechanism $F(x)$
+% \item various serious of events that lead to correct and incorrect responses
+\item $\lambda:$ lapse rate, lapse = stimulus not witnessed, response error
+\item $\gamma:$ guess rate
 \end{itemize}
+\end{frame}
 
+
+\begin{frame}
+ \frametitle{High threshold theory - relevance}
+\begin{itemize}
+\item amount of sensory evidence accumulated is unavailable to the decision process
+\item probability that the threshold is exceeded when x=0, i.e. by noise is effectively zero, no false alarms
+\item[]
+\item<2-> above assumptions largely discredited
+\item<2-> psychometric function of the type $F(x; \alpha,\beta,\gamma,\lambda) = \gamma+(1-\gamma-\lambda)*F(x;\alpha,\beta)$ in practical use
+\item<2-> \textbf{threshold} as the location parameter of the psychometric function characterizes performance
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Measuring the magnitude of the Muller Lyer effect}
+
+\begin{overlayarea}{110mm}{70mm}
+\begin{columns}[T]
+ \begin{column}{50mm}
+\begin{center}
+\includegraphics<1->[width=30mm]{../../../figures/muller_lyer.png} 
+\end{center}
+ \end{column}
+
+\begin{column}{60mm}
+\begin{center}
+\includegraphics<1->[width=50mm]{../../../figures/muller_lyer_pmf_pse.png} 
+\end{center}
+ \end{column}
+\end{columns}
+\end{overlayarea}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Measuring a psychometric function}
+
+\begin{overlayarea}{110mm}{70mm}
+\begin{columns}[T]
+ \begin{column}{55mm}
+\begin{center}
+\includegraphics<1->[width=50mm]{figs/l4/threshold_step_function.png} 
+\end{center}
+ \end{column}
+
+\begin{column}{55mm}
+\begin{center}
+\includegraphics<1->[width=50mm]{figs/l4/threshold_smooth_function.png} 
+\end{center}
+ \end{column}
+\end{columns}
+
+\only<2->{
+\begin{itemize}
+ \item at each stimulus level $x$, observer responds 'yes' with certain probability
+ \item probability increases with increasing $x$
+ \item $F(\alpha, \beta) = \frac{1}{1+exp(-\frac{x-\alpha}{\beta})}$
+\end{itemize}
+}
+
+\end{overlayarea}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Summary}
 \end{frame}
 
 
@@ -362,9 +506,7 @@ The two checks indicated by arrows have the same retinal luminance but differ in
  \frametitle{References}
 \begin{small}
 \begin{itemize}
- \item  Kingdom \& Prins, Psychophysics. A practical introduction. 
- \item 
- \item 
+ \item   Kingdom, F.A.A. \& Prins, N. (2010). Psychophysics. A practical introduction. London, UK: Elsevier Academic Press.
 \end{itemize}
 \end{small}
 \end{frame}

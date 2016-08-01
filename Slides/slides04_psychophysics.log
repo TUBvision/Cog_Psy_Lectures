@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.5.29)  30 JUN 2016 11:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.5.29)  12 JUL 2016 11:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -807,7 +807,7 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-No file slides04_psychophysics.aux.
+(./slides04_psychophysics.aux)
 \openout1 = `slides04_psychophysics.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
@@ -825,6 +825,7 @@ LaTeX Font Info:    ... okay on input line 45.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
 LaTeX Font Info:    ... okay on input line 45.
 LaTeX Font Info:    Try loading font information for T1+phv on input line 45.
+
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
@@ -979,204 +980,272 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 LaTeX Info: Redefining \includegraphics on input line 45.
 
-No file slides04_psychophysics.nav.
-[1
+(./slides04_psychophysics.nav) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-(./slides04_psychophysics.toc) [2
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 70.
+ <figs/l4/matrix_real.png, id=21, 277.78781pt x 427.5975pt>
+File: figs/l4/matrix_real.png Graphic file (type png)
 
-]
-<../../../figures/pmf.png, id=41, 481.8pt x 481.8pt>
+<use figs/l4/matrix_real.png>
+Package pdftex.def Info: figs/l4/matrix_real.png used on input line 70.
+(pdftex.def)             Requested size: 128.0374pt x 197.0887pt.
+ [2
+
+ <./figs/l4/matrix_real.png>]
+<../../../figures/pmf.png, id=30, 481.8pt x 481.8pt>
 File: ../../../figures/pmf.png Graphic file (type png)
 
 <use ../../../figures/pmf.png>
-Package pdftex.def Info: ../../../figures/pmf.png used on input line 71.
+Package pdftex.def Info: ../../../figures/pmf.png used on input line 85.
 (pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 71.
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 85.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsphv.fd
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 71.
-LaTeX Font Info:    Try loading font information for U+msa on input line 71.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 85.
+LaTeX Font Info:    Try loading font information for U+msa on input line 85.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 71.
+LaTeX Font Info:    Try loading font information for U+msb on input line 85.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 71.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 71.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 85.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 71.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 85.
  [3
 
- <../../../figures/pmf.png>] [4
+ <../../../figures/pmf.png>]
+File: ../../../figures/pmf.png Graphic file (type png)
+ <use ../../../figures/pmf.png>
+Package pdftex.def Info: ../../../figures/pmf.png used on input line 85.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+ [4
 
-] <../../../figures/CSF_wiki.png, id=56, 252.945pt x 189.70876pt>
+]
+File: ../../../figures/pmf.png Graphic file (type png)
+ <use ../../../figures/pmf.png>
+Package pdftex.def Info: ../../../figures/pmf.png used on input line 85.
+(pdftex.def)             Requested size: 142.26378pt x 142.26208pt.
+
+[5
+
+] <figs/l4/soundwave.png, id=49, 306.14375pt x 165.61874pt>
+File: figs/l4/soundwave.png Graphic file (type png)
+
+<use figs/l4/soundwave.png>
+Package pdftex.def Info: figs/l4/soundwave.png used on input line 104.
+(pdftex.def)             Requested size: 128.0374pt x 69.26624pt.
+
+<figs/l4/smell.jpg, id=50, 187.70125pt x 199.74625pt>
+File: figs/l4/smell.jpg Graphic file (type jpg)
+ <use figs/l4/smell.jpg>
+Package pdftex.def Info: figs/l4/smell.jpg used on input line 104.
+(pdftex.def)             Requested size: 128.0374pt x 136.26149pt.
+
+<figs/l4/wavelength.jpg, id=51, 285.065pt x 178.6675pt>
+File: figs/l4/wavelength.jpg Graphic file (type jpg)
+
+<use figs/l4/wavelength.jpg>
+Package pdftex.def Info: figs/l4/wavelength.jpg used on input line 104.
+(pdftex.def)             Requested size: 128.0374pt x 80.24695pt.
+
+<figs/l4/fire_stim.png, id=52, 418.56375pt x 466.74374pt>
+File: figs/l4/fire_stim.png Graphic file (type png)
+
+<use figs/l4/fire_stim.png>
+Package pdftex.def Info: figs/l4/fire_stim.png used on input line 104.
+(pdftex.def)             Requested size: 113.81102pt x 126.90561pt.
+ [6
+
+ <./figs/l4/soundwave.png> <./figs/l4/smell.jpg> <./figs/l4/wavelength.jpg> <./
+figs/l4/fire_stim.png>] [7
+
+] [8
+
+]
+<../../../figures/CSF_wiki.png, id=71, 252.945pt x 189.70876pt>
 File: ../../../figures/CSF_wiki.png Graphic file (type png)
 
 <use ../../../figures/CSF_wiki.png>
-Package pdftex.def Info: ../../../figures/CSF_wiki.png used on input line 93.
+Package pdftex.def Info: ../../../figures/CSF_wiki.png used on input line 136.
 (pdftex.def)             Requested size: 284.52756pt x 213.39865pt.
- [5
+ [9
 
  <../../../figures/CSF_wiki.png (PNG copy)>]
-<../../../figures/weber_contrast_stimulus.png, id=62, 1029.1248pt x 531.9072pt>
+<../../../figures/weber_contrast_stimulus.png, id=77, 1029.1248pt x 531.9072pt>
 File: ../../../figures/weber_contrast_stimulus.png Graphic file (type png)
 <use ../../../figures/weber_contrast_stimulus.png>
 Package pdftex.def Info: ../../../figures/weber_contrast_stimulus.png used on i
-nput line 101.
+nput line 144.
 (pdftex.def)             Requested size: 284.52756pt x 147.05814pt.
- [6
+ [10
 
  <../../../figures/weber_contrast_stimulus.png>]
-<../../../figures/weber_adjustment.png, id=70, 486.3771pt x 255.1131pt>
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 163.
+ [11
+
+] [12
+
+]
+<../../../figures/weber_adjustment.png, id=95, 486.3771pt x 255.1131pt>
 File: ../../../figures/weber_adjustment.png Graphic file (type png)
 
 <use ../../../figures/weber_adjustment.png>
 Package pdftex.def Info: ../../../figures/weber_adjustment.png used on input li
-ne 132.
+ne 194.
 (pdftex.def)             Requested size: 142.26378pt x 74.6193pt.
- [7
+
+Overfull \vbox (8.66566pt too high) detected at line 194
+ []
+
+[13
 
  <../../../figures/weber_adjustment.png>]
 File: ../../../figures/weber_adjustment.png Graphic file (type png)
- <use ../../../figures/weber_adjustment.png>
+
+<use ../../../figures/weber_adjustment.png>
 Package pdftex.def Info: ../../../figures/weber_adjustment.png used on input li
-ne 132.
+ne 194.
 (pdftex.def)             Requested size: 142.26378pt x 74.6193pt.
 
-<../../../figures/weber_2afc.png, id=78, 486.3771pt x 161.8848pt>
-File: ../../../figures/weber_2afc.png Graphic file (type png)
-
-<use ../../../figures/weber_2afc.png>
-Package pdftex.def Info: ../../../figures/weber_2afc.png used on input line 132
-.
-(pdftex.def)             Requested size: 142.26378pt x 47.3505pt.
- [8
-
- <../../../figures/weber_2afc.png>]
-<../../../figures/weber_adaptive.png, id=85, 693.0693pt x 213.1965pt>
-File: ../../../figures/weber_adaptive.png Graphic file (type png)
-
-<use ../../../figures/weber_adaptive.png>
-Package pdftex.def Info: ../../../figures/weber_adaptive.png used on input line
- 162.
-(pdftex.def)             Requested size: 142.26378pt x 43.76086pt.
- [9
-
- <../../../figures/weber_adaptive.png>]
-File: ../../../figures/weber_adaptive.png Graphic file (type png)
- <use ../../../figures/weber_adaptive.png>
-Package pdftex.def Info: ../../../figures/weber_adaptive.png used on input line
- 162.
-(pdftex.def)             Requested size: 142.26378pt x 43.76086pt.
-
-<../../../figures/weber_constant_method.png, id=92, 537.6888pt x 583.9416pt>
+<../../../figures/weber_constant_method.png, id=103, 537.6888pt x 583.9416pt>
 File: ../../../figures/weber_constant_method.png Graphic file (type png)
 
 <use ../../../figures/weber_constant_method.png>
 Package pdftex.def Info: ../../../figures/weber_constant_method.png used on inp
-ut line 162.
+ut line 194.
 (pdftex.def)             Requested size: 142.26378pt x 154.5032pt.
 
-Overfull \vbox (7.38835pt too high) detected at line 162
+Overfull \vbox (8.66566pt too high) detected at line 194
  []
 
-[10
+[14
 
- <../../../figures/weber_constant_method.png>] (./slides04_psychophysics.toc) [
-11
+ <../../../figures/weber_constant_method.png>]
+<figs/l4/method_limits.png, id=110, 392.21532pt x 482.55281pt>
+File: figs/l4/method_limits.png Graphic file (type png)
 
-] <../../../figures/cloud_types.png, id=105, 389.5353pt x 113.4639pt>
+<use figs/l4/method_limits.png>
+Package pdftex.def Info: figs/l4/method_limits.png used on input line 226.
+(pdftex.def)             Requested size: 113.81102pt x 140.02509pt.
+
+Overfull \vbox (8.66566pt too high) detected at line 226
+ []
+
+[15
+
+ <./figs/l4/method_limits.png>]
+File: figs/l4/method_limits.png Graphic file (type png)
+ <use figs/l4/method_limits.png>
+Package pdftex.def Info: figs/l4/method_limits.png used on input line 226.
+(pdftex.def)             Requested size: 113.81102pt x 140.02509pt.
+
+<figs/l4/weber_cross_modality.png, id=117, 486.3771pt x 287.6346pt>
+File: figs/l4/weber_cross_modality.png Graphic file (type png)
+
+<use figs/l4/weber_cross_modality.png>
+Package pdftex.def Info: figs/l4/weber_cross_modality.png used on input line 22
+6.
+(pdftex.def)             Requested size: 142.26378pt x 84.13167pt.
+
+Overfull \vbox (8.66566pt too high) detected at line 226
+ []
+
+[16
+
+ <./figs/l4/weber_cross_modality.png>]
+<../../../figures/cloud_types.png, id=124, 389.5353pt x 113.4639pt>
 File: ../../../figures/cloud_types.png Graphic file (type png)
 
 <use ../../../figures/cloud_types.png>
-Package pdftex.def Info: ../../../figures/cloud_types.png used on input line 17
-8.
+Package pdftex.def Info: ../../../figures/cloud_types.png used on input line 24
+1.
 (pdftex.def)             Requested size: 284.52756pt x 82.87642pt.
- [12
+ [17
 
  <../../../figures/cloud_types.png>]
 File: ../../../figures/cloud_types.png Graphic file (type png)
 
 <use ../../../figures/cloud_types.png>
-Package pdftex.def Info: ../../../figures/cloud_types.png used on input line 17
-8.
+Package pdftex.def Info: ../../../figures/cloud_types.png used on input line 24
+1.
 (pdftex.def)             Requested size: 284.52756pt x 82.87642pt.
- [13
+ [18
 
 ]
-<../../../figures/muller_lyer.png, id=118, 320.1561pt x 276.7941pt>
+<../../../figures/muller_lyer.png, id=136, 320.1561pt x 276.7941pt>
 File: ../../../figures/muller_lyer.png Graphic file (type png)
 
 <use ../../../figures/muller_lyer.png>
-Package pdftex.def Info: ../../../figures/muller_lyer.png used on input line 20
-8.
+Package pdftex.def Info: ../../../figures/muller_lyer.png used on input line 27
+1.
 (pdftex.def)             Requested size: 85.35826pt x 73.79778pt.
- [14
+ [19
 
  <../../../figures/muller_lyer.png>]
 File: ../../../figures/muller_lyer.png Graphic file (type png)
 
 <use ../../../figures/muller_lyer.png>
-Package pdftex.def Info: ../../../figures/muller_lyer.png used on input line 20
-8.
+Package pdftex.def Info: ../../../figures/muller_lyer.png used on input line 27
+1.
 (pdftex.def)             Requested size: 85.35826pt x 73.79778pt.
 
-<../../../figures/muller_lyer_pmf.png, id=125, 489.2679pt x 466.8642pt>
+<../../../figures/muller_lyer_pmf.png, id=144, 489.2679pt x 466.8642pt>
 File: ../../../figures/muller_lyer_pmf.png Graphic file (type png)
 
 <use ../../../figures/muller_lyer_pmf.png>
 Package pdftex.def Info: ../../../figures/muller_lyer_pmf.png used on input lin
-e 208.
+e 271.
 (pdftex.def)             Requested size: 142.26378pt x 135.74333pt.
- [15
+ [20
 
  <../../../figures/muller_lyer_pmf.png>]
 File: ../../../figures/muller_lyer.png Graphic file (type png)
  <use ../../../figures/muller_lyer.png>
-Package pdftex.def Info: ../../../figures/muller_lyer.png used on input line 20
-8.
+Package pdftex.def Info: ../../../figures/muller_lyer.png used on input line 27
+1.
 (pdftex.def)             Requested size: 85.35826pt x 73.79778pt.
 
-<../../../figures/muller_lyer_pmf_pse.png, id=132, 489.2679pt x 466.8642pt>
+<../../../figures/muller_lyer_pmf_pse.png, id=151, 489.2679pt x 466.8642pt>
 File: ../../../figures/muller_lyer_pmf_pse.png Graphic file (type png)
 
 <use ../../../figures/muller_lyer_pmf_pse.png>
 Package pdftex.def Info: ../../../figures/muller_lyer_pmf_pse.png used on input
- line 208.
+ line 271.
 (pdftex.def)             Requested size: 142.26378pt x 135.74333pt.
- [16
+ [21
 
- <../../../figures/muller_lyer_pmf_pse.png>] [17
+ <../../../figures/muller_lyer_pmf_pse.png>] [22
 
-] [18
+] [23
 
 ]
-<../../../figures/weber_ori_discrim.png, id=149, 483.4863pt x 350.5095pt>
+<../../../figures/weber_ori_discrim.png, id=168, 483.4863pt x 350.5095pt>
 File: ../../../figures/weber_ori_discrim.png Graphic file (type png)
 
 <use ../../../figures/weber_ori_discrim.png>
 Package pdftex.def Info: ../../../figures/weber_ori_discrim.png used on input l
-ine 254.
+ine 317.
 (pdftex.def)             Requested size: 85.35826pt x 61.88026pt.
 
-<../../../figures/weber_lightness_appear.png, id=150, 483.4863pt x 350.5095pt>
+<../../../figures/weber_lightness_appear.png, id=169, 483.4863pt x 350.5095pt>
 File: ../../../figures/weber_lightness_appear.png Graphic file (type png)
 
 <use ../../../figures/weber_lightness_appear.png>
 Package pdftex.def Info: ../../../figures/weber_lightness_appear.png used on in
-put line 254.
+put line 317.
 (pdftex.def)             Requested size: 85.35826pt x 61.88026pt.
- [19
+ [24
 
  <../../../figures/weber_ori_discrim.png> <../../../figures/weber_lightness_app
 ear.png>]
@@ -1184,138 +1253,242 @@ File: ../../../figures/weber_ori_discrim.png Graphic file (type png)
 
 <use ../../../figures/weber_ori_discrim.png>
 Package pdftex.def Info: ../../../figures/weber_ori_discrim.png used on input l
-ine 254.
+ine 317.
 (pdftex.def)             Requested size: 85.35826pt x 61.88026pt.
 File: ../../../figures/weber_lightness_appear.png Graphic file (type png)
 
 <use ../../../figures/weber_lightness_appear.png>
 Package pdftex.def Info: ../../../figures/weber_lightness_appear.png used on in
-put line 254.
+put line 317.
 (pdftex.def)             Requested size: 85.35826pt x 61.88026pt.
- [20
+ [25
 
-] [21
+] [26
 
-] [22
+] [27
 
 ]
-<../../../figures/weber_detection.png, id=175, 483.4863pt x 445.1832pt>
+<../../../figures/weber_detection.png, id=194, 483.4863pt x 445.1832pt>
 File: ../../../figures/weber_detection.png Graphic file (type png)
 
 <use ../../../figures/weber_detection.png>
 Package pdftex.def Info: ../../../figures/weber_detection.png used on input lin
-e 293.
+e 362.
 (pdftex.def)             Requested size: 85.35826pt x 78.59431pt.
 
-<../../../figures/weber_discrimination.png, id=176, 483.4863pt x 445.1832pt>
+<../../../figures/weber_discrimination.png, id=195, 483.4863pt x 445.1832pt>
 File: ../../../figures/weber_discrimination.png Graphic file (type png)
 
 <use ../../../figures/weber_discrimination.png>
 Package pdftex.def Info: ../../../figures/weber_discrimination.png used on inpu
-t line 293.
+t line 362.
 (pdftex.def)             Requested size: 85.35826pt x 78.59431pt.
- [23
+
+Overfull \vbox (1.96626pt too high) detected at line 362
+ []
+
+[28
 
  <../../../figures/weber_detection.png> <../../../figures/weber_discrimination.
 png>]
 File: ../../../figures/weber_detection.png Graphic file (type png)
-
-<use ../../../figures/weber_detection.png>
+ <use ../../../figures/weber_detection.png>
 Package pdftex.def Info: ../../../figures/weber_detection.png used on input lin
-e 293.
+e 362.
 (pdftex.def)             Requested size: 85.35826pt x 78.59431pt.
 File: ../../../figures/weber_discrimination.png Graphic file (type png)
 
 <use ../../../figures/weber_discrimination.png>
 Package pdftex.def Info: ../../../figures/weber_discrimination.png used on inpu
-t line 293.
+t line 362.
 (pdftex.def)             Requested size: 85.35826pt x 78.59431pt.
- [24
+
+Overfull \vbox (1.96626pt too high) detected at line 362
+ []
+
+[29
 
 ]
-<../../../figures/psychophysics_classification.png, id=189, 1191.7323pt x 504.4
+File: ../../../figures/weber_detection.png Graphic file (type png)
+ <use ../../../figures/weber_detection.png>
+Package pdftex.def Info: ../../../figures/weber_detection.png used on input lin
+e 362.
+(pdftex.def)             Requested size: 85.35826pt x 78.59431pt.
+File: ../../../figures/weber_discrimination.png Graphic file (type png)
+
+<use ../../../figures/weber_discrimination.png>
+Package pdftex.def Info: ../../../figures/weber_discrimination.png used on inpu
+t line 362.
+(pdftex.def)             Requested size: 85.35826pt x 78.59431pt.
+
+Overfull \vbox (1.96626pt too high) detected at line 362
+ []
+
+[30
+
+]
+<../../../figures/psychophysics_classification.png, id=213, 1191.7323pt x 504.4
 446pt>
 File: ../../../figures/psychophysics_classification.png Graphic file (type png)
 
  <use ../../../figures/psychophysics_classification.png>
 Package pdftex.def Info: ../../../figures/psychophysics_classification.png used
- on input line 303.
+ on input line 372.
 (pdftex.def)             Requested size: 312.9803pt x 132.47641pt.
- [25
+ [31
 
  <../../../figures/psychophysics_classification.png>]
-<../../../figures/adelson_demo_bar.png, id=197, 391.4625pt x 332.74312pt>
+<../../../figures/adelson_demo_bar.png, id=221, 391.4625pt x 332.74312pt>
 File: ../../../figures/adelson_demo_bar.png Graphic file (type png)
 
 <use ../../../figures/adelson_demo_bar.png>
 Package pdftex.def Info: ../../../figures/adelson_demo_bar.png used on input li
-ne 316.
+ne 385.
 (pdftex.def)             Requested size: 170.71652pt x 145.10764pt.
- [26
+ [32
 
  <../../../figures/adelson_demo_bar.png (PNG copy)>]
-<../../../figures/weber_2ifc.png, id=211, 914.2155pt x 617.1858pt>
+<../../../figures/weber_2ifc.png, id=235, 914.2155pt x 617.1858pt>
 File: ../../../figures/weber_2ifc.png Graphic file (type png)
 
 <use ../../../figures/weber_2ifc.png>
-Package pdftex.def Info: ../../../figures/weber_2ifc.png used on input line 331
+Package pdftex.def Info: ../../../figures/weber_2ifc.png used on input line 400
 .
 (pdftex.def)             Requested size: 170.71652pt x 115.25117pt.
- [27
+ [33
 
  <../../../figures/weber_2ifc.png>]
-<../../../figures/signal_pmf_0_5.png, id=219, 607.068pt x 303.534pt>
+<figs/l4/threshold_step_seen.png, id=243, 847.7271pt x 317.988pt>
+File: figs/l4/threshold_step_seen.png Graphic file (type png)
+
+<use figs/l4/threshold_step_seen.png>
+Package pdftex.def Info: figs/l4/threshold_step_seen.png used on input line 411
+.
+(pdftex.def)             Requested size: 284.52756pt x 106.72678pt.
+ [34
+
+ <./figs/l4/threshold_step_seen.png>]
+<../../../figures/signal_pmf_0_5.png, id=250, 607.068pt x 303.534pt>
 File: ../../../figures/signal_pmf_0_5.png Graphic file (type png)
 
 <use ../../../figures/signal_pmf_0_5.png>
 Package pdftex.def Info: ../../../figures/signal_pmf_0_5.png used on input line
- 346.
+ 428.
 (pdftex.def)             Requested size: 256.0748pt x 128.03456pt.
- [28
+ [35
 
- <../../../figures/signal_pmf_0_5.png>] <../../../figures/signal_pmf_1_5.png, i
-d=226, 607.068pt x 303.534pt>
+ <../../../figures/signal_pmf_0_5.png>]
+File: ../../../figures/signal_pmf_0_5.png Graphic file (type png)
+ <use ../../../figures/signal_pmf_0_5.png>
+Package pdftex.def Info: ../../../figures/signal_pmf_0_5.png used on input line
+ 428.
+(pdftex.def)             Requested size: 256.0748pt x 128.03456pt.
+ [36
+
+]
+File: ../../../figures/signal_pmf_0_5.png Graphic file (type png)
+
+<use ../../../figures/signal_pmf_0_5.png>
+Package pdftex.def Info: ../../../figures/signal_pmf_0_5.png used on input line
+ 428.
+(pdftex.def)             Requested size: 256.0748pt x 128.03456pt.
+ [37
+
+]
+<../../../figures/signal_pmf_1_5.png, id=268, 607.068pt x 303.534pt>
 File: ../../../figures/signal_pmf_1_5.png Graphic file (type png)
 
 <use ../../../figures/signal_pmf_1_5.png>
 Package pdftex.def Info: ../../../figures/signal_pmf_1_5.png used on input line
- 346.
+ 428.
 (pdftex.def)             Requested size: 256.0748pt x 128.03456pt.
- [29
+ [38
 
  <../../../figures/signal_pmf_1_5.png>] <../../../figures/signal_pmf_3_0.png, i
-d=233, 607.068pt x 303.534pt>
+d=275, 607.068pt x 303.534pt>
 File: ../../../figures/signal_pmf_3_0.png Graphic file (type png)
 
 <use ../../../figures/signal_pmf_3_0.png>
 Package pdftex.def Info: ../../../figures/signal_pmf_3_0.png used on input line
- 346.
+ 428.
 (pdftex.def)             Requested size: 256.0748pt x 128.03456pt.
- [30
+ [39
 
  <../../../figures/signal_pmf_3_0.png>] <../../../figures/signal_pmf_4_5.png, i
-d=240, 607.068pt x 303.534pt>
+d=282, 607.068pt x 303.534pt>
 File: ../../../figures/signal_pmf_4_5.png Graphic file (type png)
 
 <use ../../../figures/signal_pmf_4_5.png>
 Package pdftex.def Info: ../../../figures/signal_pmf_4_5.png used on input line
- 346.
+ 428.
 (pdftex.def)             Requested size: 256.0748pt x 128.03456pt.
- [31
+ [40
 
  <../../../figures/signal_pmf_4_5.png>]
-<../../../figures/high_threshold_decision.png, id=248, 1141.1433pt x 469.0323pt
+<../../../figures/high_threshold_decision.png, id=289, 1141.1433pt x 469.0323pt
 >
 File: ../../../figures/high_threshold_decision.png Graphic file (type png)
  <use ../../../figures/high_threshold_decision.png>
 Package pdftex.def Info: ../../../figures/high_threshold_decision.png used on i
-nput line 360.
+nput line 442.
 (pdftex.def)             Requested size: 256.0748pt x 105.2486pt.
- [32
+ [41
 
- <../../../figures/high_threshold_decision.png>] [33
+ <../../../figures/high_threshold_decision.png>] [42
 
-] [34
+] [43
+
+]
+File: ../../../figures/muller_lyer.png Graphic file (type png)
+ <use ../../../figures/muller_lyer.png>
+Package pdftex.def Info: ../../../figures/muller_lyer.png used on input line 47
+7.
+(pdftex.def)             Requested size: 85.35826pt x 73.79778pt.
+File: ../../../figures/muller_lyer_pmf_pse.png Graphic file (type png)
+
+<use ../../../figures/muller_lyer_pmf_pse.png>
+Package pdftex.def Info: ../../../figures/muller_lyer_pmf_pse.png used on input
+ line 477.
+(pdftex.def)             Requested size: 142.26378pt x 135.74333pt.
+ [44
+
+]
+<figs/l4/threshold_step_function.png, id=312, 342.5297pt x 248.42813pt>
+File: figs/l4/threshold_step_function.png Graphic file (type png)
+
+<use figs/l4/threshold_step_function.png>
+Package pdftex.def Info: figs/l4/threshold_step_function.png used on input line
+ 509.
+(pdftex.def)             Requested size: 142.26378pt x 103.18294pt.
+
+<figs/l4/threshold_smooth_function.png, id=313, 342.5297pt x 248.42813pt>
+File: figs/l4/threshold_smooth_function.png Graphic file (type png)
+
+<use figs/l4/threshold_smooth_function.png>
+Package pdftex.def Info: figs/l4/threshold_smooth_function.png used on input li
+ne 509.
+(pdftex.def)             Requested size: 142.26378pt x 103.18294pt.
+ [45
+
+ <./figs/l4/threshold_step_function.png> <./figs/l4/threshold_smooth_function.p
+ng>]
+File: figs/l4/threshold_step_function.png Graphic file (type png)
+
+<use figs/l4/threshold_step_function.png>
+Package pdftex.def Info: figs/l4/threshold_step_function.png used on input line
+ 509.
+(pdftex.def)             Requested size: 142.26378pt x 103.18294pt.
+File: figs/l4/threshold_smooth_function.png Graphic file (type png)
+
+<use figs/l4/threshold_smooth_function.png>
+Package pdftex.def Info: figs/l4/threshold_smooth_function.png used on input li
+ne 509.
+(pdftex.def)             Requested size: 142.26378pt x 103.18294pt.
+ [46
+
+] [47
+
+] [48
 
 ]
 \tf@nav=\write6
@@ -1327,34 +1500,39 @@ nput line 360.
 \tf@snm=\write8
 \openout8 = `slides04_psychophysics.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 386.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 386.
- (./slides04_psychophysics.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 386.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 386.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 536.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 536.
+
+(./slides04_psychophysics.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 536.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 536.
 Package rerunfilecheck Info: File `slides04_psychophysics.out' has not changed.
 
-(rerunfilecheck)             Checksum: 48ADAF064740AEB83E82E7984077551F;109.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 386.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 536.
  ) 
 Here is how much of TeX's memory you used:
- 20114 strings out of 494938
- 398298 string characters out of 6177585
- 451310 words of memory out of 5000000
- 22784 multiletter control sequences out of 15000+600000
- 33902 words of font info for 50 fonts, out of 8000000 for 9000
+ 20201 strings out of 494938
+ 398803 string characters out of 6177585
+ 450443 words of memory out of 5000000
+ 22831 multiletter control sequences out of 15000+600000
+ 39066 words of font info for 54 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 56i,11n,64p,419b,708s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,11n,63p,419b,707s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/h
-elvetic/uhvro8a.pfb>
-Output written on slides04_psychophysics.pdf (34 pages, 976900 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on slides04_psychophysics.pdf (48 pages, 2010000 bytes).
 PDF statistics:
- 302 PDF objects out of 1000 (max. 8388607)
- 201 compressed objects within 3 object streams
- 71 named destinations out of 1000 (max. 500000)
- 214 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 399 PDF objects out of 1000 (max. 8388607)
+ 267 compressed objects within 3 object streams
+ 97 named destinations out of 1000 (max. 500000)
+ 226 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,5 +1,1 @@
 \beamer@endinputifotherversion {3.33pt}
-\beamer@sectionintoc {1}{Psychology as a scientific discipline}{3}{0}{1}
-\beamer@sectionintoc {2}{Variables}{23}{0}{2}
-\beamer@sectionintoc {3}{Hypotheses}{43}{0}{3}
-\beamer@sectionintoc {4}{Experiments}{60}{0}{4}

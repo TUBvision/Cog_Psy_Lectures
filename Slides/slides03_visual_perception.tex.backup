@@ -37,7 +37,7 @@
 \setbeamertemplate{navigation symbols}{}
 
 \title{ Cognitive (Neuro) Psychology }
-\subtitle{Pattern vision}
+\subtitle{III. Pattern vision}
 \author{ Marianne Maertens }
 \institute[TU Berlin]{Technische Universit\"at Berlin}
 \date{July 2016}
@@ -83,6 +83,17 @@
  \end{column}
 \end{columns}
 \end{frame}
+
+\begin{frame}
+ \frametitle{Overview}
+\begin{itemize}
+ \item Acuity limits in human vision: resolution \& contrast
+ \item Properties of cells along the path of visual information processing
+ \item
+\end{itemize}
+
+\end{frame}
+
 
 
 \begin{frame}
@@ -216,6 +227,27 @@ Snellen \textbf{E} test
 \vspace{10mm}
 \begin{center}
 \includegraphics<1>[width=20mm]{figs/l3/spike_counts.png}
+\end{center}
+ \end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Receptive fields of retinal ganglion cells}
+\begin{columns}[T]
+ \begin{column}{60mm}
+  \begin{itemize}
+ \item concentric layout of ganglion cells' receptive fields
+\end{itemize}
+\begin{center}
+\includegraphics<1>[width=55mm]{figs/l3/m_p_retinal_ganglion.png}
+\end{center}
+ \end{column}
+
+ \begin{column}{50mm}
+\begin{center}
+\includegraphics<1>[width=50mm]{figs/l3/on_off_retinal_ganglion.png}
 \end{center}
  \end{column}
 \end{columns}
@@ -414,48 +446,45 @@ Snellen \textbf{E} test
  \frametitle{Selective adaptation: the psychologist's electrode}
 \begin{overlayarea}{110mm}{80mm}
 \begin{columns}[T]
-\begin{column}{50mm}
-\includegraphics[width=50mm]{figs/l3/sf_adaptation_test.png}
+\begin{column}{45mm}
+\includegraphics[width=45mm]{figs/l3/sf_adaptation_test.png}
 \end{column}
  
-\begin{column}{50mm}
-\includegraphics<1>[width=50mm]{figs/l3/sf_adaptation_vert.png}
+\begin{column}{45mm}
+\includegraphics<1,4->[width=45mm]{figs/l3/sf_adaptation_vert.png}
 
-\includegraphics<2>[width=50mm]{figs/l3/sf_adaptation_csf.png}
+\includegraphics<2>[width=45mm]{figs/l3/sf_adaptation_csf.png}
+
+\includegraphics<3>[width=45mm]{figs/l3/sf_adaptation_hori.png}
 \end{column}
 \end{columns}
+
+\begin{center}
+\includegraphics<4>[width=110mm]{figs/l3/sf_adaptation.png}
+\end{center}
 \end{overlayarea}
 \end{frame}
 
+\begin{frame}
+ \frametitle{Spatial frequency tuned pattern analyzers in human vision}
+\begin{center}
+\includegraphics[width=70mm]{figs/l3/graham_nachmias.jpg}
+\end{center}
+\end{frame}
 
 
 \begin{frame}
  \frametitle{Summary}
 \begin{itemize}
 \setlength{\itemsep}{5pt}
- \item Cognitive Psychology is the experimental study of human cognition
- \item Cognitive Psychology combines a number of different approaches including behavioral experiments, computational modelling and the study of the brain
- \item Cognitive Psychology focusses on the study of human cognition and as such is a subfield of Cognitive Science which also considers other cognitive agents
- \item The study of Human Cognition becomes increasingly transdisciplinary recognizing the usefulness of a diverse set of different approaches
+ \item 
+ \item 
+ \item 
+ \item 
 \end{itemize}
 
 \end{frame}
 
-
-
-\begin{frame}
-\frametitle{Tutorial: how to measure perception?}
-\begin{center}
-\includegraphics<1>[width=60mm]{../figures/bregman_Bs.png}
-\end{center}
-\end{frame}
-
-\begin{frame}
- \begin{exampleblock}{Thinking}
- How can you find out what's happening in someone's
-head? In normal life? In science?
- \end{exampleblock}
-\end{frame}
 
 
 
@@ -463,8 +492,7 @@ head? In normal life? In science?
  \frametitle{References}
 \begin{small}
 \begin{itemize}
- \item  Eysenck \& Keane
- \item Ward, J. (2010). The student's guide to cognitive neuroscience (2nd ed.). Taylor \& Francis, Psychology Press: Hove and New York.
+ \item  Wolfe, J.M., Kluender, K.R. \& Levi, D.M. (2012).\textit{Sensation \& Perception}. Sinauer Associates: Sunderland, MA. 
  \item 
 \end{itemize}
 \end{small}

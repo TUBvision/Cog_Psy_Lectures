@@ -58,6 +58,17 @@
 
 
 \begin{frame}
+\begin{figure}
+\begin{center}
+   \includegraphics[width=75mm]{../../../figures/scientist_fool_nature15.png}
+
+   \includegraphics<1>[width=75mm]{../../../figures/scientist_fool_nature15_picture.png}
+\end{center}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
  \frametitle{Overview}
  \begin{itemize}
   \item Psychology as a scientific discipline
@@ -69,26 +80,31 @@
 \end{frame}
 
 
-
-
-\section{Psychology as a scientific discipline}
 \begin{frame}
- \frametitle{Common sense psychology ...}
-contains a number of statements which are not being tested with respect to their validity:\\
-
+ \frametitle{Bar psychology ...}
+ \begin{overlayarea}{110mm}{80mm}
   \begin{itemize}
    \item birds of a feather flock together
+   \item opposites attract
+   \item[] 
    \item actions speak louder than words
+   \item Rome wasn't built in a day
+   \item[] 
    \item can't judge a book by its cover
-   \item ... 
-   \item German products are usually high quality ... (VW)
-   \item German trains are on time ...
+   \item first impression 
   \end{itemize}
+
+\only<2->{
+\vspace{10mm}
+... contains a number of statements which are not being tested with respect to their consistency or validity
+}
+\end{overlayarea}
 \end{frame}
 
 
 \begin{frame}
- \frametitle{Common sense psychology}
+ \frametitle{Common sense}
+\begin{overlayarea}{110mm}{90mm}
 \begin{columns}[c]
  \column[c]{10cm}
   \begin{itemize}
@@ -96,25 +112,26 @@ contains a number of statements which are not being tested with respect to their
    \item objects fall down if you release the grip
    \item birds fly, foxes don't
    \item[] ...
-   \item<2->[$\rightarrow$] basic understanding of concepts in physics, biology, psychology, etc. ... without studying them \item<2-> \alert{folk-}physics, psychology, biology, ...
+   \item<2->[$\rightarrow$] basic understanding of concepts in physics, biology, psychology, etc. ... without studying them \item<2-> \textcolor{blue}{folk-}physics, biology, medicine, psychology...
   \end{itemize}
  \column{2cm}
-  \includegraphics[width=20mm]{../figures/huber_1.png}
+  \includegraphics[width=20mm]{../../../figures/huber_1.png}
 \end{columns}
 
 \vspace{4mm}
- \only<3->{\begin{block}{Common sense is ...}
+ \only<3->{
    \begin{itemize}
     \item<4-> mix of true and false beliefs
     \item<4-> prejudices and stereotypes
     \item<4-> full of contradictions 
-    \item<5->[!] common sense wisdom does not undergo critical testing with \textcolor{blue}{scientific methods}
+    \item<4->[!] common sense wisdom does not undergo critical testing with \textcolor{blue}{scientific methods}
    \end{itemize}
-  \end{block}}
+  }
+\end{overlayarea}
 \end{frame}
 
 \begin{frame}{Why don't we notice the inadequacy of folk wisdom?}
-\begin{overlayarea}{120mm}{70mm}
+\begin{overlayarea}{110mm}{70mm}
   \begin{enumerate}[<+->]
 \setlength{\itemsep}{10pt}
    \item Even behavior based on false presumptions, might still
@@ -125,12 +142,11 @@ certain way and this causes the desired outcome.
    
 \only<3>{
 \begin{center}
-\includegraphics[width=40mm]{../figures/huber_folk_theology.png}
+\includegraphics[width=40mm]{../../../figures/huber_folk_theology.png}
 \end{center}}
 
    \item The knowledge content of folk psychology is used to explain events
-\textbf{post-hoc}. Plausibility of the explanation is more important than 
-accuracy. 
+\textbf{post-hoc}. Plausibility of the explanation is more important than accuracy. 
   \end{enumerate}
 \end{overlayarea}
 \end{frame}
@@ -140,16 +156,66 @@ accuracy.
 
 \begin{frame}{Perceptual vs cognitive biases}
 \begin{center}
-\includegraphics<1>[width=60mm]{../figures/bregman_Bs.png}
-\includegraphics<2>[width=20mm]{../figures/banana_penetrates_brick.png}
+\includegraphics<1>[width=60mm]{../../../figures/bregman_Bs.png}
+\includegraphics<2>[width=20mm]{../../../figures/banana_penetrates_brick.png}
 \end{center}
 \end{frame}
 
+
 \begin{frame}{Cognitive biases in science}
+\begin{columns}[T]
+ \begin{column}{65mm}
 \begin{center}
-\includegraphics<1>[width=65mm]{../figures/reproducibility_nature15_fallacies.jpg}
-\includegraphics<2>[width=65mm]{../figures/reproducibility_nature15.jpg}
+\includegraphics<1-6>[width=65mm]{../../../figures/reproducibility_nature15_fallacies.jpg}
+\includegraphics<7>[width=65mm]{../../../figures/reproducibility_nature15.jpg}
 \end{center}
+ \end{column}
+
+ \begin{column}{50mm}
+  \only<1-2>{
+\begin{center}
+\textcolor{blue}{Hypothesis myopia}
+\begin{itemize}
+ \item 1999 British woman guilty of murdering two of her sons
+ \item relative likelihood of sudden infant death syndrome: 
+ \item[] 1 out of 297.000 families
+ \item<2> relative likelihood of double murder
+ \item[]<2> 1 out of 2.7 m families 
+\end{itemize}
+\end{center}
+}
+  \only<3-4>{
+\begin{center}
+\textcolor{blue}{Texas sharpshooter}
+\begin{itemize}
+ \item fire random pattern of bullets
+ \item[$\rightarrow$] draw bullseye around cluster 
+ \item<4> p-hacking
+\end{itemize}
+\end{center}
+}
+
+  \only<5>{
+\begin{center}
+\textcolor{blue}{Asymmetric attention}
+\begin{itemize}
+ \item disconfirmation bias
+ \item double checking of unexpected results
+\end{itemize}
+\end{center}
+}
+
+  \only<6>{
+\begin{center}
+\textcolor{blue}{Just-so storytelling}
+\begin{itemize}
+ \item how the leopard got its spots
+ \item post-hoc rationalization
+\end{itemize}
+\end{center}
+}
+ \end{column}
+\end{columns}
 \end{frame}
 
 \begin{frame}{The scientific method}
@@ -186,16 +252,6 @@ subject to rigorous, structured community scrutiny
   \end{enumerate}
 \end{frame}
 
-\begin{frame}
-\begin{figure}
-\begin{center}
-   \includegraphics[width=90mm]{../figures/scientist_fool_nature15.png}
-
-   \includegraphics<1>[width=60mm]{../figures/scientist_fool_nature15_picture.png}
-\end{center}
-\end{figure}
-\end{frame}
-
 
 \begin{frame}{The scientific method}
 \textit{\textquotedblleft As a researcher, I'm not trying to produce misleading results, but I do have a stake in the outcome.\textquotedblright \ And that 
@@ -203,25 +259,24 @@ gives the mind excellent motivation to find what it is primed to find.} (Nuzzo, 
 \end{frame}
 
 
-
-\section{Variables}
 \begin{frame}
  \frametitle{Goals of scientific research}
 \begin{columns}[T]
 \begin{column}{60mm}
 Accumulation of knowledge
 \begin{figure}
-\includegraphics[width=50mm]{../figures/stars.jpg} 
+\includegraphics[width=50mm]{../../../figures/stars.jpg} 
 \end{figure}
 \end{column}
 \begin{column}{60mm}
 Investigation of lawful relations
 \begin{figure}
-\includegraphics[width=50mm]{../figures/huber_money_subjvalue.png}
+\includegraphics[width=50mm]{../../../figures/huber_money_subjvalue.png}
 \end{figure}
 \end{column}
 \end{columns}
 \end{frame}
+
 
 \begin{frame}
 \frametitle{Variables}
@@ -287,7 +342,7 @@ cooking skills, ...
 \begin{column}{3cm}
 \only<4>{
 \begin{center}
-\includegraphics[width=30mm]{../figures/huber_handlines.png}
+\includegraphics[width=30mm]{../../../figures/huber_handlines.png}
 \end{center}}
 \end{column}
 \end{columns}
@@ -309,7 +364,6 @@ question
 \end{frame}
 
 
-\section{Hypotheses}
 \begin{frame}{Scientific research starts with questions}
 \begin{itemize}
 \setlength{\itemsep}{5pt}
@@ -325,7 +379,6 @@ another or not?
 \end{frame}
 
 \begin{frame}{What is a hypothesis?}
-
 \begin{itemize}
  \item<2-> A hypothesis is a presumed answer to a question.
  \item<3-> To test whether or not a hypothesis applies it needs to be exposed to scientific testing. 
@@ -344,7 +397,7 @@ another or not?
 \end{itemize}
 
 \begin{center}
-\includegraphics[width=60mm]{../figures/huber_modellearning.png}
+\includegraphics[width=60mm]{../../../figures/huber_modellearning.png}
 \end{center}
 
 \only<2->{
@@ -360,8 +413,8 @@ another or not?
 
 \begin{frame}
  \frametitle{Formation of hypotheses}
- \includegraphics<1>[width=80mm]{../figures/huber_hypothesis.png}
- \includegraphics<2>[width=80mm]{../figures/huber_explorative.png}
+ \includegraphics<1>[width=80mm]{../../../figures/huber_hypothesis.png}
+ \includegraphics<2>[width=80mm]{../../../figures/huber_explorative.png}
 \end{frame}
  
 
@@ -393,14 +446,12 @@ another or not?
 \end{enumerate}
 \end{column}
 \begin{column}{50mm}
-\includegraphics<4>[width=50mm]{../figures/huber_robin_hood.png} 
+\includegraphics<4>[width=50mm]{../../../figures/huber_robin_hood.png} 
 \end{column}
 \end{columns}
 \end{overlayarea}
 \end{frame}
 
-
-\section{Experiments}
 \begin{frame}
  \frametitle{Experimental ingredients}
 \begin{enumerate}[<+->]
@@ -547,10 +598,10 @@ Write down indicators of aggressive behavior!
 %  \item analysis of behavioral traces, artifacts
 % \end{itemize}
 %  \column{4cm}
-% \includegraphics<1>[width=30mm]{../figures/huber_observation.png}
-% \includegraphics<2>[width=35mm]{../figures/huber_survey.png}
-% \includegraphics<3>[width=35mm]{../figures/huber_test.png}
-% \includegraphics<4>[width=35mm]{../figures/huber_traces.png}
+% \includegraphics<1>[width=30mm]{../../../figures/huber_observation.png}
+% \includegraphics<2>[width=35mm]{../../../figures/huber_survey.png}
+% \includegraphics<3>[width=35mm]{../../../figures/huber_test.png}
+% \includegraphics<4>[width=35mm]{../../../figures/huber_traces.png}
 % \end{columns}
 % \end{frame}
 
@@ -648,6 +699,7 @@ measurable, small groups)
 
 \begin{frame}
 \frametitle{Control of confounding variables}
+\textcolor{blue}{... in the example:}
 \begin{itemize}
  \item degree of identification with the model
  \item aggressive tendencies
@@ -676,8 +728,27 @@ measurable, small groups)
 
 
 \begin{frame}
+\frametitle{Control of confounding variables}
+\textcolor{blue}{Factors of the social situation:}
+
+\begin{overlayarea}{110mm}{80mm}
+\begin{itemize}
+ \item Rosenthal or Pygmalion effect, Self-fulfulling prophecy
+\end{itemize}
+
+\includegraphics<1>[width=100mm]{figs/l2/rosenthal_citation.png}
+
+\begin{itemize}
+ \item Hawthorne, observer  effect
+ \item[] experiments studying the effects of light levels on productivity at the Hawthorne Works (1924-32)
+\end{itemize}
+\end{overlayarea}
+ \end{frame}
+
+
+\begin{frame}
 \frametitle{Summary}
-\includegraphics[width=80mm]{../figures/huber_summary.png}
+\includegraphics[width=80mm]{../../../figures/huber_summary.png}
 \end{frame}
 
 \begin{frame}
@@ -690,12 +761,10 @@ Oswald Huber (2009). Das psychologische Experiment: Eine Einf\"uhrung. Bern:
 Huber.
  \end{column}
  \begin{column}{40mm}
-\includegraphics[width=40mm]{../figures/huber_einband.png}
+\includegraphics[width=40mm]{../../../figures/huber_einband.png}
  \end{column}
 \end{columns}
 \end{frame}
 
 \end{document}
 
-
-\end{document}

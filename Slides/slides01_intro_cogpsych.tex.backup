@@ -56,6 +56,29 @@
   \end{frame}
 }
 
+
+\begin{frame}
+ \frametitle{Your lecturer}
+\begin{columns}[T]
+ \begin{column}{80mm}
+\begin{itemize}
+ \item[]<1-> \textbf{background:} psychology
+ \item[]<2-> \textbf{research interest:} visual perception: experiments \& models
+ \item[]<4-> \textbf{location:} TU Berlin
+ \item[]<5-> \textbf{group:} Christiane, Guillermo, Torsten 
+\end{itemize}
+  \end{column}
+
+\begin{column}{40mm}
+\includegraphics<2>[width=30mm]{../../../figures/anderson_chess.jpg} 
+% \includegraphics<2>[width=30mm]{../../../figures/varin_thin.png} 
+\includegraphics<4>[width=30mm]{../../../figures/marchstrasse_building.jpg} 
+\includegraphics<3>[width=40mm]{../../../figures/odog_model.png}
+\end{column}
+\end{columns}
+\end{frame}
+
+
 \begin{frame}
  \frametitle{So far ...}
 
@@ -73,20 +96,61 @@
 \end{frame}
 
 
-
-
-
 \begin{frame}
-\frametitle{Human cognition}
- \begin{center}
-\includegraphics<1>[width=110mm]{../../../figures/adelson_processing.png}
- \end{center}
+ \frametitle{Objectives}
+ basic knowledge in
+\begin{itemize}
+  \item Cognitive Psychology
+  \item Neuropsychology
+  \item Experimental Methods
+\end{itemize}
+
+\only<2->{
+\begin{itemize}
+ \item What kind of questions are addressed in the discipline?
+ \item How are these questions being addressed?
+ \item Be able to comprehend and evaluate literature and work done in the field.
+\end{itemize}
+}
 \end{frame}
 
 \begin{frame}
-\frametitle{Human cognition}
-Internal processes involved in making sense of the environment and deciding what action might be appropriate. \\
-These processes include:
+ \frametitle{Topics \& Structure}
+\begin{center}
+\includegraphics<1>[width=100mm]{figs/l1/block_I.png} 
+\includegraphics<2>[width=100mm]{figs/l1/block_II.png} 
+\end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Philosophy}
+\begin{overlayarea}{110mm}{50mm}
+Challenge: block course!! \\
+\vspace{5mm}
+\only<2->{
+ \begin{itemize}
+  \item alternation between instruction and individual studies
+  \item active involvement of participants
+  \item some topics in depth instead of broad coverage
+  \item exam: indicate the degree of retention of material - MC 
+  \item[]
+  \item<3->[!] What do I expect?
+ \end{itemize}
+}
+\end{overlayarea}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Outline for today}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Human cognition}
+\begin{columns}[T]
+ \begin{column}{60mm}
+ Internal processes involved in making sense of the environment and deciding what action might be appropriate. \\
 \begin{itemize} 
  \item attention
  \item perception
@@ -97,7 +161,23 @@ These processes include:
  \item reasoning
  \item thinking
 \end{itemize}
+ \end{column}
+\begin{column}{50mm}
+\includegraphics<1>[width=50mm]{figs/the_mind_SebastianEriksson.jpg} 
+\end{column}
+\end{columns}
 \end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Human cognition}
+ \begin{center}
+\includegraphics<1>[width=110mm]{../../../figures/adelson_processing.png}
+ \end{center}
+\end{frame}
+
 
 \begin{frame}
  \begin{exampleblock}{Thinking}
@@ -518,16 +598,19 @@ $I(x,y)$
 
 \begin{frame}
  \frametitle{Marr's three levels}
-\begin{overlayarea}{110mm}{65mm}
-
+\begin{overlayarea}{100mm}{55mm}
+\begin{small}
  \begin{tabular}{ll}
 \hline
- \textit{\begin{tabular}[l]{@{}l@{}} Computational \\ theory\end{tabular}} & \begin{tabular}[l]{@{}l@{}} What is the goal of the computation, \\ why is it appropriate, and what is the logic \\ of the strategy by which it can be carried out? \end{tabular} \\ \hline
+ \textit{\begin{tabular}[l]{@{}l@{}} Computational \\ theory\end{tabular}} & \begin{tabular}[l]{@{}l@{}} What is the goal of the computation, \\ why is it appropriate, and what is the logic \\ of the strategy by which it can be carried out? \end{tabular} \\
+\hline
+
 
 \textit{ \begin{tabular}[l]{@{}l@{}} Representation \\and algorithm \end{tabular}} &  \begin{tabular}[l]{@{}l@{}} How can this computational theory be implemented? \\ In particular, what is the representation for  the \\ input and output, and what is the algorithm \\for the transformation?  \end{tabular} \\ \hline
 
 \textit{\begin{tabular}[l]{@{}l@{}} Hardware \\ Implementation \end{tabular}} & \begin{tabular}[l]{@{}l@{}}How can the representation and algorithm be \\ realized physically? \end{tabular} \\ \hline 
  \end{tabular}
+\end{small}
 \end{overlayarea}
 
 \begin{itemize}
@@ -554,11 +637,11 @@ aerodynamics; only then do the structure of feathers and the different shapes of
  \begin{overlayarea}{110mm}{35mm}
 \begin{columns}[T]
  \begin{column}{30mm}
-\includegraphics[width=30mm]{mondrian_edge.png}
+\includegraphics[width=30mm]{figs/mondrian_edge.png}
  \end{column}
 
  \begin{column}{80mm}
-\includegraphics<3->[width=80mm]{luminance_zero.jpg}
+\includegraphics<3->[width=80mm]{figs/luminance_zero.jpg}
  \end{column}
 \end{columns}
 \end{overlayarea}
@@ -575,7 +658,7 @@ aerodynamics; only then do the structure of feathers and the different shapes of
 
 \begin{frame}{Example}
  \begin{center}
-\includegraphics[width=60mm]{marr_hildred_mexican_hat.png}
+\includegraphics[width=60mm]{figs/marr_hildred_mexican_hat.png}
 \end{center}
  \begin{itemize}
  \item the second derivative can be found by filtering the image with a Mexican hat function (Marr-Hildreth algorithm )  
@@ -589,13 +672,7 @@ aerodynamics; only then do the structure of feathers and the different shapes of
 
 \begin{frame}{From images to the primal sketch}
  \begin{center}
-\includegraphics<1>[width=60mm]{marr_primal_sketch.png}
- \includegraphics<2>[width=80mm]{../../figures/odog_model.png}
-
-\only<2->{
-\vspace{3mm}
-\tiny{Blakeslee \& McCourt, 1999, 2004; Dakin \& Bex, 2003, Robinson et al., 2007; Otazu et al., 2008}
-}
+\includegraphics<1>[width=60mm]{figs/marr_primal_sketch.png}
 \end{center}
  \end{frame}
 
@@ -603,7 +680,7 @@ aerodynamics; only then do the structure of feathers and the different shapes of
 
 \begin{frame}{From images to 3D-objects}
  \begin{center}
-\includegraphics[width=100mm]{marr_representations.png}
+\includegraphics[width=100mm]{figs/marr_representations.png}
 \end{center}
 \end{frame}
 

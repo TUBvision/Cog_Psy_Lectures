@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.5.29)  30 JUN 2016 11:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.5.29)  12 JUL 2016 12:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -983,12 +983,12 @@ LaTeX Info: Redefining \includegraphics on input line 45.
 (./slides03_visual_perception.nav) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] <figs/l3/cortical_pathways
-.png, id=21, 722.7pt x 542.025pt>
+.png, id=21, 536.75531pt x 470.50781pt>
 File: figs/l3/cortical_pathways.png Graphic file (type png)
 
 <use figs/l3/cortical_pathways.png>
 Package pdftex.def Info: figs/l3/cortical_pathways.png used on input line 64.
-(pdftex.def)             Requested size: 312.9803pt x 234.73686pt.
+(pdftex.def)             Requested size: 256.0748pt x 224.46992pt.
  [2
 
  <./figs/l3/cortical_pathways.png>]
@@ -1000,511 +1000,532 @@ File: omsphv.fd
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 85.
 
-<figs/l3/retina_info_flow.png, id=29, 722.7pt x 542.025pt>
+<figs/l3/retina_info_flow.png, id=29, 672.26157pt x 490.08093pt>
 File: figs/l3/retina_info_flow.png Graphic file (type png)
 
 <use figs/l3/retina_info_flow.png>
 Package pdftex.def Info: figs/l3/retina_info_flow.png used on input line 85.
-(pdftex.def)             Requested size: 199.16928pt x 149.37575pt.
+(pdftex.def)             Requested size: 199.16928pt x 145.1933pt.
  [3
 
  <./figs/l3/retina_info_flow.png>]
-<figs/l3/cortical_pathways2.png, id=37, 722.7pt x 542.025pt>
+<figs/l3/cortical_pathways2.png, id=37, 581.17125pt x 492.33937pt>
 File: figs/l3/cortical_pathways2.png Graphic file (type png)
 
 <use figs/l3/cortical_pathways2.png>
 Package pdftex.def Info: figs/l3/cortical_pathways2.png used on input line 85.
-(pdftex.def)             Requested size: 199.16928pt x 149.37575pt.
+(pdftex.def)             Requested size: 199.16928pt x 168.72287pt.
  [4
 
  <./figs/l3/cortical_pathways2.png>]
-<figs/l3/ori_acuity_demo.png, id=44, 703.12688pt x 347.04657pt>
+[5
+
+] <figs/l3/ori_acuity_demo.png, id=49, 703.12688pt x 347.04657pt>
 File: figs/l3/ori_acuity_demo.png Graphic file (type png)
 
 <use figs/l3/ori_acuity_demo.png>
-Package pdftex.def Info: figs/l3/ori_acuity_demo.png used on input line 97.
+Package pdftex.def Info: figs/l3/ori_acuity_demo.png used on input line 107.
 (pdftex.def)             Requested size: 312.9803pt x 154.47495pt.
- [5
+ [6
 
  <./figs/l3/ori_acuity_demo.png>]
 File: figs/l3/ori_acuity_demo.png Graphic file (type png)
 
 <use figs/l3/ori_acuity_demo.png>
-Package pdftex.def Info: figs/l3/ori_acuity_demo.png used on input line 97.
+Package pdftex.def Info: figs/l3/ori_acuity_demo.png used on input line 107.
 (pdftex.def)             Requested size: 85.35826pt x 42.12567pt.
- [6
+ [7
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 112.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 123.
+LaTeX Font Info:    Try loading font information for U+msa on input line 123.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 112.
+LaTeX Font Info:    Try loading font information for U+msb on input line 123.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 112.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 123.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 112.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 123.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 112.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 123.
 
-<figs/l3/visual_angle.png, id=56, 699.36281pt x 229.60782pt>
+<figs/l3/visual_angle.png, id=62, 699.36281pt x 229.60782pt>
 File: figs/l3/visual_angle.png Graphic file (type png)
 
 <use figs/l3/visual_angle.png>
-Package pdftex.def Info: figs/l3/visual_angle.png used on input line 112.
+Package pdftex.def Info: figs/l3/visual_angle.png used on input line 123.
 (pdftex.def)             Requested size: 227.62204pt x 74.73026pt.
- [7
+
+Overfull \vbox (1.92737pt too high) detected at line 123
+ []
+
+[8
 
  <./figs/l3/visual_angle.png>]
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 126.
-
-<figs/l3/snellen_E.png, id=67, 722.7pt x 542.025pt>
+<figs/l3/snellen_E.png, id=73, 722.7pt x 542.025pt>
 File: figs/l3/snellen_E.png Graphic file (type png)
 
 <use figs/l3/snellen_E.png>
-Package pdftex.def Info: figs/l3/snellen_E.png used on input line 126.
+Package pdftex.def Info: figs/l3/snellen_E.png used on input line 137.
 (pdftex.def)             Requested size: 142.26378pt x 106.69933pt.
- [8
+
+Overfull \vbox (1.99567pt too high) detected at line 137
+ []
+
+[9
 
  <./figs/l3/snellen_E.png>]
-<figs/l3/grating_sampling.png, id=75, 722.7pt x 542.025pt>
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 152.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) [10
+
+]
+<figs/l3/grating_sampling.png, id=95, 498.36188pt x 481.04718pt>
 File: figs/l3/grating_sampling.png Graphic file (type png)
 
 <use figs/l3/grating_sampling.png>
-Package pdftex.def Info: figs/l3/grating_sampling.png used on input line 133.
-(pdftex.def)             Requested size: 284.52756pt x 213.39865pt.
- [9
+Package pdftex.def Info: figs/l3/grating_sampling.png used on input line 160.
+(pdftex.def)             Requested size: 227.62204pt x 219.7136pt.
+ [11
 
  <./figs/l3/grating_sampling.png>]
-<figs/l3/high_contrast.jpg, id=82, 200.75pt x 200.75pt>
+<figs/l3/high_contrast.jpg, id=102, 200.75pt x 200.75pt>
 File: figs/l3/high_contrast.jpg Graphic file (type jpg)
 
 <use figs/l3/high_contrast.jpg>
-Package pdftex.def Info: figs/l3/high_contrast.jpg used on input line 162.
-(pdftex.def)             Requested size: 42.67912pt x 42.67947pt.
+Package pdftex.def Info: figs/l3/high_contrast.jpg used on input line 189.
+(pdftex.def)             Requested size: 34.1433pt x 34.14235pt.
 
-<figs/l3/medium_contrast.jpg, id=83, 200.75pt x 200.75pt>
+<figs/l3/medium_contrast.jpg, id=103, 200.75pt x 200.75pt>
 File: figs/l3/medium_contrast.jpg Graphic file (type jpg)
 
 <use figs/l3/medium_contrast.jpg>
-Package pdftex.def Info: figs/l3/medium_contrast.jpg used on input line 162.
-(pdftex.def)             Requested size: 42.67912pt x 42.67947pt.
+Package pdftex.def Info: figs/l3/medium_contrast.jpg used on input line 189.
+(pdftex.def)             Requested size: 34.1433pt x 34.14235pt.
 
-<figs/l3/sine_wave_high_low.png, id=84, 388.45125pt x 241.65282pt>
+<figs/l3/sine_wave_high_low.png, id=104, 388.45125pt x 241.65282pt>
 File: figs/l3/sine_wave_high_low.png Graphic file (type png)
 
 <use figs/l3/sine_wave_high_low.png>
-Package pdftex.def Info: figs/l3/sine_wave_high_low.png used on input line 162.
+Package pdftex.def Info: figs/l3/sine_wave_high_low.png used on input line 189.
 
 (pdftex.def)             Requested size: 142.26378pt x 88.50305pt.
 
-<figs/l3/gabors_sf.png, id=85, 688.07062pt x 219.06844pt>
+<figs/l3/gabors_sf.png, id=105, 688.07062pt x 219.06844pt>
 File: figs/l3/gabors_sf.png Graphic file (type png)
 
 <use figs/l3/gabors_sf.png>
-Package pdftex.def Info: figs/l3/gabors_sf.png used on input line 162.
-(pdftex.def)             Requested size: 256.0748pt x 81.5287pt.
+Package pdftex.def Info: figs/l3/gabors_sf.png used on input line 189.
+(pdftex.def)             Requested size: 227.62204pt x 72.46996pt.
 
-Overfull \vbox (4.21513pt too high) detected at line 162
+Overfull \vbox (8.7564pt too high) detected at line 189
  []
-
-[10
-
- <./figs/l3/high_contrast.jpg> <./figs/l3/medium_contrast.jpg> <./figs/l3/sine_
-wave_high_low.png (PNG copy)> <./figs/l3/gabors_sf.png>]
-<figs/l3/csf_diagram.png, id=92, 722.7pt x 542.025pt>
-File: figs/l3/csf_diagram.png Graphic file (type png)
-
-<use figs/l3/csf_diagram.png>
-Package pdftex.def Info: figs/l3/csf_diagram.png used on input line 171.
-(pdftex.def)             Requested size: 284.52756pt x 213.39865pt.
- [11
-
- <./figs/l3/csf_diagram.png>]
-<figs/l3/csf_demo.png, id=99, 722.7pt x 542.025pt>
-File: figs/l3/csf_demo.png Graphic file (type png)
- <use figs/l3/csf_demo.png>
-Package pdftex.def Info: figs/l3/csf_demo.png used on input line 171.
-(pdftex.def)             Requested size: 284.52756pt x 213.39865pt.
 
 [12
 
- <./figs/l3/csf_demo.png>]
-<figs/l3/lgn_gratings.png, id=106, 722.7pt x 542.025pt>
-File: figs/l3/lgn_gratings.png Graphic file (type png)
+ <./figs/l3/high_contrast.jpg> <./figs/l3/medium_contrast.jpg> <./figs/l3/sine_
+wave_high_low.png (PNG copy)> <./figs/l3/gabors_sf.png>]
+<figs/l3/csf_diagram.png, id=112, 632.3625pt x 481.8pt>
+File: figs/l3/csf_diagram.png Graphic file (type png)
 
-<use figs/l3/lgn_gratings.png>
-Package pdftex.def Info: figs/l3/lgn_gratings.png used on input line 191.
-(pdftex.def)             Requested size: 227.62204pt x 170.71396pt.
+<use figs/l3/csf_diagram.png>
+Package pdftex.def Info: figs/l3/csf_diagram.png used on input line 201.
+(pdftex.def)             Requested size: 284.52756pt x 216.78593pt.
  [13
 
- <./figs/l3/lgn_gratings.png>]
-<figs/l3/ward_single_cell_recording.png, id=114, 209.28188pt x 216.81pt>
+ <./figs/l3/csf_diagram.png>]
+<figs/l3/csf_demo.png, id=120, 632.3625pt x 481.8pt>
+File: figs/l3/csf_demo.png Graphic file (type png)
+
+<use figs/l3/csf_demo.png>
+Package pdftex.def Info: figs/l3/csf_demo.png used on input line 201.
+(pdftex.def)             Requested size: 284.52756pt x 216.78593pt.
+ [14
+
+ <./figs/l3/csf_demo.png>] [15
+
+]
+<figs/l3/ward_single_cell_recording.png, id=132, 209.28188pt x 216.81pt>
 File: figs/l3/ward_single_cell_recording.png Graphic file (type png)
 
 <use figs/l3/ward_single_cell_recording.png>
 Package pdftex.def Info: figs/l3/ward_single_cell_recording.png used on input l
-ine 222.
+ine 241.
 (pdftex.def)             Requested size: 113.81102pt x 117.90271pt.
 
-<figs/l3/single_cell_electrode.png, id=115, 722.7pt x 542.025pt>
+<figs/l3/single_cell_electrode.png, id=133, 722.7pt x 542.025pt>
 File: figs/l3/single_cell_electrode.png Graphic file (type png)
 
 <use figs/l3/single_cell_electrode.png>
 Package pdftex.def Info: figs/l3/single_cell_electrode.png used on input line 2
-22.
+41.
 (pdftex.def)             Requested size: 113.81102pt x 85.35284pt.
 
-<figs/l3/spike_counts.png, id=116, 134.00063pt x 112.92188pt>
+<figs/l3/spike_counts.png, id=134, 134.00063pt x 112.92188pt>
 File: figs/l3/spike_counts.png Graphic file (type png)
 
 <use figs/l3/spike_counts.png>
-Package pdftex.def Info: figs/l3/spike_counts.png used on input line 222.
+Package pdftex.def Info: figs/l3/spike_counts.png used on input line 241.
 (pdftex.def)             Requested size: 56.9055pt x 47.9541pt.
- [14
+ [16
 
  <./figs/l3/ward_single_cell_recording.png> <./figs/l3/single_cell_electrode.pn
 g> <./figs/l3/spike_counts.png>]
+<figs/l3/m_p_retinal_ganglion.png, id=142, 675.27281pt x 266.49562pt>
+File: figs/l3/m_p_retinal_ganglion.png Graphic file (type png)
+
+<use figs/l3/m_p_retinal_ganglion.png>
+Package pdftex.def Info: figs/l3/m_p_retinal_ganglion.png used on input line 26
+4.
+(pdftex.def)             Requested size: 156.49014pt x 61.75627pt.
+
+<figs/l3/on_off_retinal_ganglion.png, id=143, 352.31625pt x 475.7775pt>
+File: figs/l3/on_off_retinal_ganglion.png Graphic file (type png)
+
+<use figs/l3/on_off_retinal_ganglion.png>
+Package pdftex.def Info: figs/l3/on_off_retinal_ganglion.png used on input line
+ 264.
+(pdftex.def)             Requested size: 142.26378pt x 192.1153pt.
+ [17
+
+ <./figs/l3/m_p_retinal_ganglion.png> <./figs/l3/on_off_retinal_ganglion.png>]
+<figs/l3/mach_band_demo.png, id=151, 363.60844pt x 469.00218pt>
+File: figs/l3/mach_band_demo.png Graphic file (type png)
+
+<use figs/l3/mach_band_demo.png>
+Package pdftex.def Info: figs/l3/mach_band_demo.png used on input line 274.
+(pdftex.def)             Requested size: 199.16928pt x 256.90717pt.
+
+Overfull \vbox (21.49803pt too high) detected at line 274
+ []
+
+[18
+
+ <./figs/l3/mach_band_demo.png>]
+<figs/l3/mach_band_rf.png, id=158, 252.945pt x 200.75pt>
+File: figs/l3/mach_band_rf.png Graphic file (type png)
+
+<use figs/l3/mach_band_rf.png>
+Package pdftex.def Info: figs/l3/mach_band_rf.png used on input line 274.
+(pdftex.def)             Requested size: 199.16928pt x 158.07307pt.
+ [19
+
+ <./figs/l3/mach_band_rf.png>]
+<figs/l3/mach_band_explanation.png, id=166, 609.02531pt x 481.8pt>
+File: figs/l3/mach_band_explanation.png Graphic file (type png)
+
+<use figs/l3/mach_band_explanation.png>
+Package pdftex.def Info: figs/l3/mach_band_explanation.png used on input line 2
+74.
+(pdftex.def)             Requested size: 199.16928pt x 157.56091pt.
+ [20
+
+ <./figs/l3/mach_band_explanation.png>] <figs/l3/lgn_gratings.png, id=173, 435.
+12563pt x 478.78876pt>
 File: figs/l3/lgn_gratings.png Graphic file (type png)
 
 <use figs/l3/lgn_gratings.png>
-Package pdftex.def Info: figs/l3/lgn_gratings.png used on input line 235.
-(pdftex.def)             Requested size: 227.62204pt x 170.71396pt.
- [15
+Package pdftex.def Info: figs/l3/lgn_gratings.png used on input line 286.
+(pdftex.def)             Requested size: 170.71652pt x 187.85194pt.
+ [21
 
-]
-<figs/l3/lgn_phase.png, id=129, 722.7pt x 542.025pt>
+ <./figs/l3/lgn_gratings.png>]
+<figs/l3/lgn_phase.png, id=180, 569.87906pt x 438.13687pt>
 File: figs/l3/lgn_phase.png Graphic file (type png)
 
 <use figs/l3/lgn_phase.png>
-Package pdftex.def Info: figs/l3/lgn_phase.png used on input line 247.
-(pdftex.def)             Requested size: 227.62204pt x 170.71396pt.
- [16
+Package pdftex.def Info: figs/l3/lgn_phase.png used on input line 298.
+(pdftex.def)             Requested size: 227.62204pt x 174.99759pt.
+ [22
 
  <./figs/l3/lgn_phase.png>]
 File: figs/l3/cortical_pathways2.png Graphic file (type png)
 
 <use figs/l3/cortical_pathways2.png>
-Package pdftex.def Info: figs/l3/cortical_pathways2.png used on input line 255.
+Package pdftex.def Info: figs/l3/cortical_pathways2.png used on input line 348.
 
-(pdftex.def)             Requested size: 227.62204pt x 170.71396pt.
- [17
-
-]
-<figs/l3/lgn_layers.png, id=141, 527.72156pt x 478.03593pt>
-File: figs/l3/lgn_layers.png Graphic file (type png)
-
-<use figs/l3/lgn_layers.png>
-Package pdftex.def Info: figs/l3/lgn_layers.png used on input line 277.
-(pdftex.def)             Requested size: 170.71652pt x 154.6377pt.
-
-Overfull \hbox (28.45274pt too wide) in paragraph at lines 277--277
-[][]  
- []
-
-
-Overfull \hbox (1.12088pt too wide) in paragraph at lines 277--277
-[]|[]  
- []
-
-[18
-
- <./figs/l3/lgn_layers.png>]
-File: figs/l3/lgn_layers.png Graphic file (type png)
- <use figs/l3/lgn_layers.png>
-Package pdftex.def Info: figs/l3/lgn_layers.png used on input line 290.
-(pdftex.def)             Requested size: 170.71652pt x 154.6377pt.
-
-<figs/l3/visual_field_lgn.png, id=148, 238.64156pt x 473.51906pt>
-File: figs/l3/visual_field_lgn.png Graphic file (type png)
-
-<use figs/l3/visual_field_lgn.png>
-Package pdftex.def Info: figs/l3/visual_field_lgn.png used on input line 290.
-(pdftex.def)             Requested size: 99.58464pt x 197.59776pt.
- [19
-
- <./figs/l3/visual_field_lgn.png>]
-File: figs/l3/cortical_pathways2.png Graphic file (type png)
-
-<use figs/l3/cortical_pathways2.png>
-Package pdftex.def Info: figs/l3/cortical_pathways2.png used on input line 297.
-
-(pdftex.def)             Requested size: 227.62204pt x 170.71396pt.
- [20
+(pdftex.def)             Requested size: 227.62204pt x 192.83043pt.
+ [23
 
 ]
-<figs/l3/v1_layers.png, id=161, 679.78969pt x 445.665pt>
-File: figs/l3/v1_layers.png Graphic file (type png)
-
-<use figs/l3/v1_layers.png>
-Package pdftex.def Info: figs/l3/v1_layers.png used on input line 321.
-(pdftex.def)             Requested size: 170.71652pt x 111.91919pt.
-
-Overfull \hbox (28.45274pt too wide) in paragraph at lines 321--321
-[][]  
- []
-
-
-Overfull \hbox (1.12088pt too wide) in paragraph at lines 321--321
-[]|[]  
- []
-
-[21
-
- <./figs/l3/v1_layers.png>]
-<figs/l3/magnification_topography.png, id=168, 500.62032pt x 499.11469pt>
+<figs/l3/magnification_topography.png, id=192, 500.62032pt x 499.11469pt>
 File: figs/l3/magnification_topography.png Graphic file (type png)
 
 <use figs/l3/magnification_topography.png>
 Package pdftex.def Info: figs/l3/magnification_topography.png used on input lin
-e 334.
+e 385.
 (pdftex.def)             Requested size: 170.71652pt x 170.19939pt.
- [22
+ [24
 
  <./figs/l3/magnification_topography.png>]
-<figs/l3/snellen_magnification.png, id=175, 721.94719pt x 142.28156pt>
+<figs/l3/snellen_magnification.png, id=200, 721.94719pt x 142.28156pt>
 File: figs/l3/snellen_magnification.png Graphic file (type png)
 
 <use figs/l3/snellen_magnification.png>
 Package pdftex.def Info: figs/l3/snellen_magnification.png used on input line 3
-34.
+85.
 (pdftex.def)             Requested size: 284.52756pt x 56.07358pt.
- [23
+ [25
 
- <./figs/l3/snellen_magnification.png>] <figs/l3/ori_tuning.png, id=182, 722.7p
-t x 542.025pt>
-File: figs/l3/ori_tuning.png Graphic file (type png)
+ <./figs/l3/snellen_magnification.png>] [26
 
-<use figs/l3/ori_tuning.png>
-Package pdftex.def Info: figs/l3/ori_tuning.png used on input line 351.
-(pdftex.def)             Requested size: 142.26378pt x 106.69933pt.
- [24
+] <figs/l3/ori_selectivity.jpg, id=214, 682.55pt x 420.57124pt>
+File: figs/l3/ori_selectivity.jpg Graphic file (type jpg)
 
- <./figs/l3/ori_tuning.png>]
-File: figs/l3/ori_tuning.png Graphic file (type png)
+<use figs/l3/ori_selectivity.jpg>
+Package pdftex.def Info: figs/l3/ori_selectivity.jpg used on input line 400.
+(pdftex.def)             Requested size: 256.0748pt x 157.79083pt.
+ [27
 
-<use figs/l3/ori_tuning.png>
-Package pdftex.def Info: figs/l3/ori_tuning.png used on input line 351.
-(pdftex.def)             Requested size: 142.26378pt x 106.69933pt.
+ <./figs/l3/ori_selectivity.jpg>]
+<figs/l3/simple_cell.jpg, id=220, 531.9875pt x 361.35pt>
+File: figs/l3/simple_cell.jpg Graphic file (type jpg)
 
-<figs/l3/simple_cell_model.png, id=189, 722.7pt x 542.025pt>
+<use figs/l3/simple_cell.jpg>
+Package pdftex.def Info: figs/l3/simple_cell.jpg used on input line 422.
+(pdftex.def)             Requested size: 142.26378pt x 96.62846pt.
+ [28
+
+ <./figs/l3/simple_cell.jpg>]
+<figs/l3/simple_cell_model.png, id=226, 685.05937pt x 489.32813pt>
 File: figs/l3/simple_cell_model.png Graphic file (type png)
 
 <use figs/l3/simple_cell_model.png>
-Package pdftex.def Info: figs/l3/simple_cell_model.png used on input line 351.
-(pdftex.def)             Requested size: 142.26378pt x 106.69933pt.
- [25
+Package pdftex.def Info: figs/l3/simple_cell_model.png used on input line 422.
+(pdftex.def)             Requested size: 142.26378pt x 101.61209pt.
+ [29
 
  <./figs/l3/simple_cell_model.png>]
-<figs/l3/odd_even_simple_cells.png, id=198, 698.61pt x 347.79938pt>
-File: figs/l3/odd_even_simple_cells.png Graphic file (type png)
+<figs/l3/complex_cell.jpg, id=233, 531.9875pt x 411.5375pt>
+File: figs/l3/complex_cell.jpg Graphic file (type jpg)
 
-<use figs/l3/odd_even_simple_cells.png>
-Package pdftex.def Info: figs/l3/odd_even_simple_cells.png used on input line 3
-81.
-(pdftex.def)             Requested size: 142.26378pt x 70.8217pt.
- [26
+<use figs/l3/complex_cell.jpg>
+Package pdftex.def Info: figs/l3/complex_cell.jpg used on input line 445.
+(pdftex.def)             Requested size: 142.26378pt x 110.04909pt.
+ [30
 
- <./figs/l3/odd_even_simple_cells.png>]
-File: figs/l3/odd_even_simple_cells.png Graphic file (type png)
- <use figs/l3/odd_even_simple_cells.png>
-Package pdftex.def Info: figs/l3/odd_even_simple_cells.png used on input line 3
-81.
-(pdftex.def)             Requested size: 142.26378pt x 70.8217pt.
+ <./figs/l3/complex_cell.jpg>]
+<figs/l3/complex_cell_model.jpg, id=239, 547.04375pt x 403.5075pt>
+File: figs/l3/complex_cell_model.jpg Graphic file (type jpg)
 
-<figs/l3/complex_cell_response.png, id=205, 722.7pt x 338.76563pt>
-File: figs/l3/complex_cell_response.png Graphic file (type png)
+<use figs/l3/complex_cell_model.jpg>
+Package pdftex.def Info: figs/l3/complex_cell_model.jpg used on input line 445.
 
-<use figs/l3/complex_cell_response.png>
-Package pdftex.def Info: figs/l3/complex_cell_response.png used on input line 3
-81.
-(pdftex.def)             Requested size: 142.26378pt x 66.68707pt.
- [27
+(pdftex.def)             Requested size: 142.26378pt x 104.9341pt.
+ [31
 
- <./figs/l3/complex_cell_response.png>]
-File: figs/l3/odd_even_simple_cells.png Graphic file (type png)
- <use figs/l3/odd_even_simple_cells.png>
-Package pdftex.def Info: figs/l3/odd_even_simple_cells.png used on input line 3
-81.
-(pdftex.def)             Requested size: 142.26378pt x 70.8217pt.
-File: figs/l3/complex_cell_response.png Graphic file (type png)
+ <./figs/l3/complex_cell_model.jpg>]
+File: figs/l3/simple_cell.jpg Graphic file (type jpg)
 
-<use figs/l3/complex_cell_response.png>
-Package pdftex.def Info: figs/l3/complex_cell_response.png used on input line 3
-81.
-(pdftex.def)             Requested size: 142.26378pt x 66.68707pt.
+<use figs/l3/simple_cell.jpg>
+Package pdftex.def Info: figs/l3/simple_cell.jpg used on input line 475.
+(pdftex.def)             Requested size: 142.26378pt x 96.62846pt.
+ [32
 
-<figs/l3/end_stopped_cell_response.png, id=212, 722.7pt x 338.76563pt>
+]
+File: figs/l3/simple_cell.jpg Graphic file (type jpg)
+ <use figs/l3/simple_cell.jpg>
+Package pdftex.def Info: figs/l3/simple_cell.jpg used on input line 475.
+(pdftex.def)             Requested size: 142.26378pt x 96.62846pt.
+File: figs/l3/complex_cell.jpg Graphic file (type jpg)
+
+<use figs/l3/complex_cell.jpg>
+Package pdftex.def Info: figs/l3/complex_cell.jpg used on input line 475.
+(pdftex.def)             Requested size: 142.26378pt x 110.04909pt.
+ [33
+
+]
+File: figs/l3/simple_cell.jpg Graphic file (type jpg)
+ <use figs/l3/simple_cell.jpg>
+Package pdftex.def Info: figs/l3/simple_cell.jpg used on input line 475.
+(pdftex.def)             Requested size: 142.26378pt x 96.62846pt.
+File: figs/l3/complex_cell.jpg Graphic file (type jpg)
+
+<use figs/l3/complex_cell.jpg>
+Package pdftex.def Info: figs/l3/complex_cell.jpg used on input line 475.
+(pdftex.def)             Requested size: 142.26378pt x 110.04909pt.
+
+<figs/l3/end_stopped_cell_response.png, id=256, 722.7pt x 338.76563pt>
 File: figs/l3/end_stopped_cell_response.png Graphic file (type png)
 
 <use figs/l3/end_stopped_cell_response.png>
 Package pdftex.def Info: figs/l3/end_stopped_cell_response.png used on input li
-ne 381.
+ne 475.
 (pdftex.def)             Requested size: 142.26378pt x 66.68707pt.
- [28
+
+Overfull \vbox (25.82529pt too high) detected at line 475
+ []
+
+[34
 
  <./figs/l3/end_stopped_cell_response.png>]
-<figs/l3/ori_tilt_aftereffect.png, id=219, 460.72125pt x 452.4403pt>
+<figs/l3/ori_tilt_aftereffect.png, id=263, 460.72125pt x 452.4403pt>
 File: figs/l3/ori_tilt_aftereffect.png Graphic file (type png)
 
 <use figs/l3/ori_tilt_aftereffect.png>
-Package pdftex.def Info: figs/l3/ori_tilt_aftereffect.png used on input line 38
-9.
+Package pdftex.def Info: figs/l3/ori_tilt_aftereffect.png used on input line 48
+3.
 (pdftex.def)             Requested size: 199.16928pt x 195.588pt.
- [29
+ [35
 
  <./figs/l3/ori_tilt_aftereffect.png>]
 File: figs/l3/ori_tilt_aftereffect.png Graphic file (type png)
  <use figs/l3/ori_tilt_aftereffect.png>
-Package pdftex.def Info: figs/l3/ori_tilt_aftereffect.png used on input line 41
-0.
+Package pdftex.def Info: figs/l3/ori_tilt_aftereffect.png used on input line 50
+4.
 (pdftex.def)             Requested size: 142.26378pt x 139.70274pt.
 
-<figs/l3/ori_pre_adaptation_0.png, id=226, 722.7pt x 470.50781pt>
+<figs/l3/ori_pre_adaptation_0.png, id=270, 722.7pt x 470.50781pt>
 File: figs/l3/ori_pre_adaptation_0.png Graphic file (type png)
 
 <use figs/l3/ori_pre_adaptation_0.png>
-Package pdftex.def Info: figs/l3/ori_pre_adaptation_0.png used on input line 41
-0.
+Package pdftex.def Info: figs/l3/ori_pre_adaptation_0.png used on input line 50
+4.
 (pdftex.def)             Requested size: 142.26378pt x 92.62094pt.
-File: figs/l3/ori_tuning.png Graphic file (type png)
- <use figs/l3/ori_tuning.png>
-Package pdftex.def Info: figs/l3/ori_tuning.png used on input line 410.
-(pdftex.def)             Requested size: 142.26378pt x 106.69933pt.
- [30
 
- <./figs/l3/ori_pre_adaptation_0.png>]
+<figs/l3/ori_tuning.png, id=271, 685.05937pt x 489.32813pt>
+File: figs/l3/ori_tuning.png Graphic file (type png)
+
+<use figs/l3/ori_tuning.png>
+Package pdftex.def Info: figs/l3/ori_tuning.png used on input line 504.
+(pdftex.def)             Requested size: 142.26378pt x 101.61209pt.
+ [36
+
+ <./figs/l3/ori_pre_adaptation_0.png> <./figs/l3/ori_tuning.png>]
 File: figs/l3/ori_tilt_aftereffect.png Graphic file (type png)
  <use figs/l3/ori_tilt_aftereffect.png>
-Package pdftex.def Info: figs/l3/ori_tilt_aftereffect.png used on input line 41
-0.
+Package pdftex.def Info: figs/l3/ori_tilt_aftereffect.png used on input line 50
+4.
 (pdftex.def)             Requested size: 142.26378pt x 139.70274pt.
 
-<figs/l3/ori_pre_adaptation.png, id=233, 722.7pt x 470.50781pt>
+<figs/l3/ori_pre_adaptation.png, id=279, 722.7pt x 470.50781pt>
 File: figs/l3/ori_pre_adaptation.png Graphic file (type png)
 
 <use figs/l3/ori_pre_adaptation.png>
-Package pdftex.def Info: figs/l3/ori_pre_adaptation.png used on input line 410.
+Package pdftex.def Info: figs/l3/ori_pre_adaptation.png used on input line 504.
 
 (pdftex.def)             Requested size: 142.26378pt x 92.62094pt.
- [31
+ [37
 
  <./figs/l3/ori_pre_adaptation.png>]
 File: figs/l3/ori_tilt_aftereffect.png Graphic file (type png)
 
 <use figs/l3/ori_tilt_aftereffect.png>
-Package pdftex.def Info: figs/l3/ori_tilt_aftereffect.png used on input line 41
-0.
+Package pdftex.def Info: figs/l3/ori_tilt_aftereffect.png used on input line 50
+4.
 (pdftex.def)             Requested size: 142.26378pt x 139.70274pt.
 File: figs/l3/ori_pre_adaptation.png Graphic file (type png)
  <use figs/l3/ori_pre_adaptation.png>
-Package pdftex.def Info: figs/l3/ori_pre_adaptation.png used on input line 410.
+Package pdftex.def Info: figs/l3/ori_pre_adaptation.png used on input line 504.
 
 (pdftex.def)             Requested size: 142.26378pt x 92.62094pt.
 
-<figs/l3/ori_post_adaptation.png, id=241, 722.7pt x 436.63126pt>
+<figs/l3/ori_post_adaptation.png, id=287, 722.7pt x 436.63126pt>
 File: figs/l3/ori_post_adaptation.png Graphic file (type png)
 
 <use figs/l3/ori_post_adaptation.png>
-Package pdftex.def Info: figs/l3/ori_post_adaptation.png used on input line 410
+Package pdftex.def Info: figs/l3/ori_post_adaptation.png used on input line 504
 .
 (pdftex.def)             Requested size: 142.26378pt x 85.95224pt.
- [32
+ [38
 
  <./figs/l3/ori_post_adaptation.png>]
-<figs/l3/sf_adaptation_test.png, id=248, 272.217pt x 204.765pt>
+<figs/l3/sf_adaptation_test.png, id=294, 272.217pt x 204.765pt>
 File: figs/l3/sf_adaptation_test.png Graphic file (type png)
 
 <use figs/l3/sf_adaptation_test.png>
-Package pdftex.def Info: figs/l3/sf_adaptation_test.png used on input line 434.
+Package pdftex.def Info: figs/l3/sf_adaptation_test.png used on input line 528.
 
 (pdftex.def)             Requested size: 128.0374pt x 96.31453pt.
 
-<figs/l3/sf_adaptation_vert.png, id=249, 272.217pt x 204.765pt>
+<figs/l3/sf_adaptation_vert.png, id=295, 272.217pt x 204.765pt>
 File: figs/l3/sf_adaptation_vert.png Graphic file (type png)
 
 <use figs/l3/sf_adaptation_vert.png>
-Package pdftex.def Info: figs/l3/sf_adaptation_vert.png used on input line 434.
+Package pdftex.def Info: figs/l3/sf_adaptation_vert.png used on input line 528.
 
 (pdftex.def)             Requested size: 128.0374pt x 96.31453pt.
- [33
+ [39
 
  <./figs/l3/sf_adaptation_test.png (PNG copy)> <./figs/l3/sf_adaptation_vert.pn
 g (PNG copy)>]
 File: figs/l3/sf_adaptation_test.png Graphic file (type png)
 
 <use figs/l3/sf_adaptation_test.png>
-Package pdftex.def Info: figs/l3/sf_adaptation_test.png used on input line 434.
+Package pdftex.def Info: figs/l3/sf_adaptation_test.png used on input line 528.
 
 (pdftex.def)             Requested size: 128.0374pt x 96.31453pt.
 
-<figs/l3/sf_adaptation_csf.png, id=255, 272.217pt x 204.765pt>
+<figs/l3/sf_adaptation_csf.png, id=301, 272.217pt x 204.765pt>
 File: figs/l3/sf_adaptation_csf.png Graphic file (type png)
 
 <use figs/l3/sf_adaptation_csf.png>
-Package pdftex.def Info: figs/l3/sf_adaptation_csf.png used on input line 434.
+Package pdftex.def Info: figs/l3/sf_adaptation_csf.png used on input line 528.
 (pdftex.def)             Requested size: 128.0374pt x 96.31453pt.
- [34
+ [40
 
  <./figs/l3/sf_adaptation_csf.png (PNG copy)>]
 File: figs/l3/sf_adaptation_test.png Graphic file (type png)
  <use figs/l3/sf_adaptation_test.png>
-Package pdftex.def Info: figs/l3/sf_adaptation_test.png used on input line 434.
+Package pdftex.def Info: figs/l3/sf_adaptation_test.png used on input line 528.
 
 (pdftex.def)             Requested size: 128.0374pt x 96.31453pt.
 
-<figs/l3/sf_adaptation_hori.png, id=261, 272.217pt x 204.765pt>
+<figs/l3/sf_adaptation_hori.png, id=307, 272.217pt x 204.765pt>
 File: figs/l3/sf_adaptation_hori.png Graphic file (type png)
 
 <use figs/l3/sf_adaptation_hori.png>
-Package pdftex.def Info: figs/l3/sf_adaptation_hori.png used on input line 434.
+Package pdftex.def Info: figs/l3/sf_adaptation_hori.png used on input line 528.
 
 (pdftex.def)             Requested size: 128.0374pt x 96.31453pt.
- [35
+ [41
 
  <./figs/l3/sf_adaptation_hori.png (PNG copy)>]
 File: figs/l3/sf_adaptation_test.png Graphic file (type png)
  <use figs/l3/sf_adaptation_test.png>
-Package pdftex.def Info: figs/l3/sf_adaptation_test.png used on input line 434.
+Package pdftex.def Info: figs/l3/sf_adaptation_test.png used on input line 528.
 
 (pdftex.def)             Requested size: 128.0374pt x 96.31453pt.
 File: figs/l3/sf_adaptation_vert.png Graphic file (type png)
 
 <use figs/l3/sf_adaptation_vert.png>
-Package pdftex.def Info: figs/l3/sf_adaptation_vert.png used on input line 434.
+Package pdftex.def Info: figs/l3/sf_adaptation_vert.png used on input line 528.
 
 (pdftex.def)             Requested size: 128.0374pt x 96.31453pt.
 
-<figs/l3/sf_adaptation.png, id=267, 673.0746pt x 223.0734pt>
+<figs/l3/sf_adaptation.png, id=313, 673.0746pt x 223.0734pt>
 File: figs/l3/sf_adaptation.png Graphic file (type png)
 
 <use figs/l3/sf_adaptation.png>
-Package pdftex.def Info: figs/l3/sf_adaptation.png used on input line 434.
+Package pdftex.def Info: figs/l3/sf_adaptation.png used on input line 528.
 (pdftex.def)             Requested size: 312.9803pt x 103.72804pt.
- [36
+ [42
 
  <./figs/l3/sf_adaptation.png (PNG copy)>]
-<figs/l3/graham_nachmias.jpg, id=273, 513.117pt x 479.8728pt>
+<figs/l3/graham_nachmias.jpg, id=319, 513.117pt x 479.8728pt>
 File: figs/l3/graham_nachmias.jpg Graphic file (type jpg)
 
 <use figs/l3/graham_nachmias.jpg>
-Package pdftex.def Info: figs/l3/graham_nachmias.jpg used on input line 441.
+Package pdftex.def Info: figs/l3/graham_nachmias.jpg used on input line 535.
 (pdftex.def)             Requested size: 199.16928pt x 186.26364pt.
- [37
+ [43
 
- <./figs/l3/graham_nachmias.jpg>] [38
+ <./figs/l3/graham_nachmias.jpg>] [44
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 467.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 560.
 
-[39
+[45
 
 ]
 \tf@nav=\write6
@@ -1516,35 +1537,35 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
 \tf@snm=\write8
 \openout8 = `slides03_visual_perception.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 470.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 470.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 563.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 563.
  (./slides03_visual_perception.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 470.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 470.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 563.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 563.
 Package rerunfilecheck Info: File `slides03_visual_perception.out' has not chan
 ged.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 470.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 563.
  ) 
 Here is how much of TeX's memory you used:
- 20134 strings out of 494938
- 396597 string characters out of 6177585
- 447477 words of memory out of 5000000
- 22777 multiletter control sequences out of 15000+600000
- 37975 words of font info for 53 fonts, out of 8000000 for 9000
+ 20268 strings out of 494938
+ 399742 string characters out of 6177585
+ 449477 words of memory out of 5000000
+ 22889 multiletter control sequences out of 15000+600000
+ 41486 words of font info for 57 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  56i,11n,59p,423b,674s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/h
-elvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr
-o8a.pfb>
-Output written on slides03_visual_perception.pdf (39 pages, 6169940 bytes).
+/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/he
+lvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8
+a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on slides03_visual_perception.pdf (45 pages, 4639948 bytes).
 PDF statistics:
- 334 PDF objects out of 1000 (max. 8388607)
- 211 compressed objects within 3 object streams
- 79 named destinations out of 1000 (max. 500000)
- 237 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 385 PDF objects out of 1000 (max. 8388607)
+ 247 compressed objects within 3 object streams
+ 91 named destinations out of 1000 (max. 500000)
+ 281 words of extra memory for PDF output out of 10000 (max. 10000000)
 
