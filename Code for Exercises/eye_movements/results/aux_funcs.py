@@ -1,11 +1,15 @@
 import numpy as np
+import random
+from PIL import Image
 import os
 
 """
 Auxiliary functions for data manipulation and conversion
 """
 
-__all__ = ['get_trials', 'raw_to_trial', 'samples_to_ms', 'samples_to_ms_coord', 'transform_coord', 'data_to_dict', 'get_subset',  'fix_index_to_fixations','polar2cart']
+__all__ = ['get_trials', 'raw_to_trial', 'samples_to_ms', 'samples_to_ms_coord',
+ 'transform_coord', 'data_to_dict', 'get_subset',  'fix_index_to_fixations',
+ 'polar2cart','extract_time_positions','get_positions','create_display']
 
 def get_trials(data, start, end):
     """
@@ -398,3 +402,102 @@ def extract_time_positions(id='mm',sess=1):
     out.flush()
     out.close()
     #return print "File conversion saved"
+    
+
+def get_positions(nitems, offset, radius=400):
+    """
+    Determines the [x,y] positions of search items given the number of items, 
+    any rotational offset and the radius of search circle area.
+    
+    Parameters
+    -----------    
+    nitems : int
+        Number of items
+    offset : int
+        Rotational offset of items
+    radius : int, optional
+        Radius with default value
+    
+    Returns
+    ----------
+    screen positions : dict
+        x & y coordinates for each item
+    
+    """
+    positions     = np.arange(1, 360, 360/float(nitems))
+    positions_off = positions + offset
+    
+    screen_positions = {'x': [], 'y': []}
+    
+    for k in np.arange(nitems):
+        #print k, positions_off[k]
+        x, y = polar2cart(radius, positions_off[k])
+        screen_positions['x'].append(x)
+        screen_positions['y'].append(y)
+    return screen_positions
+
+
+def create_display(log_data, trial, target=False):
+    """
+    Plots the background image stimuli, given the condition number, number of 
+    items, item figure type and rotational offset, upon which the eye tracking 
+    path is plotted.
+    
+    Parameters
+    -----------
+    log_data : array_like
+        input data
+    trial : int
+        experimental trial number
+    target : boolean, optional
+        default - False
+    
+    Returns
+    -----------
+    im_base : array_like
+        output stimuli (underlay)
+    
+    """
+    conditions = {0: 'misaligned', 1: 'aligned', 2: 'filled', 3: 'noinducer'}
+    
+    # "[log_data['trial'] == trial])" selects trial number
+    cond    = np.int(log_data['target'][log_data['trl'] == trial])
+    n_items = log_data['nitems'][log_data['trl'] == trial]
+    offset  = log_data['rot_offset'][log_data['trl'] == trial]
+    positions = get_positions(n_items, offset)
+    
+    targ_x = log_data['tpos_x'][log_data['trl'] == trial]
+    targ_y = log_data['tpos_y'][log_data['trl'] == trial]
+    
+    im_base = Image.new('L', (1920, 1200), 128)
+    if random.randint(0,1) == 1:
+        dist_type = 'thin'
+        #targ_type = 'fat'
+    else:
+        dist_type = 'fat'
+        #targ_type = 'thin'
+    
+    im_distractor = Image.open('../stimuli/norm_%s_%s_10.bmp' %(dist_type, conditions[cond]))
+    new_dist   = im_distractor.resize((110,110))
+    
+    loc_offset = 55
+    for k in np.arange(np.int(n_items)):
+        xpos = np.round(positions['x'][k])+960
+        ypos = np.round(positions['y'][k])+600
+        ul_x = np.int(min(xpos+loc_offset, xpos-loc_offset))
+        ul_y = np.int(min(ypos+loc_offset, ypos-loc_offset))
+        lr_x = np.int(max(xpos+loc_offset, xpos-loc_offset))
+        lr_y = np.int(max(ypos+loc_offset, ypos-loc_offset))
+        
+        im_base.paste(new_dist, (ul_x, ul_y, lr_x, lr_y))
+    
+    if target:
+        #im_target     = Image.open('../stimuli/norm_fat_aligned_10.bmp')
+        #new_target = im_target.resize((110,110))
+        t_ul_x = np.int(min(targ_x+55, targ_x-55))
+        t_ul_y = np.int(min(targ_y+55, targ_y-55))
+        t_lr_x = np.int(min(targ_x+55, targ_x-55))
+        t_lr_y = np.int(min(targ_y+55, targ_y-55))
+        im_base.paste(new_dist, (t_ul_x, t_ul_y, t_lr_x, t_lr_y))
+    
+    return im_base
