@@ -162,3 +162,62 @@ plt.title("Dispersion based")
 plt.tick_params(axis='both',which='both', bottom='off',top='off', left='off',right='off', labelbottom='off',labelleft='off')
 
 
+
+#"""
+#plot moving_average_based_threshold
+#"""
+#velocity = qf.calc_veloc(points * 1000)
+#velocity_smooth = qf.moving_average(velocity, sampling_rate, smooth_window, 'same')
+#plt.figure(3)
+#plt.plot(velocity_smooth,label='velocity')
+#plt.plot([0,1800], np.ones(2) * velocity_threshold,label='thresholded')
+#velocity_smooth = qf.moving_average(velocity, sampling_rate, 40, 'same')
+#plt.plot(velocity_smooth, label='smoothed')
+#plt.title("Moving average based")
+#plt.tick_params(axis='both',which='both', bottom='off',top='off', left='off',right='off')
+#plt.legend()
+#plt.ylabel("Velocity [ms]")
+#plt.xlabel("Path point")
+#
+#
+#n_items = 8
+#target = 0
+#
+#sdata = af.get_subset(bdata, 'target', target)
+#trl_select = sdata['trl'][np.logical_and(sdata['search']==0, sdata['nitems']==n_items)]
+#
+#
+#plt.figure(4)
+#for count, trl in enumerate(trl_select):
+#    eye_trial = edata[edata[:,0]==trl,:]
+#    # convert eye positions from pixels into deg visual angle
+#    points = af.mm_to_visangle( af.pixel_to_mm( eye_trial[:,2:4] ) )
+#    
+#    plt.plot(points[:,0], points[:,1])
+#    plt.axis([-24, 24, -15, 15])
+#
+#    plt.subplot(4,5,count+1)
+#    plt.plot(eye_trial[:,2], eye_trial[:,3])
+#    plt.xlim([-500,500])
+#    plt.ylim([-500,500])
+
+
+
+
+
+
+
+
+#
+#id    = 'to'
+#sess  = 4
+#bdata = af.data_to_dict('%s/%s_%d' %(id, id, sess))
+#edata=pd.read_csv('%s/%s_%d_eye.txt' %(id, id, sess),names=['blk','time','xpos','ypos'],skiprows=1,sep=' ')
+#edata=np.asarray(edata)
+#trl = 1
+## single trial data
+#eye_trial = edata[edata[:,0] == trl,]
+## convert eye positions from pixels into deg visual angle
+#points = af.mm_to_visangle( af.pixel_to_mm( eye_trial[:,2:4] ) )
+
+
