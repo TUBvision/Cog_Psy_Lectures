@@ -78,11 +78,10 @@ Question 2 - Path quantification - velocity based
 Note: the below is an expanded version of qf.velocity_based_identification()
 """
 # Variables
-smooth_window=100
+smooth_window=50
 sampling_rate=1000
 velocity_threshold = 0.1 # 0.1 == 100ms
 duration_threshold=0.1 
-
 
 # Plot eye movement path
 plt.figure(2)
@@ -97,17 +96,17 @@ plt.title("processing")
 plt.plot(qf.calc_veloc(points),label='raw velocities')
 
 # Smooth raw velocities with smoothing window (cleaning up the data)
-velocity = qf.moving_average(qf.calc_veloc(points), sampling_rate, smooth_window, 'same')
-plt.plot(velocity, label='smoothed velocities')
+velocity_sm = qf.moving_average(qf.calc_veloc(points), sampling_rate, smooth_window, 'same')
+plt.plot(velocity_sm, label='smoothed velocities')
 
 # Isolate velocities less than velocity threshold as fixations
-fix_velocities = np.array(velocity < velocity_threshold, dtype = int)
+fix_velocities = np.array(velocity_sm < velocity_threshold, dtype = int)
 plt.plot(fix_velocities, label='thresholded velocities')
 plt.legend()
 
 
 """
-??????????????????
+?????????????????? - I don't get what this bit does.
 """
 # difference between subsequent fixations (out[n] = a[n+1] - a[n])
 fixation_index = np.diff(fix_velocities)
@@ -116,7 +115,7 @@ fix_start = np.where(fixation_index == 1)[0]+1
 # assumption that eye movements start with fixation (i.e. velocity zero)
 fix_start = np.r_[0, fix_start]
 # add 1 index because difference-vector index shifted by one element
-nsamples = len(velocity)    
+nsamples = len(velocity_sm)    
 fix_end   = np.nonzero(fixation_index == -1)[0]+1
 fix_end   = np.r_[fix_end, nsamples]
 
@@ -163,31 +162,33 @@ plt.tick_params(axis='both',which='both', bottom='off',top='off', left='off',rig
 
 
 
-#"""
-#plot moving_average_based_threshold
-#"""
-#velocity = qf.calc_veloc(points * 1000)
-#velocity_smooth = qf.moving_average(velocity, sampling_rate, smooth_window, 'same')
-#plt.figure(3)
-#plt.plot(velocity_smooth,label='velocity')
-#plt.plot([0,1800], np.ones(2) * velocity_threshold,label='thresholded')
-#velocity_smooth = qf.moving_average(velocity, sampling_rate, 40, 'same')
-#plt.plot(velocity_smooth, label='smoothed')
-#plt.title("Moving average based")
-#plt.tick_params(axis='both',which='both', bottom='off',top='off', left='off',right='off')
-#plt.legend()
-#plt.ylabel("Velocity [ms]")
-#plt.xlabel("Path point")
-#
-#
+"""
+plot moving_average_based_threshold - this is a more dynamic threshold method
+"""
+velocity = qf.calc_veloc(points * 1000)
+velocity_smooth = qf.moving_average(velocity, sampling_rate, smooth_window, 'same')
+plt.figure(4)
+plt.plot(velocity_smooth/1000,label='M_A_Smooth')
+plt.plot([0,1800], np.ones(2) * velocity_threshold,label='thresholded')
+plt.plot(velocity_sm, label='first smooth')
+plt.plot(velocity/1000, label = 'velocity')
+plt.title("Moving average based")
+plt.tick_params(axis='both',which='both', bottom='off',top='off', left='off',right='off')
+plt.legend()
+plt.ylabel("Velocity [ms]")
+plt.xlabel("Path point")
+
+
+"""
+Left over from original code version- prints all conditions - 20 blocks each
+"""
 #n_items = 8
 #target = 0
 #
 #sdata = af.get_subset(bdata, 'target', target)
 #trl_select = sdata['trl'][np.logical_and(sdata['search']==0, sdata['nitems']==n_items)]
 #
-#
-#plt.figure(4)
+#plt.figure(5)
 #for count, trl in enumerate(trl_select):
 #    eye_trial = edata[edata[:,0]==trl,:]
 #    # convert eye positions from pixels into deg visual angle
@@ -203,50 +204,25 @@ plt.tick_params(axis='both',which='both', bottom='off',top='off', left='off',rig
 
 
 
-
-
-
-
-
-#
-#id    = 'to'
-#sess  = 4
-#bdata = af.data_to_dict('%s/%s_%d' %(id, id, sess))
-#edata=pd.read_csv('%s/%s_%d_eye.txt' %(id, id, sess),names=['blk','time','xpos','ypos'],skiprows=1,sep=' ')
-#edata=np.asarray(edata)
-#trl = 1
-## single trial data
-#eye_trial = edata[edata[:,0] == trl,]
-## convert eye positions from pixels into deg visual angle
-#points = af.mm_to_visangle( af.pixel_to_mm( eye_trial[:,2:4] ) )
-
-
-#id = 'kvdb' # file label
-#sess = 4    # session number [from conditions]
-#n_items = 8 # number of items (figures) in stimuli
-#
-#conditions = {0: 'misaligned', 1: 'aligned', 2: 'filled', 3: 'noinducer'}
-#
-## Import computer and button response data as dictionary
-#bdata = a_eye.data_to_dict('%s/%s_%d' %(id, id, sess))
+#n_items=8
 ## Find which trials the target is correctly found (Where button response = Target presence)
 #bdata['correct'] = np.array(bdata['button']-6 == bdata['search'], dtype=int)
 ## Extract corrected condition
-#bdata = a_eye.get_subset(bdata, 'correct', 1)
+#bdata = af.get_subset(bdata, 'correct', 1)
 ## Import eye tracking data [ block, time, x position, y position]
 #edata=pd.read_csv('%s/%s_%d_eye.txt' %(id, id, sess),names=['blk','time','xpos','ypos'],skiprows=1,sep=' ')
 #edata=np.asarray(edata)
 #
 ## loop through each condition, plotting each condition stimuli
 #for target in conditions.keys():
-#    sdata = a_eye.get_subset(bdata, 'target', target) 
+#    sdata = af.get_subset(bdata, 'target', target) 
 #    # Select trials to plot
 #    trial_select = sdata['trl'][np.logical_and(sdata['search']==0, sdata['nitems']==n_items)]
 #    
 #    # Initiate plotting
 #    f1 = plt.figure()
 #    for k, trial in enumerate(trial_select):
-#        trial_disp = create_display(bdata, trial )
+#        trial_disp = af.create_display(bdata, trial )
 #        eye_trial = edata[edata[:,0] == trial,]
 #        
 #        plt.subplot(4,5,k+1)
