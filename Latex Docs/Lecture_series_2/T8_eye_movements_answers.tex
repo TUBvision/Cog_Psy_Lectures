@@ -14,70 +14,37 @@
 \begin{document}
 
 \maketitle
-In this exercise you will be working through Python code provided to you. The bulk of the code is broken up into auxiliary and quantification functions, stored in their respective scripts. You may views these functions for additional understanding but the concepts discussed in these questions are the focus here. \\
+In this exercise you will be working through Python code (step\_by\_step\_quant.py) provided to you. The bulk of the code is broken up into auxiliary (aux\_funcs.py) and quantification (quant\_funcs.py) functions, stored in their respective scripts. You may views these functions for additional understanding but the focus here is on the concepts discussed in the following questions. \\
 
-The experiment we follow is eye-tracking through object search. Namely, looking for the odd-one-out in a selection of images. The eye movements are sampled every few milliseconds, which can then be analysed, giving us insight into what is important when undertaking a visual search.
+The experiment we follow is eye-tracking through an object search task. Namely, looking for the odd-one-out in a selection of images. The eye movements are sampled every few milliseconds, which can then be analysed, giving us insight into what is important when undertaking a visual search, particularly what parts we fixate upon.
 
 
 \begin{enumerate}
- \item We first want to get familiar with the data we are using. Look through the code and find where 'bdata' and 'edata' are imported. Type 'bdata.keys()' to view the different labels of data within the bdata dictionary. Next, plot the outputs for nitems = 4,8 & 12.
- 
- \item[]
- \color{blue}
- Trace the edge of the shape, read off the value [1] 
- \item[]
- Any 1 from:
- \begin{itemize}
- \item More efficient
- \item Higher precision
- \item No calculations necessary 
- \end{itemize} 
- 
- \color{black}
- \item Now try to measure the length of a line with the planimeter. Compare this with using a ruler. Can you think of a way in which you could measure the length of a line using the planimeter, given that it only measures area [1]?
- \item[]
- \color{blue}
- Use the area of a known shape to calculate the length (e.g. circle $Area =/pi radius^2 $). [1]
- 
- \color{black}
- \item Consider what methods you employed to solve Task 2. How does this differ from Task 1 [1]? How does this compare to perception vs cognition [1]?
- \item[]
- \color{blue}
- You employed a method to solve it rather than just following a instruction. [1] \\
- Perception as directly accessing complex data, cognition as calculating complex data. [1]
- 
- \color{black}
- \item Discuss with your group possible way to differentiate between pseudo-perceptual judgements and true perceptual reports? Use the table below to help, adding any more you can think of [3]. What are the problems with using such distinctions[2]?
- \item[]
+\item We first want to get familiar with the data we are using. Look through the code and find where 'bdata' and 'edata' are imported. Type 'bdata.keys()' to view the different labels of data within the bdata dictionary. Next, plot the outputs for nitems = 4,8 and 12. Also change the presence of the target and see if you can observe a difference [1]. \\
 
-  \begin{center}
-   \begin{tabular}{ || c c c || } 
-   \hline
-   Measurement Quality & Perception & Cognition \\ 
-   \hline
-   Precision & \color{blue} High & \color{blue} Low  \\ 
-   \hline
-   Stability & \color{blue} High & \color{blue} Low  \\ 
-   \hline
-   Time taken  & \color{blue} Low  & \color{blue} High \\
-   \hline
-   \end{tabular}
-  \end{center}
-  \item[]
-  
  \color{blue}
- Pitfalls [2]
- \begin{itemize}
- \item Brain functions follow a spectrum (between perception and cognition) with unknown cutoffs between.
- \item We can't directly access much of our own internal functioning.
- \item Participants verbal reports may be biased.
- \item Accurate cognitive compensation could appear to be perceptual.
- \item Other good comments.
- \end{itemize}
-
+ The stimuli with more items have a more varied tracking path [1] 
+ 
+ \color{black}
+ \item Having seen the raw data we want to extract fixation points from the tracking path. One method to do this is via velocity discrimination. Given that we know the time interval between each point on the path, can you think of a way of calculating the velocity between each point[1]? \\
+ 
+ \color{blue}
+ Velocity = distance / time . Therefore we can calculate the velocity by measuring the distance between subsequent points along the tracking path. \\
+ 
+ \color{black}
+ Follow the code through, plotting the various methods applied to the raw data to extract fixation points, via velocity discrimination. The essential point is that below a certain velocity value, data points are defined as fixations, above the threshold they are defined as saccades. See what happens when you change the velocity threshold value \\
+ 
+ \item Run the code for dispersion based quantification. Note the difference in quality between this method and the previous. 
+ \item[]
+ \color{blue}
+ Dispersion correctly isolated more fixation points.
+ 
+ \color{black}
+ \item TBC
+ 
 
  \end{enumerate}
 
  Maximum marks 10/10 \\
- * Counting the number of squares, of known area, within the perimeter of the shape.
+
 \end{document}
