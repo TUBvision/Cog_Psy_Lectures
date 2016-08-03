@@ -16,7 +16,9 @@
 \maketitle
 In this exercise you will be working through Python code (step\_by\_step\_quant.py) provided to you. The bulk of the code is broken up into auxiliary (aux\_funcs.py) and quantification (quant\_funcs.py) functions, stored in their respective scripts. You may views these functions for additional understanding but the focus here is on the concepts discussed in the following questions. \\
 
-The experiment we follow is eye-tracking through an object search task. Namely, looking for the odd-one-out in a selection of images. The eye movements are sampled every few milliseconds, which can then be analysed, giving us insight into what is important when undertaking a visual search, particularly what parts we fixate upon.
+The experiment we follow is eye-tracking through an object search task. Namely, looking for the odd-one-out in a selection of images. The eye movements are sampled every few milliseconds, which can then be analysed, giving us insight into what is important when undertaking a visual search, particularly what parts we fixate upon. \\
+
+Remember to set the current to directory to the folder containing the code and data (with "cd /location")
 
 
 \begin{enumerate}
@@ -32,19 +34,22 @@ The experiment we follow is eye-tracking through an object search task. Namely, 
  Velocity = distance / time . Therefore we can calculate the velocity by measuring the distance between subsequent points along the tracking path. \\
  
  \color{black}
- Follow the code through, plotting the various methods applied to the raw data to extract fixation points, via velocity discrimination. The essential point is that below a certain velocity value, data points are defined as fixations, above the threshold they are defined as saccades. See what happens when you change the velocity threshold value \\
+ \item Follow the code through, plotting the various methods applied to the raw data to extract fixation points, via velocity discrimination. The essential point is that below a certain velocity value, data points are defined as fixations, above the threshold they are defined as saccades. See what happens when you change the velocity threshold value to 20ms and 200ms\\
  
- \item Run the code for dispersion based quantification. Note the difference in quality between this method and the previous. 
- \item[]
  \color{blue}
- Dispersion correctly isolated more fixation points.
+ A lower threshold results in more fixation points. A higher threshold averages across these fixations. \\
  
  \color{black}
- \item TBC
+ \item Run the code for dispersion based quantification. Note the difference in quality between this method and the previous. Try toying with the parameters for the duration threshold and minimum fixation threshold. What do you notice? \\
+ \item[]
+ \color{blue}
+ Dispersion correctly isolated more fixation points. \\
  
+ The dispersion based method's parameters require more careful parameter setting. Changing them too much causes incorrect fixation detection.
+  
 
  \end{enumerate}
-
+ \color{black}
  Maximum marks 10/10 \\
 
 \end{document}

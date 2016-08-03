@@ -35,7 +35,9 @@ edata=np.asarray(edata)
 
 trl = 1 # single trial data
 eye_trial = edata[edata[:,0] == trl,] # extract trial number
-points = af.mm_to_visangle( af.pixel_to_mm( eye_trial[:,2:4] ) ) # convert pixels to degrees of visual angle
+
+# convert pixels to degrees of visual angle (All this essentially does is rescale)
+points = af.mm_to_visangle( af.pixel_to_mm( eye_trial[:,2:4] ) ) 
 
 # 4 conditions of different target types 
 conditions = {0: 'misaligned', 1: 'aligned', 2: 'filled', 3: 'noinducer'}
@@ -73,15 +75,16 @@ for n in range(3): # loop through number of items
         
 
 """
-Question 2 - Path quantification - velocity based
+Question 3 - Path quantification - velocity based
 
 Note: the below is an expanded version of qf.velocity_based_identification()
 """
+
 # Variables
 smooth_window=50
 sampling_rate=1000
 velocity_threshold = 0.1 # 0.1 == 100ms
-duration_threshold=0.1 
+duration_threshold=0.5
 
 # Plot eye movement path
 plt.figure(2)
@@ -99,22 +102,23 @@ plt.plot(qf.calc_veloc(points),label='raw velocities')
 velocity_sm = qf.moving_average(qf.calc_veloc(points), sampling_rate, smooth_window, 'same')
 plt.plot(velocity_sm, label='smoothed velocities')
 
-# Isolate velocities less than velocity threshold as fixations
+# Isolate velocities less than velocity threshold as fixations 
+# (i.e. fixation velocities = 0, saccades -= 1)
 fix_velocities = np.array(velocity_sm < velocity_threshold, dtype = int)
 plt.plot(fix_velocities, label='thresholded velocities')
 plt.legend()
 
-
-"""
-?????????????????? - I don't get what this bit does.
-"""
-# difference between subsequent fixations (out[n] = a[n+1] - a[n])
+# Find difference between subsequent fixations with: out[n] = a[n+1] - a[n]
+# Essentially, this sets the start of fixation to be 1 and end to be -1
 fixation_index = np.diff(fix_velocities)
-# locations of where a change in velocity == 1 (np.where()[0] gets array of locations)
+
+# Extract fixation start locations (np.where()[0] gets array of locations)
+# add 1 index because difference-vector index shifted by one element
 fix_start = np.where(fixation_index == 1)[0]+1
 # assumption that eye movements start with fixation (i.e. velocity zero)
 fix_start = np.r_[0, fix_start]
-# add 1 index because difference-vector index shifted by one element
+
+# Extract fixation end locations
 nsamples = len(velocity_sm)    
 fix_end   = np.nonzero(fixation_index == -1)[0]+1
 fix_end   = np.r_[fix_end, nsamples]
@@ -124,13 +128,13 @@ if fix_velocities[-1] == 0:
 if fix_velocities[0] == 0:
     fix_start = fix_start[1:]
 
+# Recombine fixation start and end point into indicies
 fix_index = np.c_[fix_start, fix_end]
 
-
-# eliminate fixations with DUR < dur_crit m
+# eliminate fixations with a duration less than critical threshold value
 critical_duration = duration_threshold * sampling_rate/1000
 fix_dur   = fix_index[:,1]-fix_index[:,0]
-fix_index = fix_index[fix_dur>critical_duration,:] # Indicies of fixation
+#fix_index = fix_index[fix_dur>critical_duration,:] # Indicies of fixation
 
 # Convert indices into positions
 fixations = af.fix_index_to_fixations(points, fix_index, sampling_rate)
@@ -141,11 +145,12 @@ plt.title('path with fixations')
 
 
 """
-Question 3 - Path quantification - dispersion based 
+Question 4 - Path quantification - dispersion based 
 
 Note: As fixations are low velocity, they tend to cluster. This method classifies
 fixations based on maximum cluster seperation. In other words, it computes
-fixations based on dispersion of sample points and minimum duration
+fixations based on dispersion of sample points and minimum duration. Full routine
+methods can be seen in quant_funcs.py
 """
 # Variables
 min_duration=100
@@ -162,21 +167,21 @@ plt.tick_params(axis='both',which='both', bottom='off',top='off', left='off',rig
 
 
 
-"""
-plot moving_average_based_threshold - this is a more dynamic threshold method
-"""
-velocity = qf.calc_veloc(points * 1000)
-velocity_smooth = qf.moving_average(velocity, sampling_rate, smooth_window, 'same')
-plt.figure(4)
-plt.plot(velocity_smooth/1000,label='M_A_Smooth')
-plt.plot([0,1800], np.ones(2) * velocity_threshold,label='thresholded')
-plt.plot(velocity_sm, label='first smooth')
-plt.plot(velocity/1000, label = 'velocity')
-plt.title("Moving average based")
-plt.tick_params(axis='both',which='both', bottom='off',top='off', left='off',right='off')
-plt.legend()
-plt.ylabel("Velocity [ms]")
-plt.xlabel("Path point")
+#"""
+#plot moving_average_based_threshold - this is a more dynamic threshold method
+#"""
+#velocity = qf.calc_veloc(points * 1000)
+#velocity_smooth = qf.moving_average(velocity, sampling_rate, smooth_window, 'same')
+#plt.figure(4)
+#plt.plot(velocity_smooth/1000,label='M_A_Smooth')
+#plt.plot([0,1800], np.ones(2) * velocity_threshold,label='thresholded')
+#plt.plot(velocity_sm, label='first smooth')
+#plt.plot(velocity/1000, label = 'velocity')
+#plt.title("Moving average based")
+#plt.tick_params(axis='both',which='both', bottom='off',top='off', left='off',right='off')
+#plt.legend()
+#plt.ylabel("Velocity [ms]")
+#plt.xlabel("Path point")
 
 
 """
