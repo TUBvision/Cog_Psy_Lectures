@@ -18,21 +18,26 @@ In this exercise you will be working through Python code (step\_by\_step\_quant.
 
 The experiment we follow is eye-tracking through an object search task. Namely, looking for the odd-one-out in a selection of images. The eye movements are sampled every few milliseconds, which can then be analysed, giving us insight into what is important when undertaking a visual search, particularly what parts we fixate upon. \\
 
-Remember to set the current to directory to the folder containing the code and data (with "cd /location")
+Remember to set the current directory to the folder containing the code and data (with "cd /location")
 
 
 \begin{enumerate}
-\item We first want to get familiar with the data we are using. Look through the code and find where 'bdata' and 'edata' are imported. Type 'bdata.keys()' to view the different labels of data within the bdata dictionary. Next, plot the outputs for nitems = 4,8 and 12. Also change the presence of the target and see if you can observe a difference [1]. \\
+\item We first want to get familiar with the data we are using. Look through the code and find where 'bdata' and 'edata' are imported. Type 'bdata.keys()' to view the different labels of data within the bdata dictionary. Next, plot the outputs for nitems = 4,8 and 12. Also change the presence of the target and see if you can observe a qualitative difference in the paths [1]. \\
 
  \color{blue}
- The stimuli with more items have a more varied tracking path [1] 
+ When the non identical inducer is present, the condition ends. This is when the participant would indicate with a button that they have noticed it. [1] 
  
  \color{black}
- \item Having seen the raw data we want to extract fixation points from the tracking path. One method to do this is via velocity discrimination. Given that we know the time interval between each point on the path, can you think of a way of calculating the velocity between each point[1]? \\
+ \item Having seen the raw data, we want to extract fixation points from the tracking path. Given your answer to the previous question, why do we want to know fixation points [1]? One method to do this is via velocity discrimination. Given that we know the time interval between each point on the path, can you think of a way of calculating the velocity between each point[1]? \\
  
  \color{blue}
- Velocity = distance / time . Therefore we can calculate the velocity by measuring the distance between subsequent points along the tracking path. \\
+ \begin{itemize}
+  \item Then we may be able to deduce what parts of the stimuli are used by the participants to discriminate between identical and non-identical inducers \\
  
+  \item Velocity = distance / time . Therefore we can calculate the velocity by measuring the distance between subsequent points along the tracking path. \\
+ 
+ \end{itemize}
+
  \color{black}
  \item Follow the code through, plotting the various methods applied to the raw data to extract fixation points, via velocity discrimination. The essential point is that below a certain velocity value, data points are defined as fixations, above the threshold they are defined as saccades. See what happens when you change the velocity threshold value to 20ms and 200ms\\
  
