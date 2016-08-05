@@ -135,7 +135,8 @@ def dispersion_based_identification(data_samples, dispersion_threshold, duration
     fixations based on maximum cluster seperation. In other words, it computes
     fixations based on dispersion of sample points and minimum duration
     
-    - disperson = mean(max_horizontal_distance, max_vertical_distance)
+    disperson = mean(max_horizontal_distance, max_vertical_distance)
+    or D = (max(x)-min(x)) + (max(y)-min(y))
     
     Parameters
     ----------
@@ -152,50 +153,62 @@ def dispersion_based_identification(data_samples, dispersion_threshold, duration
         
     """
     data_samples_or = data_samples.copy()
+
+    # Convert number of sample points into milliseconds
     duration_threshold_in = af.millisecs_to_nsamples(duration_threshold, sampling_rate)
+    
+    # Initialise arrays
     sacc_samples = 0
     fix_end   = 0
     fix_index = []
     
+    # while there are still points (1 point removed through each iteration)
     while data_samples.shape[0] >= duration_threshold_in:
-    
+        
+        # Initiate duration length (to be increased)
         duration_samples = duration_threshold_in
+        
+        # Extract window from data set
         window    = data_samples[:duration_samples,:]
     
-        ### calculate distance as radius
-        #centroid  = np.mean(window, 0)
-        #distances = np.array([dist(centroid, window[k,:]) for k in range(window.shape[0])])
-    
-        ## calculate maximal horizontal and vertical distances
+        # calculate maximal horizontal and vertical distances, to calculate dispersion
         d_x = np.abs(np.max(window[:,0])-np.min(window[:,0]))
         d_y = np.abs(np.max(window[:,1])-np.min(window[:,1]))
         distances = np.array([d_x, d_y])
     
+        # If disperson of window points <= threshold
         if np.mean(distances) <= dispersion_threshold:
         
+            # While dispersion of window points <= threshold 
+            # Keep adding points to cluster until dispersion exceeds maximum distance threshold
             while np.mean(distances) <= dispersion_threshold:
-                duration_samples +=1
+                duration_samples +=1 # increase window size by 1 each iteration
                 if duration_samples > data_samples.shape[0]:
                     break
                 window    = data_samples[:duration_samples,:]
+                
                 ## calculate distance
                 d_x = np.abs(np.max(window[:,0])-np.min(window[:,0]))
                 d_y = np.abs(np.max(window[:,1])-np.min(window[:,1]))
                 distances = np.array([d_x, d_y])
             
+            # Store indices of fixations
             fix_start = fix_end + sacc_samples
             fix_end   = fix_start + (duration_samples-1)
             sacc_samples = 0
             fix_index.append([fix_start, fix_end])
             
+            # Remove window point from points
             data_samples = data_samples.take(np.arange(duration_samples, data_samples.shape[0]), axis=0)
         else:
+            # Remove first point from points
             data_samples = data_samples.take(np.arange(1, data_samples.shape[0]), axis=0)
             sacc_samples +=1
     
+    # Extract fixations from data samples using the stored indicies
     fixations = af.fix_index_to_fixations(data_samples_or, np.array(fix_index), sampling_rate)
     return fixations
-    
+        
 
 
 def detect_fixations(id,sess=4, fix_algorithm ='velocity',sampling_rate = 1000.0,min_duration  = 100,smooth_window = 30, velocity_threshold = 50,dispersion_threshold = 1  ):

@@ -3,7 +3,7 @@ import aux_funcs as af
 import quant_funcs as qf
 import pandas as pd
 import numpy as np
-
+import Image
 """
 Tutorial 8 - Eye movements
 
@@ -36,7 +36,8 @@ trl        - trial number
 button     - absent/present participant response [6,7]
 rot_offset - offset angles for presence of odd-one-out
 blk        - block number
-tpos_y     - ?????
+tpos_y     - screen coordinates for y
+tpos_x     - screen coordinates for x
 target     - [0,1,2,3] (Rotated outwards, illusionary, filled gray, square)
 """
 
@@ -52,7 +53,21 @@ points = eye_trial[:,2:4]*pixel_dim
 # get subset data from bdata
 sdata = af.get_subset(bdata, 'target', target) 
 
+# Simple plotting showing difference between example pair stimuli types
 plt.figure(1)
+plt.subplot(3,1,1)
+plt.imshow(Image.open('../stimuli/norm_fat_aligned_10.bmp'),cmap='gray')
+plt.title('Item fat')
+plt.subplot(3,1,2)
+plt.imshow(Image.open('../stimuli/norm_thin_aligned_10.bmp'),cmap='gray')
+plt.title('Item thin')
+plt.subplot(3,1,3)
+plt.plot(eye_trial[:,2],eye_trial[:,3])
+plt.title('Scan path')
+
+# More complex plotting showing scan path with full stimuli underlay 
+# Rows are 4,8 & 12 nitems, columns show 3 different examples.
+plt.figure(2)
 trial_select=np.zeros((20,3)) # initiate empty array to extract 20 trials for 3 different nitems
 step = 1                      # step for plotting only
 for n in range(3):            # loop through number of items
@@ -73,7 +88,7 @@ for n in range(3):            # loop through number of items
         plt.hold(True)
         plt.plot(eye_trial[:,2]+960, eye_trial[:,3]+600, 'b.') # overlay eye tracking path
         plt.axis([300, 1660, 50, 1100])
-        plt.suptitle('Eye path examples for %s condition with search : %s' %(conditions[target],search))
+        plt.suptitle('Scan path examples for %s condition with search : %s' %(conditions[target],search))
         
 
 """
@@ -88,10 +103,10 @@ smooth_window      = 20  # sliding window for moving average smoothing [ms] 20 d
 duration_threshold = 80  # minimum fixation event duration [ms]  80 default value
 
 # Plot eye movement path
-plt.figure(2)
+plt.figure(3)
 plt.subplot(1,4,1)
 plt.plot(points[:,0],points[:,1])
-plt.title("Raw path")
+plt.title("Scan path")
 plt.tick_params(axis='both',which='both', bottom='off',top='off', left='off',right='off', labelbottom='off',labelleft='off')
 
 # Calculate & Plot the velocities of path via the Euclidean distance between subsequent points.
@@ -121,9 +136,13 @@ plt.subplot(1,4,3)
 plt.plot(fix_velocities,label='threshold window')
 plt.title('thresholding')
 
-# NOTE: The following code gets rather complicated, in summary the following code, until the end of this question, groups sampled points
-# based on their thresholded values. These thresholded values indicate either a fixation or saccade. These fixation points occur often in
-# close duration to each other. Between these points, a fixation duration greater than the defined minimum fixation duration is averaged.
+# NOTE: The following code gets rather complicated :)
+# In summary the following code groups sample points into fixations.
+# Grouping is done based on velocity thresholds.
+# Sampling points exceeding this threshold indicate a saccade, below indicate a fixation.
+# Subsequent thresholded sampling points with the same label are grouped into a single saccade/fixation respectively.
+# By averaging the x-y coordinates of all the sampling points belong to one fixation we determine the centre of that fixation.
+# By adding all the duration of individual sampling points we calculate the duration of the fixation (e.g. sample frequency = 350Hz, fixation 80 samples long, sample_duration = 1000/350 = 2.86ms, 80*2.86 = 229 )
 # This average for the fixation group is stored in the array fixations. 
 
 # Find difference between subsequent fixations with: out[n] = a[n+1] - a[n], this sets the start of fixation to be 1 and end to be -1
@@ -175,12 +194,14 @@ plt.tick_params(axis='both',which='both', bottom='off',top='off', left='off',rig
 
 """
 Question 4 - Path quantification - dispersion based 
-
-Note: As fixations are low velocity, they tend to cluster. This method classifies
-fixations based on maximum cluster seperation. In other words, it computes
-fixations based on dispersion of sample points and minimum duration. Full routine
-methods can be seen in quant_funcs.py
 """
+
+# There is an observation that samples with low velocities tend to cluster.
+# This method classifies fixations as groups of consecutive points with a set dispersion.
+# The dispersopm threshold is the maximum seperation of consecutive points.
+# So sample points will be grouped into a fixation when the average of their maximum x & y distances remain under a certain threshold distance.
+# Full routine methods can be seen in quant_funcs.py
+
 # Variables
 min_duration=100
 dispersion_threshold=1 #[100-200]ms
@@ -188,7 +209,7 @@ dispersion_threshold=1 #[100-200]ms
 # Extract fixations used dispersion based method
 fixations_disp = qf.dispersion_based_identification(points, dispersion_threshold, min_duration, sampling_rate)
 
-plt.figure(3)
+plt.figure(4)
 plt.plot(points[:,0], points[:,1])
 plt.plot(fixations_disp[:,3], fixations_disp[:,4], 'ro')
 plt.title("Dispersion based")
@@ -196,74 +217,5 @@ plt.tick_params(axis='both',which='both', bottom='off',top='off', left='off',rig
 
 
 
-#"""
-#plot moving_average_based_threshold - this is a more dynamic threshold method
-#"""
-#velocity = qf.calc_veloc(points * 1000)
-#velocity_smooth = qf.moving_average(velocity, sampling_rate, smooth_window, 'same')
-#plt.figure(4)
-#plt.plot(velocity_smooth/1000,label='M_A_Smooth')
-#plt.plot([0,1800], np.ones(2) * velocity_threshold,label='thresholded')
-#plt.plot(velocity_sm, label='first smooth')
-#plt.plot(velocity/1000, label = 'velocity')
-#plt.title("Moving average based")
-#plt.tick_params(axis='both',which='both', bottom='off',top='off', left='off',right='off')
-#plt.legend()
-#plt.ylabel("Velocity [ms]")
-#plt.xlabel("Path point")
 
-
-"""
-Left over from original code version- prints all conditions - 20 blocks each
-"""
-#n_items = 8
-#target = 0
-#
-#sdata = af.get_subset(bdata, 'target', target)
-#trl_select = sdata['trl'][np.logical_and(sdata['search']==0, sdata['nitems']==n_items)]
-#
-#plt.figure(5)
-#for count, trl in enumerate(trl_select):
-#    eye_trial = edata[edata[:,0]==trl,:]
-#    # convert eye positions from pixels into deg visual angle
-#    points = af.mm_to_visangle( af.pixel_to_mm( eye_trial[:,2:4] ) )
-#    
-#    plt.plot(points[:,0], points[:,1])
-#    plt.axis([-24, 24, -15, 15])
-#
-#    plt.subplot(4,5,count+1)
-#    plt.plot(eye_trial[:,2], eye_trial[:,3])
-#    plt.xlim([-500,500])
-#    plt.ylim([-500,500])
-
-
-
-#n_items=8
-## Find which trials the target is correctly found (Where button response = Target presence)
-#bdata['correct'] = np.array(bdata['button']-6 == bdata['search'], dtype=int)
-## Extract corrected condition
-#bdata = af.get_subset(bdata, 'correct', 1)
-## Import eye tracking data [ block, time, x position, y position]
-#edata=pd.read_csv('%s/%s_%d_eye.txt' %(id, id, sess),names=['blk','time','xpos','ypos'],skiprows=1,sep=' ')
-#edata=np.asarray(edata)
-#
-## loop through each condition, plotting each condition stimuli
-#for target in conditions.keys():
-#    sdata = af.get_subset(bdata, 'target', target) 
-#    # Select trials to plot
-#    trial_select = sdata['trl'][np.logical_and(sdata['search']==0, sdata['nitems']==n_items)]
-#    
-#    # Initiate plotting
-#    f1 = plt.figure()
-#    for k, trial in enumerate(trial_select):
-#        trial_disp = af.create_display(bdata, trial )
-#        eye_trial = edata[edata[:,0] == trial,]
-#        
-#        plt.subplot(4,5,k+1)
-#        plt.imshow(trial_disp, cmap = 'gray', vmin=0, vmax=255)
-#        plt.hold(True)
-#        plt.plot(eye_trial[:,2]+960, eye_trial[:,3]+600, 'b.')
-#        plt.axis([300, 1660, 50, 1100])
-#        plt.suptitle(conditions[target])
-#    
-#    f1.set_size_inches([24., 13.6375])
+data_samples=points
