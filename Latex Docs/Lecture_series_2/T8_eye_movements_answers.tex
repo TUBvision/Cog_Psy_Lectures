@@ -22,7 +22,7 @@ Remember to set the current directory to the folder containing the code and data
 
 
 \begin{enumerate}
-\item We first want to get familiar with the data we are using. Look through the code and find where 'bdata' and 'edata' are imported. Type 'bdata.keys()' to view the different labels of data within the bdata dictionary. Next, plot the outputs for nitems = 4,8 and 12. Also change the presence of the target and see if you can observe a qualitative difference in the paths [1]. \\
+\item We first want to get familiar with the data we are using. Look through the code and find where 'bdata' and 'edata' are imported. Run the code up to 'edata'. Type 'bdata.keys()' to view the different labels of data within the bdata dictionary. The first plotting routine shows the two examples types of stimuli and also a example eye tracking data set. Next, plot the outputs for nitems = 4,8 and 12. Also change the presence of the target and see if you can observe a qualitative difference in the paths [1]. \\
 
  \color{blue}
  When the non identical inducer is present, the condition ends. This is when the participant would indicate with a button that they have noticed it. [1] 
@@ -39,7 +39,7 @@ Remember to set the current directory to the folder containing the code and data
  \end{itemize}
 
  \color{black}
- \item Follow the code through, plotting the various methods applied to the raw data to extract fixation points, via velocity discrimination. The essential point is that below a certain velocity value, data points are defined as fixations, above the threshold they are defined as saccades. See what happens when you change the velocity threshold value to 20ms and 200ms\\
+ \item Follow the code through, plotting the various methods applied to the raw data to extract fixation points, via velocity discrimination. The essential point is that below a certain velocity value, data points are defined as fixations, above the threshold they are defined as saccades. See what happens when you change the velocity threshold value to 20ms and 200ms [1]\\
  
  \color{blue}
  A lower threshold results in more fixation points. A higher threshold averages across these fixations. \\
@@ -50,7 +50,7 @@ Remember to set the current directory to the folder containing the code and data
  \color{blue}
  Dispersion correctly isolated more fixation points. \\
  
- The dispersion based method's parameters require more careful parameter setting. Changing them too much causes incorrect fixation detection. Note however, once stable detection parameters are found this method is much more robust.
+ The dispersion based method's parameters require more careful parameter setting. Changing them too much causes incorrect fixation detection. Note however, once stable detection parameters are found this method is much more robust. There are often such trade-offs between quantification methods.
   
 
  \end{enumerate}

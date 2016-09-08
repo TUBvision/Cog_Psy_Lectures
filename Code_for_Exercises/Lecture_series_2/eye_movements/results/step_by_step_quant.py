@@ -41,7 +41,7 @@ tpos_x     - screen coordinates for x
 target     - [0,1,2,3] (Rotated outwards, illusionary, filled gray, square)
 """
 
-# import eye tracking data [ block, time , x position , y position]
+# import eye tracking data edata [ block, time , x position , y position]
 edata=np.asarray(pd.read_csv('%s/%s_%d_eye.txt' %(id, id, sess),names=['blk','time','xpos','ypos'],skiprows=1,sep=' '))
 
 # extract trial number
@@ -120,7 +120,7 @@ for k in range(len(points)-1):
 
 veloc = veloc
 plt.plot(veloc,label='raw velocities')
-plt.xlabel('Sample path')
+plt.xlabel('Point on Sample path')
 plt.ylabel('Velocity [ms]')
 
 # Smooth raw velocities with smoothing window (cleaning up the data)
@@ -128,13 +128,6 @@ velocity_sm = qf.moving_average(veloc, sampling_rate, smooth_window, 'same')
 plt.plot(velocity_sm, label='smoothed velocities')
 plt.legend()
 plt.title('smoothing')
-
-# Isolate velocities less than velocity threshold as fixations  (i.e. fixation velocities = 1, saccades = 0)
-fix_velocities = np.array(velocity_sm < velocity_threshold, dtype = int)
-# Acts as high-pass filter for velocities above threshold.
-plt.subplot(1,4,3)
-plt.plot(fix_velocities,label='threshold window')
-plt.title('thresholding')
 
 # NOTE: The following code gets rather complicated :)
 # In summary the following code groups sample points into fixations.
@@ -145,9 +138,18 @@ plt.title('thresholding')
 # By adding all the duration of individual sampling points we calculate the duration of the fixation (e.g. sample frequency = 350Hz, fixation 80 samples long, sample_duration = 1000/350 = 2.86ms, 80*2.86 = 229 )
 # This average for the fixation group is stored in the array fixations. 
 
-# Find difference between subsequent fixations with: out[n] = a[n+1] - a[n], this sets the start of fixation to be 1 and end to be -1
+# Isolate velocities less than velocity threshold as fixations  (i.e. fixation velocities = 1, saccades = 0)
+fix_velocities = np.array(velocity_sm < velocity_threshold, dtype = int)
+# Acts as high-pass filter for velocities above threshold.
+plt.subplot(1,4,3)
+plt.plot(fix_velocities,label='threshold window')
+plt.title('thresholding')
+plt.ylim([-0.5,1.5])
+
+# Find difference between subsequent fixations with: out[n] = a[n+1] - a[n], this sets the first point in the fixation to be -1 and end point to be 1
 fixation_index = np.diff(fix_velocities)
 plt.plot(fixation_index,label='fixation index')
+plt.ylim([-1.5,1.5])
 plt.legend()
 
 # Extract fixation start locations (np.where()[0] gets array of locations), add 1 index because difference-vector index shifted by one element
