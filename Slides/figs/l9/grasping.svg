@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="grasping.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path4037"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter3027">
+      <feFlood
+         flood-opacity="0.5"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3029" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3031" />
+      <feGaussianBlur
+         in="composite"
+         stdDeviation="2.2"
+         result="blur"
+         id="feGaussianBlur3033" />
+      <feOffset
+         dx="4"
+         dy="4"
+         result="offset"
+         id="feOffset3035" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3037" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter3027-3">
+      <feFlood
+         flood-opacity="0.5"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3029-6" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3031-7" />
+      <feGaussianBlur
+         stdDeviation="2.2"
+         result="blur"
+         id="feGaussianBlur3033-5" />
+      <feOffset
+         dx="4"
+         dy="4"
+         result="offset"
+         id="feOffset3035-3" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3037-5" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter3027-2">
+      <feFlood
+         flood-opacity="0.5"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3029-9" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3031-1" />
+      <feGaussianBlur
+         stdDeviation="2.2"
+         result="blur"
+         id="feGaussianBlur3033-2" />
+      <feOffset
+         dx="4"
+         dy="4"
+         result="offset"
+         id="feOffset3035-7" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3037-0" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter3027-36">
+      <feFlood
+         flood-opacity="0.5"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3029-0" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3031-6" />
+      <feGaussianBlur
+         stdDeviation="2.2"
+         result="blur"
+         id="feGaussianBlur3033-26" />
+      <feOffset
+         dx="4"
+         dy="4"
+         result="offset"
+         id="feOffset3035-1" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3037-8" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter3027-22">
+      <feFlood
+         flood-opacity="0.5"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3029-8" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3031-9" />
+      <feGaussianBlur
+         stdDeviation="2.2"
+         result="blur"
+         id="feGaussianBlur3033-7" />
+      <feOffset
+         dx="4"
+         dy="4"
+         result="offset"
+         id="feOffset3035-36" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3037-1" />
+    </filter>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-9"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4037-3"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-94"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4037-7"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-4"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4037-5"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-3"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4037-6"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-5"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4037-35"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-2"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4037-9"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-27"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4037-0"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter3027-22-3">
+      <feFlood
+         flood-opacity="0.5"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3029-8-6" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3031-9-0" />
+      <feGaussianBlur
+         stdDeviation="2.2"
+         result="blur"
+         id="feGaussianBlur3033-7-6" />
+      <feOffset
+         dx="4"
+         dy="4"
+         result="offset"
+         id="feOffset3035-36-2" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3037-1-6" />
+    </filter>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-53"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4037-56"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter3027-3-2">
+      <feFlood
+         flood-opacity="0.5"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3029-6-9" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3031-7-1" />
+      <feGaussianBlur
+         stdDeviation="2.2"
+         result="blur"
+         id="feGaussianBlur3033-5-2" />
+      <feOffset
+         dx="4"
+         dy="4"
+         result="offset"
+         id="feOffset3035-3-7" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3037-5-0" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter3027-36-6">
+      <feFlood
+         flood-opacity="0.5"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3029-0-1" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3031-6-8" />
+      <feGaussianBlur
+         stdDeviation="2.2"
+         result="blur"
+         id="feGaussianBlur3033-26-7" />
+      <feOffset
+         dx="4"
+         dy="4"
+         result="offset"
+         id="feOffset3035-1-9" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3037-8-2" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter3027-3-2-7">
+      <feFlood
+         flood-opacity="0.5"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3029-6-9-3" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3031-7-1-6" />
+      <feGaussianBlur
+         stdDeviation="2.2"
+         result="blur"
+         id="feGaussianBlur3033-5-2-1" />
+      <feOffset
+         dx="4"
+         dy="4"
+         result="offset"
+         id="feOffset3035-3-7-2" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3037-5-0-9" />
+    </filter>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-7"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4037-8"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-1"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4037-06"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-6"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4037-1"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-54"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4037-76"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.75225647"
+     inkscape:cx="476.96567"
+     inkscape:cy="644.80826"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1808"
+     inkscape:window-height="1149"
+     inkscape:window-x="108"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="23.472183"
+       y="270.98355"
+       id="text2985"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l9/grasping_overview.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739"><tspan
+         sodipodi:role="line"
+         id="tspan2987"
+         x="23.472183"
+         y="270.98355">perception </tspan><tspan
+         sodipodi:role="line"
+         x="23.472183"
+         y="320.98355"
+         id="tspan2989">of objects</tspan></text>
+    <rect
+       style="color:#000000;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3027);enable-background:accumulate"
+       id="rect3011"
+       width="250"
+       height="105.17242"
+       x="6.7241364"
+       y="232.36218"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l9/grasping_overview.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739" />
+    <g
+       id="g3106"
+       transform="translate(-14.827587,1.2930908)"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l9/grasping_overview.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739">
+      <text
+         sodipodi:linespacing="125%"
+         id="text2991"
+         y="433.65363"
+         x="28.758755"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="433.65363"
+           x="28.758755"
+           id="tspan2993"
+           sodipodi:role="line">memory of</tspan><tspan
+           id="tspan2995"
+           y="483.65363"
+           x="28.758755"
+           sodipodi:role="line">affordances</tspan></text>
+      <rect
+         y="391.1553"
+         x="21.551723"
+         height="105.17242"
+         width="250"
+         id="rect3011-6"
+         style="color:#000000;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3027-3);enable-background:accumulate" />
+    </g>
+    <g
+       id="g3094"
+       transform="translate(-25.172413,20)"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l9/grasping_overview.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739">
+      <text
+         sodipodi:linespacing="125%"
+         id="text3005"
+         y="575.0329"
+         x="87.04303"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="575.0329"
+           x="87.04303"
+           id="tspan3007"
+           sodipodi:role="line">goal of </tspan><tspan
+           id="tspan3009"
+           y="625.0329"
+           x="87.04303"
+           sodipodi:role="line">action</tspan></text>
+      <rect
+         y="532.53461"
+         x="31.896549"
+         height="105.17242"
+         width="250"
+         id="rect3011-9"
+         style="color:#000000;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3027-2);enable-background:accumulate" />
+    </g>
+    <g
+       id="g4009"
+       transform="translate(20,0)"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l9/grasping_overview.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739">
+      <text
+         sodipodi:linespacing="125%"
+         id="text2997"
+         y="370.63803"
+         x="361.03448"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="370.63803"
+           x="361.03448"
+           id="tspan2999"
+           sodipodi:role="line">planning</tspan></text>
+      <rect
+         transform="matrix(1.1428543,0,0,2.6853774,-45.195707,-734.78383)"
+         y="392.87943"
+         x="342.24139"
+         height="105.17242"
+         width="250"
+         id="rect3011-7"
+         style="color:#000000;fill:none;stroke:#000000;stroke-width:1.00008285;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.00016581, 4.00033162;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3027-36);enable-background:accumulate" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3152"
+         y="417.18976"
+         x="360"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           style="font-size:32px"
+           y="417.18976"
+           x="360"
+           id="tspan3154"
+           sodipodi:role="line">grip aperture</tspan><tspan
+           id="tspan3156"
+           style="font-size:32px"
+           y="457.18976"
+           x="360"
+           sodipodi:role="line"># fingers</tspan><tspan
+           id="tspan3158"
+           style="font-size:32px"
+           y="497.18976"
+           x="360"
+           sodipodi:role="line">hand orientation</tspan><tspan
+           id="tspan3160"
+           style="font-size:32px"
+           y="537.18976"
+           x="360"
+           sodipodi:role="line"># hands</tspan><tspan
+           id="tspan3162"
+           style="font-size:32px"
+           y="577.18976"
+           x="360"
+           sodipodi:role="line">...</tspan></text>
+    </g>
+    <g
+       id="g3236"
+       transform="translate(100,-2.1551514)"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l9/grasping_overview.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739">
+      <text
+         sodipodi:linespacing="125%"
+         id="text3001"
+         y="454.23077"
+         x="738.48969"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="454.23077"
+           x="738.48969"
+           id="tspan3003"
+           sodipodi:role="line">grasp</tspan></text>
+      <rect
+         y="394.60355"
+         x="669.82758"
+         height="105.17242"
+         width="250"
+         id="rect3011-2"
+         style="color:#000000;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3027-22);enable-background:accumulate" />
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+       d="m 263.86423,445.12612 80.66687,0"
+       id="path4468"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l9/grasping_overview.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+       d="m 275.31053,589.47828 70.68415,-70.68415"
+       id="path4468-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l9/grasping_overview.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+       d="m 269.1048,300.72177 70.68415,70.68415"
+       id="path4468-1-8"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l9/grasping_overview.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+       d="m 668.46124,445.30997 80.66687,0"
+       id="path4468-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l9/grasping_overview.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
+       d="m 884.54174,505.85894 0,193.30566"
+       id="path4468-0-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l9/grasping_overview.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
+       d="m 884.14281,697.967 -363.19878,0"
+       id="path4468-0-7-6"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l9/grasping_overview.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+       d="m 522.23581,696.87089 0,-80.66687"
+       id="path4468-9"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l9/grasping_overview.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739" />
+    <g
+       id="g3236-1"
+       transform="translate(-82.453803,334.12982)"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l9/grasping_overview.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739">
+      <g
+         id="g4387"
+         transform="translate(0,-80)">
+        <rect
+           style="color:#000000;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3027-22-3);enable-background:accumulate"
+           id="rect3011-2-9"
+           width="250"
+           height="105.17242"
+           x="669.82758"
+           y="394.60355" />
+        <text
+           xml:space="preserve"
+           style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+           x="726.21429"
+           y="462.10187"
+           id="text3001-8"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3003-7"
+             x="726.21429"
+             y="462.10187">control</tspan></text>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="280.87021"
+       y="99.489983"
+       id="text2991-3"
+       sodipodi:linespacing="125%"
+       transform="matrix(1,0,-0.17632629,1,0,0)"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l10/memory_retrieval.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739"><tspan
+         sodipodi:role="line"
+         x="280.87021"
+         y="99.489983"
+         id="tspan2995-0">Encoding</tspan></text>
+    <rect
+       style="color:#000000;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3027-3-2);enable-background:accumulate"
+       id="rect3011-6-6"
+       width="250"
+       height="105.17242"
+       x="5.3715744"
+       y="68.955673"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l10/memory_retrieval.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+       d="m 265.15421,121.54188 184.02432,0"
+       id="path4468-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l10/memory_retrieval.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739" />
+    <g
+       id="g4009-0"
+       transform="translate(139.82062,-316.77948)"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l10/memory_retrieval.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739">
+      <text
+         sodipodi:linespacing="125%"
+         id="text2997-2"
+         y="449.00494"
+         x="390.25797"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           y="449.00494"
+           x="390.25797"
+           id="tspan2999-3"
+           sodipodi:role="line">Storage</tspan></text>
+      <rect
+         transform="matrix(1.1428543,0,0,1.1026564,-65.195707,-52.874176)"
+         y="392.87943"
+         x="342.24139"
+         height="105.17242"
+         width="250"
+         id="rect3011-7-7"
+         style="color:#000000;fill:none;stroke:#000000;stroke-width:1.00008285;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.00016581, 4.00033162;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3027-36-6);enable-background:accumulate" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3152-5"
+         y="417.18976"
+         x="360"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           id="tspan3162-9"
+           style="font-size:32px"
+           y="417.18976"
+           x="360"
+           sodipodi:role="line" /></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="788.88361"
+       y="99.489983"
+       id="text2991-3-1"
+       sodipodi:linespacing="125%"
+       transform="matrix(1,0,-0.17632629,1,0,0)"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l10/memory_retrieval.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739"><tspan
+         sodipodi:role="line"
+         x="788.88361"
+         y="99.489983"
+         id="tspan2995-0-9">Retrieval</tspan></text>
+    <rect
+       style="color:#000000;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3027-3-2-7);enable-background:accumulate"
+       id="rect3011-6-6-4"
+       width="250"
+       height="105.17242"
+       x="964.76324"
+       y="68.955673"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l10/memory_retrieval.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="12.572334"
+       y="128.87564"
+       id="text2991-3-5"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l10/memory_retrieval.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739"><tspan
+         sodipodi:role="line"
+         x="12.572334"
+         y="128.87564"
+         id="tspan2995-0-0">Information</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+       d="m 768.57115,121.54188 184.02432,0"
+       id="path4468-2-3"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l10/memory_retrieval.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="975.31866"
+       y="136.45399"
+       id="text2991-3-5-2"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l10/memory_retrieval.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739"><tspan
+         sodipodi:role="line"
+         x="975.31866"
+         y="136.45399"
+         id="tspan2995-0-0-0">Information</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+       d="m 861.40834,130.99004 0,184.02432"
+       id="path4468-2-3-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l10/memory_retrieval.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739"
+       inkscape:transform-center-y="29.245345" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5052942;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
+       d="m 843.24393,222.4116 32.29884,-38.94551"
+       id="path4468-1-5"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l10/memory_retrieval.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.5052942;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
+       d="m 844.60025,232.3786 32.29884,-38.94551"
+       id="path4468-1-5-6"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l9/grasping_overview.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="828.2171"
+       y="354.75134"
+       id="text2991-3-1-9"
+       sodipodi:linespacing="125%"
+       transform="matrix(1,0,-0.17632629,1,0,0)"
+       inkscape:export-filename="/home/marianne/teaching/osna_summer16/Cog_Psy_Lectures/Slides/figs/l10/memory_retrieval.png"
+       inkscape:export-xdpi="100.09739"
+       inkscape:export-ydpi="100.09739"><tspan
+         sodipodi:role="line"
+         x="828.2171"
+         y="354.75134"
+         id="tspan2995-0-9-3">Forgetting</tspan></text>
+  </g>
+</svg>
