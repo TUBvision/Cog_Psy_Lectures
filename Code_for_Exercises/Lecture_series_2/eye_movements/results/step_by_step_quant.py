@@ -6,54 +6,56 @@ import numpy as np
 import Image
 """
 Tutorial 8 - Eye movements
-
-Question 1 - Exploring the raw data
 """
-# Variables
-id    = 'to'      # initials for participant
-sess  = 4         # session number
-trl = 1           # single trial data
+# variable of eye tracker and monitor
 pixel_dim = 0.265 # Dimension of pixel [mm]
-nitems = [4,8,12] # number of figure items
-search = 0        # Condition of non identical inducer [0:absent,1:present]
-target = 0        # target condition type
 sampling_rate=350 # Sampling rate of eye-tracker [Hz]
 
-# 4 conditions of different target types 
-conditions = {0: 'misaligned', 1: 'aligned', 2: 'filled', 3: 'noinducer'}
+# variables of participant
+id    = 'to'   # initials of participant
+sess  = 4      # session number
 
-# Import data as dictionary, containing stimulis given and button responses
-bdata = af.data_to_dict('%s/%s_%d' %(id, id, sess)) 
+# import behavioral data as dictionary - contains design and button presses
+bdata = af.data_to_dict('%s/%s_%d' %(id, id, sess))
 
-"""
-Typing "bdata.keys()" gives you:
-['rt', 'search', 'nitems', 'trl', 'button', 'tpos_x', 'rot_offset', 'blk', 'tpos_y', 'target']
- 
-rt         - reaction time
-search     - absence/presence [0,1]
-nitems     - number of figures in stimulus
-trl        - trial number
-button     - absent/present participant response [6,7]
-rot_offset - offset angles for presence of odd-one-out
-blk        - block number
-tpos_y     - screen coordinates for y
-tpos_x     - screen coordinates for x
-target     - [0,1,2,3] (Rotated outwards, illusionary, filled gray, square)
-"""
+# Question 1 - Exploring the raw data
+# --------------------------------------
+# Typing "bdata.keys()" gives you:
+#['rt', 'search', 'nitems', 'trl', 'button', 'tpos_x', 'rot_offset', 'blk', 'tpos_y', 'target']
+
+#rt         - reaction time
+#search     - absence/presence [0,1]
+#nitems     - number of figures in stimulus [4,8,12]
+#trl        - trial number
+#button     - absent/present participant response [6,7]
+#rot_offset - offset angles for presence of odd-one-out
+#blk        - block number
+#tpos_y     - screen coordinates for y
+#tpos_x     - screen coordinates for x
+#target     - type: misaligned, aligned, filled gray, square [0,1,2,3]
+
 
 # import eye tracking data edata [ block, time , x position , y position]
-edata=np.asarray(pd.read_csv('%s/%s_%d_eye.txt' %(id, id, sess),names=['blk','time','xpos','ypos'],skiprows=1,sep=' '))
+edata=np.asarray(pd.read_csv('%s/%s_%d_eye.txt' %(id, id, sess), names=['blk','time','xpos','ypos'], skiprows=1, sep=' '))
 
-# extract trial number
-eye_trial = edata[edata[:,0] == trl,] 
+
+# 2. Simple plot showing difference between aligned and misaligned stimuli and scan path for nitems==4
+# ---------------------------------
+# Variables
+trl   = 1         # data of trial 1
+nitems = [4,8,12] # number of items
+search = 0        # target absent
+target = 0        # target misaligned
+
+# extract trial number 1
+eye_trial = edata[edata[:,0] == trl,]
 
 # convert pixels to milimetres
 points = eye_trial[:,2:4]*pixel_dim
 
-# get subset data from bdata
-sdata = af.get_subset(bdata, 'target', target) 
+# get subset data from bdata for target==0
+sdata = af.get_subset(bdata, 'target', target)
 
-# Simple plotting showing difference between example pair stimuli types
 plt.figure(1)
 plt.subplot(3,1,1)
 plt.imshow(Image.open('../stimuli/norm_fat_aligned_10.bmp'),cmap='gray')
@@ -62,12 +64,17 @@ plt.subplot(3,1,2)
 plt.imshow(Image.open('../stimuli/norm_thin_aligned_10.bmp'),cmap='gray')
 plt.title('Item thin')
 plt.subplot(3,1,3)
-plt.plot(eye_trial[:,2],eye_trial[:,3])
+plt.plot(eye_trial[:,2], eye_trial[:,3])
 plt.title('Scan path')
 
-# More complex plotting showing scan path with full stimuli underlay 
-# Rows are 4,8 & 12 nitems, columns show 3 different examples.
+# More complex plot: shows scan path with stimulus underlay
+# Rows differ in nitems: 4,8 & 12
+# -------------------------------------------------------------
 plt.figure(2)
+
+# define labels for target types
+conditions = {0: 'misaligned', 1: 'aligned'}
+
 trial_select=np.zeros((20,3)) # initiate empty array to extract 20 trials for 3 different nitems
 step = 1                      # step for plotting only
 for n in range(3):            # loop through number of items
@@ -75,7 +82,7 @@ for n in range(3):            # loop through number of items
     # select trial based on presence of target and number of items
     trial_select[:,n] = sdata['trl'][np.logical_and(sdata['search']==search, sdata['nitems']==nitems[n])]
     
-    # Plotting routine  
+    # Plotting routine
     
     for trl in range(3):
         trial = trial_select[trl,n]
@@ -88,12 +95,11 @@ for n in range(3):            # loop through number of items
         plt.hold(True)
         plt.plot(eye_trial[:,2]+960, eye_trial[:,3]+600, 'b.') # overlay eye tracking path
         plt.axis([300, 1660, 50, 1100])
-        plt.suptitle('Scan path examples for %s condition with search : %s' %(conditions[target],search))
+        plt.suptitle('Scan path examples for %s condition with search : %s' %(conditions[target], search))
         
 
 """
-Question 3 - Path quantification - velocity based
-
+Question 3 - Identify fixations based on velocity
 Note: the below is an expanded version of qf.velocity_based_identification()
 """
 
