@@ -143,6 +143,11 @@ Challenge: block course!! \\
 
 \begin{frame}
  \frametitle{Outline for today}
+\begin{itemize}
+ \item Demarcation
+ \item Approaches to Cognition
+\end{itemize}
+
 \end{frame}
 
 
@@ -225,7 +230,7 @@ Scientific attempt to understand human cognition by observing the behavior of pe
   
  \begin{column}{40mm}
 \begin{center}
- \includegraphics<2->[width=35mm]{../../../figures/dichotic_listening_task.png}
+ \includegraphics<2->[width=35mm]{figs/l1/dichotic_listening_task.png}
 \end{center}
  \end{column}
  \end{columns}
@@ -343,7 +348,49 @@ localized in one area - why?
 \begin{frame}
 \frametitle{Cognitive Neuroscience}
  \includegraphics<1>[width=110mm]{figs/methods_overview.png}
-\includegraphics<2>[width=110mm]{figs/methods_classification.png}
+% \includegraphics<2>[width=110mm]{figs/methods_classification.png}
+\end{frame}
+
+
+
+\begin{frame}
+ \frametitle{Single cell / multi-unit recording}
+\begin{center}
+\includegraphics[width=60mm]{figs/l3/ward_single_cell_recording.png} 
+\end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{EEG}
+\begin{center}
+\includegraphics[width=50mm]{figs/l1/eeg_cap.png} 
+
+\vspace{3mm}
+\includegraphics[width=50mm]{figs/l1/erp_face_animal_object.png} 
+\end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{fMRI}
+\begin{center}
+\includegraphics[width=45mm]{figs/l1/fmri_magnet.png} 
+
+\vspace{3mm}
+\includegraphics[width=45mm]{figs/l1/fmri_flat_map.png} 
+\end{center}
+\end{frame}
+
+\begin{frame}
+ \frametitle{TMS}
+\begin{center}
+\includegraphics[width=55mm]{figs/l1/tms.png} 
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Cognitive Neuroscience}
+\includegraphics[width=110mm]{figs/methods_classification.png}
 \end{frame}
 
 \begin{frame}
@@ -698,36 +745,32 @@ aerodynamics; only then do the structure of feathers and the different shapes of
 \end{frame}
 
 
-
-
-
-
-
-\begin{frame}
-\frametitle{Tutorial: how to measure perception?}
-\begin{center}
-\includegraphics<1>[width=60mm]{../../../figures/bregman_Bs.png}
-\includegraphics<2>[width=20mm]{../../../figures/banana_penetrates_brick.png}
-\includegraphics<3>[width=60mm]{../../../figures/amodal_michotte.png}
-\end{center}
-\end{frame}
-
-\begin{frame}
- \begin{exampleblock}{Thinking}
- How can you find out what's happening in someone's
-head? In normal life? In science?
- \end{exampleblock}
-\end{frame}
-
+% 
+% \begin{frame}
+% \frametitle{Tutorial: how to measure perception?}
+% \begin{center}
+% \includegraphics<1>[width=60mm]{../../../figures/bregman_Bs.png}
+% \includegraphics<2>[width=20mm]{../../../figures/banana_penetrates_brick.png}
+% \includegraphics<3>[width=60mm]{../../../figures/amodal_michotte.png}
+% \end{center}
+% \end{frame}
+% 
+% \begin{frame}
+%  \begin{exampleblock}{Thinking}
+%  How can you find out what's happening in someone's
+% head? In normal life? In science?
+%  \end{exampleblock}
+% \end{frame}
+% 
 
 
 \begin{frame}
  \frametitle{References}
 \begin{small}
 \begin{itemize}
- \item  Eysenck \& Keane
+ \item  Eysenck \& Keane (2010). Cognitive Psychology. A student's handbook. 
  \item Ward, J. (2010). The student's guide to cognitive neuroscience (2nd ed.). Taylor \& Francis, Psychology Press: Hove and New York.
- \item 
+ \item Marr, D. (2010). Vision.  
 \end{itemize}
 \end{small}
 \end{frame}

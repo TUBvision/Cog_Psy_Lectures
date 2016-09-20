@@ -40,7 +40,7 @@
 \setbeamertemplate{navigation symbols}{}
 
 \title{ Cognitive (Neuro) Psychology }
-\subtitle{VII. Perceiving and suppressing motion}
+\subtitle{VII. Perceiving Motion}
 \author{ Marianne Maertens }
 \institute[TU Berlin]{Technische Universit\"at Berlin}
 \date{September 2016}
@@ -59,6 +59,98 @@
   \end{frame}
 }
 
+
+
+\begin{frame}
+ \frametitle{Objectives}
+\begin{overlayarea}{110mm}{70mm}
+ basic knowledge in
+\begin{itemize}
+  \item Cognitive (Neuro) \textbf{Psychology}
+  \item Experimental Methods
+\end{itemize}
+
+\vspace{5mm}
+\only<2->{
+\begin{itemize}
+ \item[$\Rightarrow$] What kind of questions are addressed in the discipline?
+ \item[$\Rightarrow$] How are these questions being addressed?
+ \item[$\Rightarrow$] Be able to comprehend and evaluate literature and work done in the field.
+\end{itemize}
+}
+\end{overlayarea}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Topics \& Structure}
+\includegraphics<1>[width=120mm]{figs/l7/timetable.pdf} 
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Philosophy}
+\begin{overlayarea}{110mm}{50mm}
+Challenge: block course!! \\
+\vspace{5mm}
+\only<2->{
+ \begin{itemize}
+  \item alternation between instruction and individual studies
+  \item active involvement of participants
+  \item some topics in depth instead of broad coverage
+  \item exam: indicate the degree of retention of material - MC 
+  \item[]
+  \item<3->[?] Comments, Questions?
+ \end{itemize}
+}
+\end{overlayarea}
+\end{frame}
+
+
+\begin{frame}
+\begin{center}
+ \begin{LARGE}
+What happened so far? 
+\end{LARGE}
+ \end{center}
+\end{frame}
+
+
+\begin{frame}{Recap}
+ \begin{overlayarea}{110mm}{70mm}
+  \begin{columns}[T]
+   \begin{column}{60mm}
+    \begin{itemize}
+     \item Experimental methodology
+    \begin{itemize}
+     \item<1-> Hypothesis, experimental design, etc.
+     \item<2-> Psychophysics, thresholds, sensitivity
+     \item<3-> Measuring appearance 
+    \end{itemize}
+   \item<4-> Visual information processing
+    \begin{itemize}
+     \item<4-> Properties of visual neurons, orientation selectivity, spatial frequency selectivity, ...
+     \item<5-> Visual functions, orientation discrimination, acuity, ...
+     \item<6-> Object recognition
+    \end{itemize}
+   \end{itemize}
+   \end{column}
+
+   \begin{column}{50mm}
+    \begin{center}
+    \includegraphics<1>[width=50mm]{../../../figures/huber_hypothesis.png}
+   \includegraphics<2>[width=40mm]{../../../figures/muller_lyer_pmf_pse.png}
+   \includegraphics<3>[width=40mm]{figs/l6/knoblauch_scaling98.png}
+   \includegraphics<4>[width=40mm]{figs/l5/ventral_pathways.png}
+   \includegraphics<5>[width=40mm]{figs/l3/csf_demo.png}
+   \includegraphics<6>[width=50mm]{figs/l5/T_junctions.png}
+   \end{center}
+  \end{column}
+  \end{columns}
+ \end{overlayarea}
+\end{frame}
+
+
+
 \begin{frame}
  \frametitle{What do you see?}
 \begin{overlayarea}{130mm}{80mm}
@@ -66,7 +158,7 @@
 \includegraphics<1>[width=50mm]{figs/l7/ladybug_1.png}
 \includegraphics<2->[width=50mm]{figs/l7/ladybug_2.png}
  \end{center}
-\only<3->{\textcolor{blue}{Motion} is a change in position over time.}
+\only<3->{\textcolor{blue}{Motion} is a change in location over time.}
 \end{overlayarea}
  \end{frame}
 
@@ -97,17 +189,17 @@ How would you build a motion detector?
 \frametitle{The computation of motion in the brain}
 \begin{overlayarea}{110mm}{80mm}
 \begin{itemize}
- \item<1-> start with two adjacent receptors
+ \item<1-> start with two adjacent receptors, A and B
  \item<2->[$\rightarrow$] registers change in position
- \item<3-> adding input $\rightarrow$ response to large stationary object
+ \item<3-> simply adding inputs $\rightarrow$ not motion-selective
  \item<4-> \textbf{D}elay cell, fast adapting 
- \item<4-> multiplication of receptor and D response
+ \item<5-> \textbf{X} - multiplies D with receptor B's response
 \end{itemize}
 
  \begin{center}
 \includegraphics<1-2>[width=70mm]{figs/l7/reichardt_detector_2cells_1.png}
 \includegraphics<3>[width=70mm]{figs/l7/reichardt_detector_2cells_0.png}
-\includegraphics<4>[width=70mm]{figs/l7/reichardt_detector_2cells.png}
+\includegraphics<4->[width=70mm]{figs/l7/reichardt_detector_2cells.png}
  \end{center}
 \end{overlayarea}
 \end{frame}
@@ -115,7 +207,7 @@ How would you build a motion detector?
 
 \begin{frame}
  \frametitle{"Bug`` motion detector}
-\begin{overlayarea}{130mm}{80mm}
+\begin{overlayarea}{130mm}{70mm}
 first described by Werner Reichardt (1950)
  \begin{center}
 \includegraphics[width=60mm]{figs/l7/reichardt_detector_manycells.png}
@@ -133,7 +225,6 @@ first described by Werner Reichardt (1950)
 
 
 \begin{frame}
-
 \begin{block}{Activity}
 Explore the motion detection circuit with the activity on the following webpage \url{http://sites.sinauer.com/wolfe4e/wa08.01.html}
 \end{block}
@@ -145,7 +236,8 @@ Explore the motion detection circuit with the activity on the following webpage 
  \frametitle{Apparent motion}
  \begin{overlayarea}{110mm}{80mm}
 \begin{itemize}
-   \item Reichardt detector does not require continuous motion, responds equally to object that appears in A's receptive field, disappears and reappears in B's receptive field
+   \item Reichardt detector does not require continuous motion,
+   \item[$\rightarrow$]\textcolor{blue}{prediction:} responds equally to object that appears in A's receptive field, disappears and reappears in B's receptive field
 \end{itemize}
 
 \begin{columns}[T]
@@ -168,13 +260,17 @@ Explore the motion detection circuit with the activity on the following webpage 
 
 \begin{frame}
 \frametitle{Apparent motion}
+ \begin{overlayarea}{110mm}{80mm}
  \begin{itemize}
- \item illusory impression of smooth motion resulting from rapid alternation of objects that appear in different locations in rapid succession
- \item stop-motion
+ \item[=] illusory impression of smooth motion resulting from rapid alternation of objects that appear in different locations in rapid succession
+ \item stop-motion, phi-phenomenon
 \end{itemize}
 \begin{center}
 \includegraphics[width=70mm]{figs/l7/filming_shaun2.jpg} 
 \end{center}
+
+\only<2-> {\vspace{3mm}\textcolor{gray}{Web Activity 8.2}}
+\end{overlayarea}
 \end{frame}
 
 \begin{frame}
@@ -190,9 +286,8 @@ Explore the motion detection circuit with the activity on the following webpage 
 \end{column}
 \end{columns}
 
-\only<2->{
 \vspace{3mm}
-How does the visual system know which circles in frame 2 correspond to which circles in frame 1?}
+How does the visual system know which circles in frame 2 correspond to which circles in frame 1?
 \begin{center}
 \includegraphics<2>[width=40mm]{figs/l7/correspondence_3.png} 
 \end{center}
@@ -239,6 +334,7 @@ when a moving object is viewed through an aperture, the direction of motion of a
 
 \begin{frame}
  \frametitle{Where in the brain are global motion detectors?}
+\begin{overlayarea}{110mm}{80mm}
 \begin{center}
 \includegraphics<1>[width=90mm]{figs/l7/cortical_pathways_motion.png} 
 \includegraphics<2->[width=70mm]{figs/l7/MT_brain.png}  
@@ -248,9 +344,10 @@ when a moving object is viewed through an aperture, the direction of motion of a
  \item area MT in non-human primates - middle temporal area
  \item human equivalent of MT localized with fMRI MT+/V5
  \item<3-> MT cells are selective for motions in one particular direction
- \item<4->[$\rightarrow$] \textit{Do MT cells correspond to global motion detector or are they also local motion detectors?}
+ \item<4->[$\rightarrow$] \textit{Are MT cells global or local motion detectors?}
 \end{itemize}
 }
+\end{overlayarea}
 \end{frame}
 
 
@@ -264,7 +361,7 @@ when a moving object is viewed through an aperture, the direction of motion of a
 \begin{itemize}
  \item monkeys were trained in motion discrimination in correlated dot displays
  \item<2-> no single dot sufficient to signal overall direction of motion
- \item<2->[$\rightarrow$] to detect correlated direction a neuron must integrate information from many locations
+ \item<2->[$\rightarrow$] to detect correlated motion direction neuron must integrate information from many locations
 \end{itemize}
 \end{overlayarea}
 \end{frame}
@@ -278,10 +375,10 @@ when a moving object is viewed through an aperture, the direction of motion of a
 \end{center}
 
 \begin{itemize}
- \item after training monkeys recognized motion direction when only 2-3\% od the dots moved coherently
+ \item after training monkeys recognized motion direction with only 2-3\% coherent dots
  \item<2-> experimental \textcolor{blue}{lesion} of area MT
- \item<3-> following surgery discrimination thresholds were 10 times as high: 20\% correlated dots
- \item<3-> ability to discriminate orientation of stationary patterns was generally unimpaired
+ \item<3->[$\Rightarrow$] following surgery discrimination thresholds were 10 times as high: 20\% coherent dots
+ \item<3->[$\Rightarrow$] ability to discriminate orientation of stationary patterns was generally unimpaired
 \end{itemize}
 \end{overlayarea}
 \end{frame}
@@ -339,8 +436,8 @@ How do we estimate time to collision (TTC) of an approaching object?\begin{colum
 \begin{itemize}
  \item small cricket ball bounces off the ground 3m away from player moves with constant rate of 15$\frac{m}{s}$
  \item $TTC = \frac{distance}{rate} = \frac{3}{15} = 0.2s$
- \item humans are not very precise at judging distances in depth
- \item $\tau = \frac{\theta}{\dot{\theta}}$, 
+ \item humans better at judging TTC than at judging distances
+ \item[$\Rightarrow$] $\tau = \frac{\theta}{\dot{\theta}}$, heuristic
   \item[] $\theta$ - visual angle of object at any moment
   \item[] $\dot{\theta}$ - rate of change of visual angle 
 \end{itemize}
@@ -357,26 +454,8 @@ How do we estimate time to collision (TTC) of an approaching object?\begin{colum
 
 
 \begin{frame}
- \frametitle{Eye movements}
-\begin{overlayarea}{120mm}{80mm}
-\begin{center}
-\includegraphics[width=70mm]{figs/l7/eye_movement_demo.png} 
-\end{center}
-\begin{enumerate}[(a)]
- \item close one eye, focus on dot, move pencil from lower right to left
- \item start with pencil at bottom left, fixate eraser, track it while moving the pencil to the right
-\end{enumerate}
-
-\only<2->{
-Image of dot (b) and of pencil (a) make the same journey on the retina - one is perceived as moving the other not. Why?
-}
-\end{overlayarea}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Physiology of eye movements}
-\begin{overlayarea}{120mm}{70mm}
+\frametitle{Eye movements - physiology}
+\begin{overlayarea}{110mm}{70mm}
  \begin{center}
 \includegraphics[width=70mm]{figs/l7/six_eye_muscles.png} 
 \end{center}
@@ -390,8 +469,8 @@ Image of dot (b) and of pencil (a) make the same journey on the retina - one is 
 
 
 \begin{frame}
-\frametitle{Physiology of eye movements}
-\begin{overlayarea}{120mm}{80mm}
+\frametitle{Eye movements - physiology}
+\begin{overlayarea}{110mm}{80mm}
  \begin{center}
 \includegraphics[width=70mm]{figs/l7/wurtz_em_brain.png} 
 \end{center}
@@ -408,7 +487,7 @@ How to probe the role of brain structures in control of eye movements?
 
 \begin{frame}
 \frametitle{Types of eye movements}
-\begin{overlayarea}{120mm}{80mm}
+\begin{overlayarea}{110mm}{80mm}
  \begin{itemize}
   \item[] \textbf{smooth pursuit} - eye moves smoothly to follow a moving object
   \item[] \textbf{vergence} - inward or outward rotation on the eye to focus on near or far object
@@ -419,11 +498,28 @@ How to probe the role of brain structures in control of eye movements?
  \end{itemize}
 
  \begin{center}
-\includegraphics<2->[width=70mm]{figs/l7/classic_scan_path.png} 
+\includegraphics<2->[width=60mm]{figs/l7/classic_scan_path.png} 
 \end{center}
 \end{overlayarea}
 \end{frame}
 
+
+\begin{frame}
+ \frametitle{Eye movements}
+\begin{overlayarea}{110mm}{80mm}
+\begin{center}
+\includegraphics[width=70mm]{figs/l7/eye_movement_demo.png} 
+\end{center}
+\begin{enumerate}[(a)]
+ \item close one eye, focus on dot, move pencil from lower right to left
+ \item start with pencil at bottom left, fixate eraser, track it while moving the pencil to the right
+\end{enumerate}
+
+\only<2->{
+Image of dot (b) and of pencil (a) make the same journey on the retina - one is perceived as moving the other not. Why?
+}
+\end{overlayarea}
+\end{frame}
 
 
 \begin{frame}
